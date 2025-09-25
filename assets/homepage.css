@@ -925,6 +925,10 @@ body[sf-dragging-el=section] .sf-possible-target .sf-possible-target-label {
   color: #0C111E !important;
 }
 
+.bg-dvdkempblue {
+  background-color: #132234;
+}
+
 #js-drop-here {
   opacity: 0;
   visibility: hidden;
