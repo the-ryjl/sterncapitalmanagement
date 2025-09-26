@@ -19271,3 +19271,7 @@ a:not([data-aos]):not(.btn):hover {
     display: none !important;
   }
 }
+
+.testcontainer{
+  margin: auto
+}
