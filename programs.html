@@ -81,33 +81,552 @@
 			</div>
 		</div>
 	</nav>
-	<!-- Feature 20 -->
-		<section class="py-10 py-lg-20 text-center text-md-start bg-bg-3">
-			<div class="container">
-				<div class="row justify-content-between mb-15 mb-lg-12">
-					<div class="mb-lg-0 mb-6 text-lg-center">
-						<h2 class="display-5" data-aos="fade-down" data-aos-delay="0">Our Programs</h2>
+	<!-- Programs -->
+		<style>
+			.programs-page {
+				--scm-ink: #132234;
+				--scm-blue: #243f63;
+				--scm-line: rgba(19, 34, 52, 0.14);
+				--scm-soft: #f4f7f8;
+				--scm-paper: #ffffff;
+				background: #f8fafb;
+				color: var(--scm-ink);
+				overflow: hidden;
+			}
+
+			.programs-hero {
+				position: relative;
+				padding: 5rem 0 4rem;
+				background:
+					linear-gradient(90deg, rgba(19, 34, 52, 0.9) 0%, rgba(19, 34, 52, 0.76) 48%, rgba(19, 34, 52, 0.2) 100%),
+					url("assets/programs/programstestimage.jpg") center/cover no-repeat;
+				color: #fff;
+			}
+
+			.programs-hero::after {
+				content: "";
+				position: absolute;
+				inset: auto 0 0;
+				height: 9px;
+				background: linear-gradient(90deg, #7b1632 0%, #c9a45c 48%, #4c6f86 100%);
+			}
+
+			.programs-kicker {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.65rem;
+				margin-bottom: 1.25rem;
+				color: rgba(255, 255, 255, 0.86);
+				font-size: 0.78rem;
+				font-weight: 800;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+			}
+
+			.programs-kicker::before {
+				content: "";
+				width: 2rem;
+				height: 2px;
+				background: #c9a45c;
+			}
+
+			.programs-title {
+				max-width: 820px;
+				margin-bottom: 1.25rem;
+				color: #fff;
+				font-size: clamp(2.8rem, 7vw, 5.7rem);
+				line-height: 0.95;
+				letter-spacing: 0;
+			}
+
+			.programs-lede {
+				max-width: 720px;
+				margin-bottom: 2rem;
+				color: rgba(255, 255, 255, 0.86);
+				font-size: 1.18rem;
+				line-height: 1.7;
+			}
+
+			.programs-hero-grid {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 1px;
+				max-width: 900px;
+				background: rgba(255, 255, 255, 0.24);
+				border: 1px solid rgba(255, 255, 255, 0.24);
+			}
+
+			.programs-stat {
+				min-height: 118px;
+				padding: 1.35rem;
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(14px);
+			}
+
+			.programs-stat strong {
+				display: block;
+				margin-bottom: 0.25rem;
+				color: #fff;
+				font-size: 2rem;
+				line-height: 1;
+			}
+
+			.programs-stat span {
+				color: rgba(255, 255, 255, 0.78);
+				font-size: 0.92rem;
+				line-height: 1.45;
+			}
+
+			.programs-section {
+				padding: 4.7rem 0;
+			}
+
+			.programs-section-tight {
+				padding-top: 3.2rem;
+			}
+
+			.programs-eyebrow {
+				margin-bottom: 0.7rem;
+				color: #7b1632;
+				font-size: 0.78rem;
+				font-weight: 800;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+			}
+
+			.programs-heading {
+				margin-bottom: 1rem;
+				color: var(--scm-ink);
+				font-size: clamp(2rem, 4vw, 3.3rem);
+				letter-spacing: 0;
+			}
+
+			.programs-copy {
+				color: rgba(19, 34, 52, 0.72);
+				font-size: 1.04rem;
+				line-height: 1.75;
+			}
+
+			.programs-card {
+				height: 100%;
+				padding: 1.6rem;
+				background: var(--scm-paper);
+				border: 1px solid var(--scm-line);
+				border-radius: 8px;
+				box-shadow: 0 18px 45px rgba(19, 34, 52, 0.06);
+			}
+
+			.programs-card h3,
+			.programs-card h4 {
+				color: var(--scm-ink);
+				letter-spacing: 0;
+			}
+
+			.programs-card p,
+			.programs-card li {
+				color: rgba(19, 34, 52, 0.72);
+				line-height: 1.65;
+			}
+
+			.programs-card ul {
+				margin: 1rem 0 0;
+				padding-left: 1.15rem;
+			}
+
+			.programs-program-map {
+				position: relative;
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1rem;
+				margin-top: 2rem;
+			}
+
+			.programs-club {
+				min-height: 245px;
+				padding: 1.5rem;
+				background: #fff;
+				border: 1px solid var(--scm-line);
+				border-top: 5px solid #243f63;
+				border-radius: 8px;
+			}
+
+			.programs-club:nth-child(2) {
+				border-top-color: #7b1632;
+			}
+
+			.programs-club:nth-child(3) {
+				border-top-color: #c9a45c;
+			}
+
+			.programs-club span {
+				display: inline-block;
+				margin-bottom: 1rem;
+				font-size: 0.82rem;
+				font-weight: 800;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+			}
+
+			.programs-club h3 {
+				margin-bottom: 0.75rem;
+				font-size: 1.45rem;
+			}
+
+			.programs-path {
+				display: grid;
+				grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) minmax(0, 0.9fr);
+				gap: 1rem;
+				align-items: stretch;
+				margin-top: 2rem;
+			}
+
+			.programs-path-step {
+				position: relative;
+				padding: 1.5rem;
+				background: #fff;
+				border: 1px solid var(--scm-line);
+				border-radius: 8px;
+			}
+
+			.programs-path-step::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: -1rem;
+				width: 1rem;
+				height: 2px;
+				background: var(--scm-line);
+			}
+
+			.programs-path-step:last-child::after {
+				display: none;
+			}
+
+			.programs-path-step small {
+				display: block;
+				margin-bottom: 0.55rem;
+				color: #7b1632;
+				font-weight: 800;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+			}
+
+			.programs-curriculum {
+				background: var(--scm-ink);
+				color: #fff;
+			}
+
+			.programs-curriculum .programs-eyebrow,
+			.programs-curriculum .programs-heading {
+				color: #fff;
+			}
+
+			.programs-curriculum .programs-copy {
+				color: rgba(255, 255, 255, 0.74);
+			}
+
+			.programs-training-grid {
+				display: grid;
+				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+				gap: 1rem;
+				margin-top: 2rem;
+			}
+
+			.programs-training {
+				padding: 1.6rem;
+				border: 1px solid rgba(255, 255, 255, 0.16);
+				border-radius: 8px;
+				background: rgba(255, 255, 255, 0.07);
+			}
+
+			.programs-training h3 {
+				margin-bottom: 1rem;
+				color: #fff;
+			}
+
+			.programs-chip-list {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.7rem;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.programs-chip-list li {
+				padding: 0.65rem 0.8rem;
+				color: rgba(255, 255, 255, 0.86);
+				border: 1px solid rgba(255, 255, 255, 0.18);
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.06);
+				font-size: 0.95rem;
+			}
+
+			.programs-impact-grid {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 1rem;
+				margin-top: 2rem;
+			}
+
+			.programs-impact-number {
+				display: inline-grid;
+				place-items: center;
+				width: 2.35rem;
+				height: 2.35rem;
+				margin-bottom: 1.1rem;
+				color: #fff;
+				background: var(--scm-blue);
+				border-radius: 50%;
+				font-weight: 800;
+			}
+
+			.programs-competition {
+				display: grid;
+				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+				gap: 2rem;
+				align-items: center;
+			}
+
+			.programs-photo {
+				position: relative;
+				min-height: 430px;
+				border-radius: 8px;
+				background: url("assets/programs/stockpitchcomp.jpg") center/cover no-repeat;
+				box-shadow: 0 24px 60px rgba(19, 34, 52, 0.16);
+			}
+
+			.programs-photo-card {
+				position: absolute;
+				left: 1.3rem;
+				right: 1.3rem;
+				bottom: 1.3rem;
+				padding: 1.25rem;
+				background: rgba(255, 255, 255, 0.92);
+				border: 1px solid rgba(255, 255, 255, 0.6);
+				border-radius: 8px;
+				backdrop-filter: blur(10px);
+			}
+
+			.programs-photo-card p {
+				margin: 0;
+				color: var(--scm-ink);
+				font-weight: 700;
+				line-height: 1.5;
+			}
+
+			@media (max-width: 991.98px) {
+				.programs-hero {
+					padding: 4rem 0 3.4rem;
+				}
+
+				.programs-hero-grid,
+				.programs-impact-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+
+				.programs-program-map,
+				.programs-path,
+				.programs-training-grid,
+				.programs-competition {
+					grid-template-columns: 1fr;
+				}
+
+				.programs-path-step::after {
+					display: none;
+				}
+			}
+
+			@media (max-width: 575.98px) {
+				.programs-hero-grid,
+				.programs-impact-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.programs-section {
+					padding: 3.25rem 0;
+				}
+
+				.programs-photo {
+					min-height: 320px;
+				}
+			}
+		</style>
+		<main class="programs-page">
+			<section class="programs-hero">
+				<div class="container">
+					<div class="programs-kicker" data-aos="fade-down" data-aos-delay="0">Investment Management Initiative</div>
+					<h1 class="programs-title" data-aos="fade-down" data-aos-delay="100">Scholars Program</h1>
+					<p class="programs-lede" data-aos="fade-down" data-aos-delay="200">A single platform for student investors at NYU, bringing SCM together with IAG, QFS, and the IMI advisory board for shared training, stronger speaker access, and a deeper investment community.</p>
+					<div class="programs-hero-grid" data-aos="fade-down" data-aos-delay="300">
+						<div class="programs-stat">
+							<strong>3</strong>
+							<span>Premier finance clubs training through one cohort.</span>
+						</div>
+						<div class="programs-stat">
+							<strong>~40</strong>
+							<span>Scholars selected across SCM, IAG, and QFS.</span>
+						</div>
+						<div class="programs-stat">
+							<strong>5</strong>
+							<span>Core finance modules using BIWS-style training.</span>
+						</div>
+						<div class="programs-stat">
+							<strong>5</strong>
+							<span>Investment strategies spanning equity, macro, quant, and credit.</span>
+						</div>
 					</div>
 				</div>
-				<div class="row justify-content-center">
-					<div class="col-sm-8 col-md-4 mb-15 mb-md-0" data-aos="fade-down" data-aos-delay="400">
-						<img src="assets/programs/programs3.png" alt="" class="img-fluid w-100 mb-6" srcset="assets/programs/programs3.png 2x">
-						<h4 class="mb-4">Underclassmen Foundations</h4>
-						<p class="fs-4 mb-0">We offer introductory programming tailored to underclassmen to help them build a strong foundation in finance. This includes skill building workshops and professor-led discussions, which let members gain insight on potential career paths and become familiar with company analysis, modeling, and information sourcing using Bloomberg. </p>
+			</section>
+
+			<section class="programs-section">
+				<div class="container">
+					<div class="row align-items-end justify-content-between">
+						<div class="col-lg-7" data-aos="fade-down" data-aos-delay="0">
+							<p class="programs-eyebrow">One Application, Three Paths</p>
+							<h2 class="programs-heading">A common entry point for NYU investors.</h2>
+						</div>
+						<div class="col-lg-6" data-aos="fade-down" data-aos-delay="100">
+							<p class="programs-copy mb-0">The new structure creates a unified application across SCM, QFS, and IAG while preserving club-specific interviews, questions, and investment identities.</p>
+						</div>
 					</div>
-					<div class="col-sm-8 col-md-4 mb-15 mb-md-0" data-aos="fade-down" data-aos-delay="400">
-						<img src="assets/programs/programsphotosspeakerseries.png" alt="" class="img-fluid w-100 mb-6" srcset="assets/programs/programsphotosspeakerseries.png 2x">
-						<h4 class="mb-4">Speaker Series</h4>
-						<p class="fs-4 mb-0">Our weekly Speaker Series brings together industry leaders, alumni, and faculty to share insights on markets, investment strategies, and career paths.<font color="#132234"> General Meetings are held during common hour (12:30 - 1:30 PM) every Monday, </font> giving members the chance to learn directly from professionals and ask questions in an interactive setting.</p>
+
+					<div class="programs-path" data-aos="fade-down" data-aos-delay="200">
+						<div class="programs-path-step">
+							<small>Step 01</small>
+							<h3 class="h4 mb-3">Common App</h3>
+							<p class="mb-0">Applicants move through a shared structure designed to make recruiting clearer and more accessible across the investment ecosystem.</p>
+						</div>
+						<div class="programs-path-step">
+							<small>Step 02</small>
+							<h3 class="h4 mb-3">Club Review</h3>
+							<p class="mb-0">Each club keeps its own questions and interviews so analysts can be evaluated against the strategy and culture they want to join.</p>
+						</div>
+						<div class="programs-path-step">
+							<small>Step 03</small>
+							<h3 class="h4 mb-3">Scholars Cohort</h3>
+							<p class="mb-0">After joining a club, analysts may apply separately to the Scholars Program and train together as one cross-club class.</p>
+						</div>
 					</div>
-					<div class="col-sm-8 col-md-4" data-aos="fade-down" data-aos-delay="500">
-						<img src="assets/programs/stockphoto2stern.jpg" alt="" class="img-fluid w-100 mb-6" srcset="assets/programs/stockphoto2stern.jpg 2x">
-						<h4 class="mb-4">Scholars Program</h4> 
-						<p class="fs-4 mb-0"> <a href="https://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/investment-management-initiative/scholars-program" target="_blank"> <font color="#132234"><u>The Scholars Program</u></font></a> provides select members with an intensive track focused on advanced investment research, leadership, and networking. Scholars work closely with mentors, gain priority access to recruiting opportunities, and represent the club at competitions and conferences, building a strong foundation for future success in finance. </p>
+
+					<div class="programs-program-map">
+						<div class="programs-club" data-aos="fade-down" data-aos-delay="250">
+							<span>SCM</span>
+							<h3>Fixed Income</h3>
+							<p class="mb-0">Credit and rates-oriented education for students who want to understand debt markets, macro risk, and capital structure.</p>
+						</div>
+						<div class="programs-club" data-aos="fade-down" data-aos-delay="300">
+							<span>QFS</span>
+							<h3>Multi-Strategy Investing</h3>
+							<p class="mb-0">Long/short, global macro, and quantitative pods that give students multiple ways to study markets and express views.</p>
+						</div>
+						<div class="programs-club" data-aos="fade-down" data-aos-delay="350">
+							<span>IAG</span>
+							<h3>Long-Only Equity</h3>
+							<p class="mb-0">Real-money, value-oriented investing focused on company analysis, security selection, and portfolio discipline.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+
+			<section class="programs-section programs-curriculum">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-6" data-aos="fade-down" data-aos-delay="0">
+							<p class="programs-eyebrow">Scholars Training</p>
+							<h2 class="programs-heading">A shared foundation before students specialize.</h2>
+						</div>
+						<div class="col-lg-7" data-aos="fade-down" data-aos-delay="100">
+							<p class="programs-copy mb-0">The program starts with practical finance training, then moves into pod-specific lessons that expose scholars to the major investment approaches represented across the three clubs.</p>
+						</div>
+					</div>
+					<div class="programs-training-grid">
+						<div class="programs-training" data-aos="fade-down" data-aos-delay="200">
+							<h3>General Training</h3>
+							<ul class="programs-chip-list">
+								<li>Accounting</li>
+								<li>Enterprise Value / Equity Value</li>
+								<li>DCF Analysis</li>
+								<li>M&amp;A Modeling</li>
+								<li>LBO Modeling</li>
+							</ul>
+						</div>
+						<div class="programs-training" data-aos="fade-down" data-aos-delay="300">
+							<h3>Pod-Specific Lessons</h3>
+							<ul class="programs-chip-list">
+								<li>Long-Only Investing</li>
+								<li>Long/Short Equity</li>
+								<li>Global Macro</li>
+								<li>Quant Investing</li>
+								<li>Fixed Income</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="programs-section">
+				<div class="container">
+					<div class="row align-items-end justify-content-between">
+						<div class="col-lg-7" data-aos="fade-down" data-aos-delay="0">
+							<p class="programs-eyebrow">Why It Matters</p>
+							<h2 class="programs-heading">The unified initiative makes every program stronger.</h2>
+						</div>
+						<div class="col-lg-7" data-aos="fade-down" data-aos-delay="100">
+							<p class="programs-copy mb-0">Pooling curriculum, alumni networks, and event resources gives scholars a more serious platform than any single club could build alone.</p>
+						</div>
+					</div>
+					<div class="programs-impact-grid">
+						<div class="programs-card" data-aos="fade-down" data-aos-delay="150">
+							<div class="programs-impact-number">1</div>
+							<h3 class="h4 mb-3">World Class Curriculum</h3>
+							<p class="mb-0">Five weeks of technical training followed by strategy-specific sessions across the clubs.</p>
+						</div>
+						<div class="programs-card" data-aos="fade-down" data-aos-delay="200">
+							<div class="programs-impact-number">2</div>
+							<h3 class="h4 mb-3">Speaker Series</h3>
+							<p class="mb-0">Combined alumni and advisory-board resources unlock higher-caliber industry speakers and guest lecturers.</p>
+						</div>
+						<div class="programs-card" data-aos="fade-down" data-aos-delay="250">
+							<div class="programs-impact-number">3</div>
+							<h3 class="h4 mb-3">Internship Pipeline</h3>
+							<p class="mb-0">The initiative creates a structured pathway from analyst training toward stronger recruiting outcomes.</p>
+						</div>
+						<div class="programs-card" data-aos="fade-down" data-aos-delay="300">
+							<div class="programs-impact-number">4</div>
+							<h3 class="h4 mb-3">Cross-Club Community</h3>
+							<p class="mb-0">Scholars train together, forming durable relationships across strategies and organizations.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="programs-section programs-section-tight bg-bg-3">
+				<div class="container">
+					<div class="programs-competition">
+						<div data-aos="fade-down" data-aos-delay="0">
+							<p class="programs-eyebrow">National Platform</p>
+							<h2 class="programs-heading">Rosenwald Investment Competition</h2>
+							<p class="programs-copy">With SCM, QFS, and IAG operating under the Investment Management Initiative, NYU can host larger, more competitive events that bring top students from across the country to campus.</p>
+							<div class="programs-card mt-6">
+								<h3 class="h4 mb-3">The Vision</h3>
+								<p>Build on the Rosenwald Investment Competition and turn NYU into a destination for serious student investors.</p>
+								<ul>
+									<li>Raise Stern's national profile in investment management.</li>
+									<li>Build cross-university alumni networks.</li>
+									<li>Create a prestigious credential for Scholars.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="programs-photo" data-aos="fade-down" data-aos-delay="150">
+							<div class="programs-photo-card">
+								<p>Premier investing education across long-only, long/short, global macro, quantitative, and fixed income investing.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 		<!-- Footer 2 -->
 			<footer class="py-8 text-center bg-dvdkempblue">
 				<div class="container">
