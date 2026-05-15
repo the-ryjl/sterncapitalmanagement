@@ -19275,3 +19275,127 @@ a:not([data-aos]):not(.btn):hover {
 .testcontainer{
   margin: auto
 }
+
+.team-page {
+				background: #f7f9fc;
+				color: #14233b;
+	}
+.team-nav-dropdown {
+				display: inline-block;
+	}
+.team-nav-dropdown .dropdown-toggle::after {
+				margin-left: 0.45rem;
+				vertical-align: 0.12em;
+	}
+.team-nav-menu {
+				border: 1px solid rgba(20, 35, 59, 0.1);
+				border-radius: 8px;
+				box-shadow: 0 18px 45px rgba(20, 35, 59, 0.12);
+				padding: 0.55rem;
+	}
+.team-nav-menu .dropdown-item {
+				border-radius: 6px;
+				color: #14233b;
+				font-weight: 700;
+				padding: 0.65rem 0.85rem;
+	}
+.team-nav-menu .dropdown-item:hover {
+				background: #eef3fb;
+				color: #213c73;
+	}
+.team-hero {
+				background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 48%, #e9eef6 100%);
+				overflow: hidden;
+				position: relative;
+	}
+.team-eyebrow {
+				color: #405a86;
+				font-size: 0.78rem;
+				font-weight: 800;
+				letter-spacing: 0;
+				text-transform: uppercase;
+	}
+.team-hero-panel {
+				background: #ffffff;
+				border: 1px solid rgba(20, 35, 59, 0.1);
+				border-radius: 8px;
+				box-shadow: 0 26px 70px rgba(25, 42, 70, 0.12);
+				position: relative;
+	}
+.team-stat {
+				border-left: 3px solid #243f75;
+				padding-left: 1rem;
+	}
+.team-hero-actions {
+				align-items: stretch;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.75rem;
+	}
+.team-hero-actions .btn {
+				margin: 0 !important;
+	}
+.team-card {
+				background: #ffffff;
+				border: 1px solid rgba(20, 35, 59, 0.11);
+				border-radius: 8px;
+				box-shadow: 0 14px 34px rgba(25, 42, 70, 0.08);
+				height: 100%;
+				overflow: hidden;
+				transition: transform 180ms ease, box-shadow 180ms ease;
+	}
+.team-card:hover {
+				box-shadow: 0 20px 46px rgba(25, 42, 70, 0.13);
+				transform: translateY(-4px);
+	}
+.team-grid-row {
+				row-gap: 1.5rem;
+	}
+.team-card-top {
+					align-items: center;
+					background: #eef3fb;
+					display: flex;
+					gap: 1rem;
+					height: 100%;
+					padding: 1.15rem;
+	}
+.team-card img {
+				aspect-ratio: 1 / 1;
+				border: 4px solid #ffffff;
+				border-radius: 50%;
+				height: 96px;
+				object-fit: cover;
+				width: 96px;
+	}
+.team-role {
+				color: #405a86;
+				font-weight: 700;
+	}
+.coffee-chat {
+				background: #14233b;
+				color: #ffffff;
+				overflow: hidden;
+				position: relative;
+	}
+.team-pill {
+				background: rgba(255,255,255,0.12);
+				border: 1px solid rgba(255,255,255,0.2);
+				border-radius: 999px;
+				color: #ffffff;
+				display: inline-block;
+				font-size: 0.78rem;
+				font-weight: 800;
+				letter-spacing: 0;
+				padding: 0.45rem 0.8rem;
+				text-transform: uppercase;
+	}
+@media (max-width: 575.98px) {
+				.team-hero-actions .btn {
+					flex: 1 1 100%;
+					text-align: center;
+				}
+				.team-card-top {
+					align-items: flex-start;
+					flex-direction: column;
+				}
+	}

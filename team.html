@@ -54,9 +54,15 @@
 				</div>
 				<div>
 					<a href="team.html" class="fw-bold text-dark-1 py-2 d-inline-block">Team</a>
+					<div class="ps-4">
+						<a href="#executive-board" class="text-dark-1 py-1 d-inline-block">Executive Board</a>
+					</div>
+					<div class="ps-4">
+						<a href="#coffee-chat" class="text-dark-1 py-1 d-inline-block">Coffee Chat</a>
+					</div>
 				</div>
 				<div>
-					<a href="team.html" class="fw-bold text-dark-1 py-2 d-inline-block">Programs</a>
+					<a href="programs.html" class="fw-bold text-dark-1 py-2 d-inline-block">Programs</a>
 				<div>
 					<a href="events.html" class="btn btn-sm rounded-2 mt-4 btn-outline-dvdkempblue">Events</a>
 				</div>
@@ -74,7 +80,13 @@
 						<a href="index.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="100">Home                    </a>
 						<a href="about.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="200">About</a>
 						<a href="adboard.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="300">Advisory Board</a>
-						<a href="team.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="300">Team</a>
+						<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="300">
+							<a href="team.html" class="fw-bold mx-4 text-dark-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Team</a>
+							<ul class="dropdown-menu team-nav-menu">
+								<li><a class="dropdown-item" href="team.html">Team Overview</a></li>
+								<li><a class="dropdown-item" href="#coffee-chat">Coffee Chat</a></li>
+							</ul>
+						</div>
 						<a href="programs.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="400">Programs</a>
 						<a href="events.html" class="ms-4 btn btn-sm rounded-2 text-dvdkempblue btn-light-1 border border-dvdkempblue" data-aos="fade-down" data-aos-delay="500">Events</a>
 						<a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank" class="ms-4 btn btn-sm rounded-2 btn-dvdkempblue" data-aos="fade-down" data-aos-delay="500">Mailing List</a>
@@ -83,69 +95,113 @@
 			</div>
 		</div>
 	</nav>
-	<!-- Team 2 -->
-		<section class="py-10 py-lg-20 text-center">
+	<main class="team-page">
+
+		<section id="executive-board" class="py-10 py-lg-20">
 			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-md-9 col-lg-7 col-xl-6 col-xxl-5">
-						<h2 class="display-5 mb-10" data-aos="fade-down" data-aos-delay="0">Executive Board</h2>
+				<div class="row align-items-end mb-8">
+					<div class="col-lg-7" data-aos="fade-down" data-aos-delay="0">
+						<p class="team-eyebrow mb-3">Leadership</p>
+						<h2 class="display-5 mb-0">Executive Board</h2>
 					</div>
 				</div>
-				<div class="row justify-content-center">
-					<div class="col-sm-6 col-md-5 col-lg-3 mb-6 mb-lg-0" data-aos="fade-down" data-aos-delay="200">
-						<div class="border rounded-2 border-dark-3 p-6 h-100">
-							<img src="assets/headshots/jonathan.jpg" alt="" class="img-fluid rounded-circle mb-6" srcset="assets/headshots/jonathan.jpg 2x">
-							<h5 class="mb-2">Jonathan Renger</h5>
-							<p class="mb-4">President</p>
-						</div>
+				<div class="row team-grid-row justify-content-center">
+					<div class="col-md-6 col-xl-4" data-aos="fade-down" data-aos-delay="100">
+						<article class="team-card">
+							<div class="team-card-top">
+								<img src="assets/headshots/jonathan.jpg" alt="Jonathan Renger headshot">
+								<div>
+									<h5 class="mb-1">Jonathan Renger</h5>
+									<p class="team-role mb-0">Co-President</p>
+								</div>
+							</div>
+							</article>
 					</div>
-					<div class="col-sm-6 col-md-5 col-lg-3 mb-6 mb-lg-0" data-aos="fade-down" data-aos-delay="300">
-						<div class="border rounded-2 border-dark-3 p-6 h-100">
-							<img src="assets/headshots/soorya.png" alt="" class="img-fluid rounded-circle mb-6" srcset="assets/headshots/soorya.png 2x">
-							<h5 class="mb-2">Soorya Sivaganesan</h5>
-							<p class="mb-4">Vice President</p>
-						</div>
+					<div class="col-md-6 col-xl-4" data-aos="fade-down" data-aos-delay="150">
+						<article class="team-card">
+							<div class="team-card-top">
+								<img src="assets/headshots/ryan2.png" alt="Ryan Lee headshot">
+								<div>
+									<h5 class="mb-1">Ryan Lee</h5>
+									<p class="team-role mb-0">Co-President</p>
+								</div>
+							</div>
+							</article>
 					</div>
-					<div class="col-sm-6 col-md-5 col-lg-3 mb-6 mb-sm-0" data-aos="fade-down" data-aos-delay="400">
-						<div class="border rounded-2 border-dark-3 p-6 h-100">
-							<img src="assets/headshots/daniel.png" alt="" class="img-fluid rounded-circle mb-6" srcset="assets/headshots/daniel.png 2x">
-							<h5 class="mb-2 w-100">Daniel Armanious</h5>
-							<p class="mb-4">VP of Membership</p>
-						</div>
+					<div class="col-md-6 col-xl-4" data-aos="fade-down" data-aos-delay="200">
+						<article class="team-card">
+							<div class="team-card-top">
+								<img src="assets/headshots/mukhammad.jpg" alt="Mukhammad headshot">
+								<div>
+									<h5 class="mb-1">Mukhammad Anvarkhonov</h5>
+									<p class="team-role mb-0">Vice President</p>
+								</div>
+							</div>
+							</article>
 					</div>
-					<div class="col-sm-6 col-md-5 col-lg-3" data-aos="fade-down" data-aos-delay="500">
-						<div class="border rounded-2 border-dark-3 p-6 h-100">
-							<img src="assets/headshots/mia.jpg" alt="" class="img-fluid rounded-circle mb-6" srcset="assets/headshots/mia.jpg 2x">
-							<h5 class="mb-2">Mia Vaisman</h5>
-							<p class="mb-4">Secretary</p>
-						</div>
+					<div class="col-md-6 col-xl-4" data-aos="fade-down" data-aos-delay="100">
+						<article class="team-card">
+							<div class="team-card-top">
+								<img src="assets/headshots/mia.jpg" alt="Mia Vaisman headshot">
+								<div>
+									<h5 class="mb-1">Mia Vaisman</h5>
+									<p class="team-role mb-0">Secretary</p>
+								</div>
+							</div>
+							</article>
 					</div>
-				</div>
-				<div class="row justify-content-center mt-lg-8">
-					<div class="col-sm-6 col-md-5 col-lg-3" data-aos="fade-down" data-aos-delay="500">
-						<div class="border rounded-2 border-dark-3 p-6 h-100">
-							<img src="assets/headshots/nina.png" alt="" class="img-fluid rounded-circle mb-6" srcset="assets/headshots/nina.png 2x">
-							<h5 class="mb-2">Nina Wang</h5>
-							<p class="mb-4">Director of Events</p>
-						</div>
+					<div class="col-md-6 col-xl-4" data-aos="fade-down" data-aos-delay="150">
+						<article class="team-card">
+							<div class="team-card-top">
+								<img src="assets/headshots/placeholder-headshot.svg" alt="placeholder">
+								<div>
+									<h5 class="mb-1">Joey Mallozzi</h5>
+									<p class="team-role mb-0">Director of Marketing</p>
+								</div>
+							</div>
+							</article>
 					</div>
-					<div class="col-sm-6 col-md-5 col-lg-3" data-aos="fade-down" data-aos-delay="500">
-						<div class="border rounded-2 border-dark-3 p-6 h-100">
-							<img src="assets/headshots/mukhammad.jpg" srcset="assets/headshots/mukhammad.jpg 2x" alt="" class="img-fluid rounded-circle mb-6">
-							<h5 class="mb-2">Mukhammad Anvarkhonov</h5>
-							<p class="mb-4">Treasurer</p>
-						</div>
+					<div class="col-md-6 col-xl-4" data-aos="fade-down" data-aos-delay="200">
+						<article class="team-card">
+							<div class="team-card-top">
+								<img src="assets/headshots/placeholder-headshot.svg" alt="Vartan headshot">
+								<div>
+									<h5 class="mb-1">Vartan Yildiz</h5>
+									<p class="team-role mb-0">Treasurer</p>
+								</div>
+							</div>
+							</article>
 					</div>
-					<div class="col-sm-6 col-md-5 col-lg-3" data-aos="fade-down" data-aos-delay="500">
-						<div class="border rounded-2 border-dark-3 p-6 h-100">
-							<img src="assets/headshots/ryan2.png" alt="" class="img-fluid rounded-circle mb-6" srcset="assets/headshots/ryan2.png 2x">
-							<h5 class="mb-2">Ryan Lee</h5>
-							<p class="mb-4">VP of Marketing</p>
-						</div>
+					<div class="col-md-6 col-xl-4" data-aos="fade-down" data-aos-delay="100">
+						<article class="team-card">
+							<div class="team-card-top">
+								<img src="assets/headshots/placeholder-headshot.svg" alt="Amaan headshot">
+								<div>
+									<h5 class="mb-1">Amaan Arif</h5>
+									<p class="team-role mb-0">VP of PMs</p>
+								</div>
+							</div>
+							</article>
 					</div>
 				</div>
 			</div>
 		</section>
+
+		<section id="coffee-chat" class="coffee-chat py-10 py-lg-14">
+			<div class="container position-relative">
+				<div class="row align-items-center">
+					<div class="col-lg-8" data-aos="fade-down" data-aos-delay="0">
+						<span class="team-pill mb-5">Coffee Chat</span>
+						<h2 class="display-5 mb-4 text-light-1">Curious about SCM? Start with a conversation.</h2>
+						<p class="fs-1 mb-0 text-light-1">Use the form to request a short chat with a board member about joining, recruiting, research, or what happens inside weekly meetings. Alternatively, email us at: </strong><a href="mailto:scm@stern.nyu.edu" target="_blank"><strong>scm@stern.nyu.edu</strong></a></p>
+					</div>
+					<div class="col-lg-4 text-lg-end mt-8 mt-lg-0" data-aos="fade-down" data-aos-delay="150">
+						<a href="https://forms.gle/replace-with-your-coffee-chat-form" target="_blank" class="btn btn-light-1 text-dvdkempblue">Open Google Form</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 		<!-- Footer 2 -->
 			<footer class="py-8 text-center bg-dvdkempblue">
 				<div class="container">
