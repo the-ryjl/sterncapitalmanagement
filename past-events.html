@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Events - Stern Capital Management</title>
+		<title>Past Events - Stern Capital Management</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="custom" content="MzI0Mjcx" id="snextras">
 		<link rel="icon" href="assets/favicon-32x32.png">
@@ -21,44 +21,39 @@
 				display: block;
 			}
 
-			.events-page {
-				--event-ink: #111b29;
-				--event-blue: #243f63;
-				--event-wine: #7b1632;
-				--event-gold: #c9a45c;
-				--event-sky: #e9f1f4;
-				--event-line: rgba(17, 27, 41, 0.14);
-				--event-muted: #5f6c7b;
+			.past-events-page {
+				--archive-ink: #111b29;
+				--archive-blue: #243f63;
+				--archive-wine: #7b1632;
+				--archive-gold: #c9a45c;
+				--archive-line: rgba(17, 27, 41, 0.14);
+				--archive-muted: #5f6c7b;
 				background: #f8fafb;
-				color: var(--event-ink);
-				overflow: hidden;
+				color: var(--archive-ink);
 			}
 
-			.events-hero {
+			.archive-hero {
 				position: relative;
-				min-height: calc(100vh - 108px);
-				padding: 5rem 0 4rem;
-				display: flex;
-				align-items: center;
+				padding: 5.5rem 0 4.5rem;
 				background:
-					linear-gradient(90deg, rgba(17, 27, 41, 0.92) 0%, rgba(17, 27, 41, 0.78) 42%, rgba(17, 27, 41, 0.25) 100%),
-					url("assets/eventsphotos/tischstairslobby.jpg") center/cover no-repeat;
+					linear-gradient(90deg, rgba(17, 27, 41, 0.9), rgba(36, 63, 99, 0.78)),
+					url("assets/eventsphotos/alumnievent.jpg") center/cover no-repeat;
 				color: #fff;
 			}
 
-			.events-hero::after {
+			.archive-hero::after {
 				content: "";
 				position: absolute;
 				inset: auto 0 0;
 				height: 10px;
-				background: linear-gradient(90deg, var(--event-wine), var(--event-gold), #4c6f86);
+				background: linear-gradient(90deg, var(--archive-wine), var(--archive-gold), #4c6f86);
 			}
 
-			.events-kicker {
+			.archive-kicker {
 				display: inline-flex;
 				align-items: center;
 				gap: 0.7rem;
-				margin-bottom: 1.25rem;
+				margin-bottom: 1rem;
 				color: rgba(255, 255, 255, 0.85);
 				font-size: 0.78rem;
 				font-weight: 800;
@@ -66,294 +61,170 @@
 				text-transform: uppercase;
 			}
 
-			.events-kicker::before {
+			.archive-kicker::before {
 				content: "";
 				width: 2.2rem;
 				height: 2px;
-				background: var(--event-gold);
+				background: var(--archive-gold);
 			}
 
-			.events-title {
-				max-width: 880px;
-				margin-bottom: 1.25rem;
+			.archive-title {
+				max-width: 820px;
+				margin-bottom: 1rem;
 				color: #fff;
-				font-size: clamp(3rem, 8vw, 6.6rem);
-				line-height: 0.95;
+				font-size: clamp(3rem, 7vw, 6rem);
+				line-height: 0.96;
 				letter-spacing: 0;
 			}
 
-			.events-lede {
-				max-width: 690px;
-				margin-bottom: 2rem;
-				color: rgba(255, 255, 255, 0.86);
-				font-size: 1.18rem;
-				line-height: 1.7;
+			.archive-lede {
+				max-width: 720px;
+				color: rgba(255, 255, 255, 0.85);
+				font-size: 1.12rem;
+				line-height: 1.75;
 			}
 
-			.events-actions {
+			.archive-section {
+				padding: 4.8rem 0;
+			}
+
+			.archive-toolbar {
 				display: flex;
-				flex-wrap: wrap;
-				gap: 0.85rem;
-			}
-
-			.events-btn {
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
-				min-height: 48px;
-				padding: 0.85rem 1.2rem;
-				border-radius: 6px;
-				font-weight: 800;
-				line-height: 1.2;
-				transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-			}
-
-			.events-btn:hover {
-				transform: translateY(-2px);
-			}
-
-			.events-btn-primary {
-				background: #172132;
-				color: var(--event-ink);
-			}
-
-			.events-btn-secondary {
-				background: #fff;
-				color: var(--event-ink);
-			}
-
-			.events-btn-outline {
-				border: 1px solid rgba(255, 255, 255, 0.45);
-				color: #fff;
-			}
-
-			.events-section {
-				padding: 5rem 0;
-			}
-
-			.events-section-alt {
-				background: #fff;
-			}
-
-			.events-section-head {
-				max-width: 760px;
+				justify-content: space-between;
+				align-items: end;
+				gap: 1.5rem;
 				margin-bottom: 2rem;
 			}
 
-			.events-eyebrow {
+			.archive-eyebrow {
 				margin-bottom: 0.7rem;
-				color: var(--event-wine);
+				color: var(--archive-wine);
 				font-size: 0.78rem;
 				font-weight: 800;
 				letter-spacing: 0.14em;
 				text-transform: uppercase;
 			}
 
-			.events-heading {
-				margin-bottom: 0.85rem;
-				color: var(--event-ink);
+			.archive-heading {
+				margin: 0;
+				color: var(--archive-ink);
 				font-size: clamp(2rem, 4vw, 3.25rem);
 				line-height: 1.02;
 				letter-spacing: 0;
 			}
 
-			.events-copy {
-				color: var(--event-muted);
-				font-size: 1.05rem;
-				line-height: 1.75;
+			.archive-back {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 46px;
+				padding: 0.8rem 1rem;
+				border: 1px solid var(--archive-blue);
+				border-radius: 6px;
+				color: var(--archive-blue);
+				font-weight: 800;
+				line-height: 1.2;
 			}
 
-			.next-event {
+			.archive-grid {
 				display: grid;
-				grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-				min-height: 520px;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1px;
+				background: var(--archive-line);
+				border: 1px solid var(--archive-line);
+			}
+
+			.archive-card {
+				display: flex;
+				flex-direction: column;
+				min-height: 100%;
 				background: #fff;
-				border: 1px solid var(--event-line);
 			}
 
-			.next-event-media {
+			.archive-card-media {
 				position: relative;
-				min-height: 420px;
-				background: url("assets/eventsphotos/newcomingsoon.png") center/cover no-repeat;
+				aspect-ratio: 4 / 3;
+				background: #e9f1f4 center/cover no-repeat;
 			}
 
-			.next-event-media::after {
+			.archive-card-media::after {
 				content: "";
 				position: absolute;
 				inset: 0;
-				background: linear-gradient(180deg, rgba(17, 27, 41, 0.04), rgba(17, 27, 41, 0.36));
+				background: linear-gradient(180deg, rgba(17, 27, 41, 0), rgba(17, 27, 41, 0.24));
 			}
 
-			.next-event-badge {
-				position: absolute;
-				left: 1.5rem;
-				bottom: 1.5rem;
-				z-index: 1;
-				padding: 0.55rem 0.75rem;
-				background: rgba(255, 255, 255, 0.92);
-				color: var(--event-blue);
-				font-size: 0.78rem;
+			.archive-card-body {
+				flex: 1;
+				padding: 1.45rem;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.archive-card-type {
+				margin-bottom: 0.65rem;
+				color: var(--archive-wine);
+				font-size: 0.75rem;
 				font-weight: 900;
 				letter-spacing: 0.12em;
 				text-transform: uppercase;
 			}
 
-			.next-event-body {
-				padding: clamp(2rem, 4vw, 3.5rem);
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
+			.archive-card h3 {
+				margin-bottom: 0.4rem;
+				color: var(--archive-ink);
+				font-size: 1.45rem;
+				line-height: 1.12;
+				letter-spacing: 0;
 			}
 
-			.next-event-title {
+			.archive-firm {
 				margin-bottom: 1rem;
-				color: var(--event-ink);
-				font-size: clamp(2rem, 4vw, 3.7rem);
-				line-height: 1;
-				letter-spacing: 0;
+				color: var(--archive-muted);
+				line-height: 1.55;
 			}
 
-			.next-event-text {
-				margin-bottom: 1.6rem;
-				color: var(--event-muted);
-				font-size: 1.05rem;
-				line-height: 1.75;
-			}
-
-			.event-facts {
-				display: grid;
-				gap: 0.75rem;
-				margin: 0 0 1.8rem;
-				padding: 0;
-				list-style: none;
-			}
-
-			.event-fact {
-				display: grid;
-				grid-template-columns: 42px minmax(0, 1fr);
-				gap: 0.9rem;
-				align-items: center;
-				padding: 0.85rem 0;
-				border-top: 1px solid var(--event-line);
-			}
-
-			.event-fact:last-child {
-				border-bottom: 1px solid var(--event-line);
-			}
-
-			.event-icon {
-				width: 42px;
-				height: 42px;
-				flex: 0 0 42px;
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
-				background: var(--event-sky);
-				color: var(--event-blue);
-				border-radius: 50%;
-			}
-
-			.event-icon svg {
-				display: block;
-				width: 18px;
-				height: 18px;
-			}
-
-			.event-fact > span:not(.event-icon) {
-				display: block;
-				color: var(--event-muted);
-				font-size: 0.82rem;
-				font-weight: 800;
-				letter-spacing: 0.08em;
-				text-transform: uppercase;
-			}
-
-			.event-fact strong {
-				display: block;
-				margin-top: 0.15rem;
-				color: var(--event-ink);
-				font-size: 1rem;
-			}
-
-			.event-card-grid {
-				display: grid;
-				grid-template-columns: repeat(3, minmax(0, 1fr));
-				gap: 1px;
-				background: var(--event-line);
-				border: 1px solid var(--event-line);
-			}
-
-			.event-info-card {
-				min-height: 270px;
-				padding: 1.6rem;
-				background: #fff;
-			}
-
-			.event-info-card h3 {
-				margin-bottom: 0.8rem;
-				color: var(--event-ink);
-				font-size: 1.35rem;
-				line-height: 1.18;
-				letter-spacing: 0;
-			}
-
-			.event-info-card p {
-				margin-bottom: 0;
-				color: var(--event-muted);
+			.archive-meta {
+				margin: auto 0 1.1rem;
+				padding: 1rem 0 0;
+				border-top: 1px solid var(--archive-line);
+				color: var(--archive-muted);
+				font-size: 0.95rem;
 				line-height: 1.7;
 			}
 
-			.archive-band {
-				position: relative;
-				padding: 4rem 0;
-				background:
-					linear-gradient(90deg, rgba(36, 63, 99, 0.95), rgba(123, 22, 50, 0.88)),
-					url("assets/eventsphotos/alumnievent.jpg") center/cover no-repeat;
-				color: #fff;
+			.archive-meta strong {
+				color: var(--archive-ink);
 			}
 
-			.archive-band h2 {
-				color: #fff;
-				font-size: clamp(2rem, 4vw, 3.6rem);
-				line-height: 1.02;
-				letter-spacing: 0;
-			}
-
-			.archive-band p {
-				max-width: 660px;
-				margin-bottom: 1.5rem;
-				color: rgba(255, 255, 255, 0.84);
-				font-size: 1.05rem;
-				line-height: 1.7;
+			.archive-card a {
+				align-self: flex-start;
 			}
 
 			@media (max-width: 991.98px) {
-				.events-hero {
-					min-height: auto;
-					padding: 4rem 0 3.5rem;
+				.archive-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+				}
+			}
+
+			@media (max-width: 767.98px) {
+				.archive-toolbar {
+					align-items: stretch;
+					flex-direction: column;
 				}
 
-				.next-event {
-					grid-template-columns: 1fr;
-				}
-
-				.event-card-grid {
-					grid-template-columns: 1fr;
+				.archive-back {
+					width: 100%;
 				}
 			}
 
 			@media (max-width: 575.98px) {
-				.events-actions,
-				.events-actions .events-btn {
-					width: 100%;
-				}
-
-				.events-section {
+				.archive-section {
 					padding: 3.4rem 0;
 				}
 
-				.next-event-media {
-					min-height: 300px;
+				.archive-grid {
+					grid-template-columns: 1fr;
 				}
 			}
 		</style>
@@ -388,8 +259,8 @@
 						<div class="ps-4"><a href="team.html#coffee-chat" class="text-dark-1 py-1 d-inline-block">Coffee Chat</a></div>
 					</div>
 					<div><a href="programs.html" class="fw-bold text-dark-1 py-2 d-inline-block">Programs</a></div>
-					<div><a href="events.html" class="btn btn-sm rounded-2 mt-4 btn-outline-dvdkempblue">Events</a></div>
-					<div><a href="past-events.html" class="fw-bold text-dark-1 py-2 d-inline-block">Past Events</a></div>
+					<div><a href="events.html" class="fw-bold text-dark-1 py-2 d-inline-block">Upcoming Events</a></div>
+					<div><a href="past-events.html" class="btn btn-sm rounded-2 mt-4 btn-outline-dvdkempblue">Past Events</a></div>
 					<a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" class="btn btn-action-1 btn-sm rounded-2 mt-4 btn-dvdkempblue">Mailing List</a>
 				</div>
 			</div>
@@ -412,7 +283,7 @@
 							</div>
 							<a href="programs.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="400">Programs</a>
 							<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="500">
-								<a href="events.html" class="ms-4 btn btn-sm rounded-2 text-dvdkempblue btn-light-1 border border-dvdkempblue dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Events</a>
+								<a href="past-events.html" class="ms-4 btn btn-sm rounded-2 text-dvdkempblue btn-light-1 border border-dvdkempblue dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Events</a>
 								<ul class="dropdown-menu team-nav-menu">
 									<li><a class="dropdown-item" href="events.html">Upcoming Events</a></li>
 									<li><a class="dropdown-item" href="past-events.html">Past Events</a></li>
@@ -425,51 +296,109 @@
 			</div>
 		</nav>
 
-		<main class="events-page">
+		<main class="past-events-page">
 
-			<section class="events-section">
+			<section class="archive-section">
 				<div class="container">
-					<div class="events-section-head" data-aos="fade-up">
-						<div class="events-eyebrow">Upcoming</div>
-						<h2 class="events-heading">Next on the calendar</h2>
-						<p class="events-copy">We are finalizing the next speaker lineup. Meeting details stay here so students can quickly find the regular SCM touchpoint while new event announcements are prepared.</p>
+					<div class="archive-toolbar" data-aos="fade-up">
+						<div>
+							<div class="archive-eyebrow">2026 Speaker Series</div>
+							<h2 class="archive-heading">Previous Events</h2>
+						</div>
+						<a class="archive-back" href="events.html">Back to upcoming events</a>
 					</div>
-					<article class="next-event" data-aos="fade-up" data-aos-delay="100">
-						<div class="next-event-media">
-							<div class="next-event-badge">Coming soon</div>
-						</div>
-						<div class="next-event-body">
-							<h3 class="next-event-title">Speaker schedule in progress</h3>
-							<p class="next-event-text">Have a good summer vacation! New speaker series announcements and special sessions will be posted here when the semester calendar is ready.</p>
-							<ul class="event-facts">
-								<li class="event-fact">
-									<span class="event-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path></svg></span>
-									<span>Meeting day<strong>Monday general meetings</strong></span>
-								</li>
-								<li class="event-fact">
-									<span class="event-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path></svg></span>
-									<span>Time<strong>12:30 - 1:30 PM</strong></span>
-								</li>
-								<li class="event-fact">
-									<span class="event-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"></path></svg></span>
-									<span>Location<strong>Tisch 200</strong></span>
-								</li>
-							</ul>
-							<div class="events-actions">
-								<a class="events-btn events-btn-primary btn-dvdkempblue text-light-1" href="https://www.instagram.com/sterncapitalmanagement/" target="_blank">Follow updates</a>
-								<a class="events-btn border border-dvdkempblue text-dvdkempblue" href="past-events.html">Browse archive</a>
+					<div class="archive-grid">
+						<article class="archive-card" data-aos="fade-up">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/tudor.jpeg');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series 2026</div>
+								<h3>Giles Coppel</h3>
+								<p class="archive-firm">Tudor Investment Corporation</p>
+								<p class="archive-meta"><strong>Wednesday, Jan 21</strong><br>6:00 PM<br>KMC 3-130</p>
+								<a href="https://www.instagram.com/p/DTyzPewjn_p/?img_index=1" target="_blank" class="btn btn-dvdkempblue">More Info</a>
 							</div>
-						</div>
-					</article>
-				</div>
-			</section>
-
-			<section class="archive-band">
-				<div class="container" data-aos="fade-up">
-					<div class="events-eyebrow text-light-1">Archive</div>
-					<h2>Past events now live on their own page.</h2>
-					<p>The previous speaker series cards have moved out of the main events page, keeping this page focused on current opportunities while preserving the full event history.</p>
-					<a class="events-btn events-btn-secondary" href="past-events.html">Open past events</a>
+						</article>
+						<article class="archive-card" data-aos="fade-up" data-aos-delay="100">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/3gcapital.jpeg');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series 2026</div>
+								<h3>Bernardo Piquet</h3>
+								<p class="archive-firm">3G Capital</p>
+								<p class="archive-meta"><strong>Wednesday, Jan 28</strong><br>6:30 PM<br>KMC 3-55</p>
+								<a href="https://www.instagram.com/p/DT82u7vjgBm/" target="_blank" class="btn btn-dvdkempblue">More Info</a>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up" data-aos-delay="200">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/UN.jpeg');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series 2026</div>
+								<h3>Greg Solomon</h3>
+								<p class="archive-firm">United Nations Joint Staff Pension Fund</p>
+								<p class="archive-meta"><strong>Monday, Feb 9</strong><br>6:00 PM<br>Tisch 201</p>
+								<a href="https://www.instagram.com/p/DUkAlfWjvAn/?img_index=1" target="_blank" class="btn btn-dvdkempblue">More Info</a>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/jones.jpeg');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series 2026</div>
+								<h3>Soren Gandrud</h3>
+								<p class="archive-firm">Jones Hill Capital</p>
+								<p class="archive-meta"><strong>Tuesday, Feb 17</strong><br>6:30 PM<br>KMC 2-70</p>
+								<a href="https://www.instagram.com/p/DUyaGclDmGC/" target="_blank" class="btn btn-dvdkempblue">More Info</a>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up" data-aos-delay="100">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/atlantic.jpeg');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series 2026</div>
+								<h3>Alex Raytburg</h3>
+								<p class="archive-firm">Atlantic Investment Management</p>
+								<p class="archive-meta"><strong>Wednesday, Feb 25</strong><br>6:00 PM<br>KMC 2-70</p>
+								<a href="https://www.instagram.com/sterncapitalmanagement/" target="_blank" class="btn btn-dvdkempblue">More Info</a>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up" data-aos-delay="200">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/point72.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series 2026</div>
+								<h3>Chandler Bocklage</h3>
+								<p class="archive-firm">Point72</p>
+								<p class="archive-meta"><strong>Thursday, Mar 5</strong><br>6:30 PM<br>KMC 2-100</p>
+								<a href="https://www.instagram.com/p/DVM61yvDuv0/" target="_blank" class="btn btn-dvdkempblue">More Info</a>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/tenebrist.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series 2026</div>
+								<h3>James Reynolds</h3>
+								<p class="archive-firm">Tenebrist Global</p>
+								<p class="archive-meta"><strong>Wednesday, Mar 25</strong><br>6:00 PM<br>Tisch 201</p>
+								<a href="https://www.instagram.com/sterncapitalmanagement/" target="_blank" class="btn btn-dvdkempblue">More Info</a>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up" data-aos-delay="100">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/bluecrest.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series 2026</div>
+								<h3>Joshua Sheldon</h3>
+								<p class="archive-firm">BlueCrest Capital Management</p>
+								<p class="archive-meta"><strong>Thursday, Apr 16</strong><br>6:30 PM<br>KMC 2-60</p>
+								<a href="https://www.instagram.com/sterncapitalmanagement/" target="_blank" class="btn btn-dvdkempblue">More Info</a>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up" data-aos-delay="200">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/ubs.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series 2026</div>
+								<h3>Brian Zakrocki</h3>
+								<p class="archive-firm">UBS</p>
+								<p class="archive-meta"><strong>Tuesday, Apr 28</strong><br>6:30 PM<br>KMC 5-75</p>
+								<a href="https://www.instagram.com/sterncapitalmanagement/" target="_blank" class="btn btn-dvdkempblue">More Info</a>
+							</div>
+						</article>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -485,12 +414,12 @@
 						<a href="adboard.html" class="font-heading text-light-1 mx-sm-2 mx-md-2 mx-1">Advisory Board</a>
 						<a href="team.html" class="font-heading text-light-1 mx-sm-2 mx-1 mx-md-2">Team</a>
 						<a href="programs.html" class="font-heading text-light-1 mx-md-2 mx-sm-2 mx-1">Programs</a>
-						<a href="past-events.html" class="font-heading text-light-1 mx-md-2 mx-sm-2 mx-1">Past Events</a>
+						<a href="events.html" class="font-heading text-light-1 mx-md-2 mx-sm-2 mx-1">Events</a>
 					</div>
 					<div class="col-12 col-lg-2 col-md-3" data-aos="fade-down" data-aos-delay="200">
 						<a href="https://x.com/scmnyu" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin fill-light-1" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path></svg></a>
 						<a href="https://www.linkedin.com/company/stern-capital-management-nyu/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="mx-6 fill-light-1" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path></svg></a>
-						<a href="https://www.instagram.com/sterncapitalmanagement/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-light-1"><path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"></path></svg></a>
+							<a href="https://www.instagram.com/sterncapitalmanagement/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-light-1"><path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"></path></svg></a>
 					</div>
 				</div>
 				<div class="mt-6 mb-8 border-bottom border-light-1" data-aos="fade-down" data-aos-delay="300"></div>
