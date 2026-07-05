@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Membership - Stern Capital Management</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="custom" content="MzI0Mjcx" id="snextras">
+		<link rel="icon" href="assets/favicon-32x32.png">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&subset=latin&display=swap" rel="stylesheet" id="sf-google-fonts">
+		<link href="assets/homepage.css" rel="stylesheet" id="sf-custom-css"/>
+		<meta name="twitter:card" content="summary_large_image">
+		<style>
+			.team-nav-dropdown {
+				display: inline-block;
+			}
+
+			.team-nav-dropdown:hover .dropdown-menu,
+			.team-nav-dropdown:focus-within .dropdown-menu {
+				display: block;
+			}
+
+			.membership-page {
+				--scm-ink: #132234;
+				--scm-blue: #243f63;
+				--scm-maroon: #7b1632;
+				--scm-gold: #c9a45c;
+				--scm-line: rgba(19, 34, 52, 0.13);
+				background: #f8fafb;
+				color: var(--scm-ink);
+				overflow: hidden;
+			}
+
+			.membership-hero {
+				position: relative;
+				padding: 6rem 0 5rem;
+				background:
+					linear-gradient(90deg, rgba(19, 34, 52, 0.94) 0%, rgba(19, 34, 52, 0.8) 52%, rgba(19, 34, 52, 0.3) 100%),
+					url("assets/eventsphotos/tischstairslobby.jpg") center/cover no-repeat;
+				color: #fff;
+			}
+
+			.membership-hero::after {
+				content: "";
+				position: absolute;
+				inset: auto 0 0;
+				height: 9px;
+				background: linear-gradient(90deg, var(--scm-maroon), var(--scm-gold), #4c6f86);
+			}
+
+			.membership-kicker {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.65rem;
+				margin-bottom: 1.25rem;
+				color: rgba(255, 255, 255, 0.86);
+				font-size: 0.78rem;
+				font-weight: 800;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+			}
+
+			.membership-kicker::before {
+				content: "";
+				width: 2rem;
+				height: 2px;
+				background: var(--scm-gold);
+			}
+
+			.membership-title {
+				max-width: 820px;
+				margin-bottom: 1.3rem;
+				color: #fff;
+				font-size: clamp(3rem, 7vw, 5.8rem);
+				line-height: 0.95;
+				letter-spacing: 0;
+			}
+
+			.membership-lede {
+				max-width: 720px;
+				margin-bottom: 2rem;
+				color: rgba(255, 255, 255, 0.86);
+				font-size: 1.18rem;
+				line-height: 1.7;
+			}
+
+			.membership-hero-card {
+				display: inline-flex;
+				align-items: center;
+				gap: 1.2rem;
+				padding: 1.1rem 1.25rem;
+				background: rgba(255, 255, 255, 0.1);
+				border: 1px solid rgba(255, 255, 255, 0.22);
+				border-radius: 8px;
+				backdrop-filter: blur(12px);
+			}
+
+			.membership-hero-card strong {
+				color: #fff;
+				font-size: 2.35rem;
+				line-height: 1;
+			}
+
+			.membership-hero-card span {
+				max-width: 310px;
+				color: rgba(255, 255, 255, 0.82);
+				line-height: 1.45;
+			}
+
+			.membership-section {
+				padding: 4.7rem 0;
+			}
+
+			.membership-eyebrow {
+				margin-bottom: 0.7rem;
+				color: var(--scm-maroon);
+				font-size: 0.78rem;
+				font-weight: 800;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+			}
+
+			.membership-heading {
+				margin-bottom: 1rem;
+				color: var(--scm-ink);
+				font-size: clamp(2rem, 4vw, 3.25rem);
+				letter-spacing: 0;
+			}
+
+			.membership-copy {
+				color: rgba(19, 34, 52, 0.72);
+				font-size: 1.04rem;
+				line-height: 1.75;
+			}
+
+			.membership-benefits-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 1rem;
+				margin-top: 2rem;
+			}
+
+			.membership-card {
+				height: 100%;
+				padding: 1.6rem;
+				background: #fff;
+				border: 1px solid var(--scm-line);
+				border-radius: 8px;
+				box-shadow: 0 18px 45px rgba(19, 34, 52, 0.06);
+			}
+
+			.membership-card h3 {
+				margin-bottom: 0.75rem;
+				color: var(--scm-ink);
+				letter-spacing: 0;
+			}
+
+			.membership-card p,
+			.membership-card li {
+				color: rgba(19, 34, 52, 0.72);
+				line-height: 1.65;
+			}
+
+			.membership-number {
+				display: inline-grid;
+				place-items: center;
+				width: 2.35rem;
+				height: 2.35rem;
+				margin-bottom: 1.1rem;
+				color: #fff;
+				background: var(--scm-blue);
+				border-radius: 50%;
+				font-weight: 800;
+			}
+
+			.membership-card:nth-child(2) .membership-number {
+				background: var(--scm-maroon);
+			}
+
+			.membership-card:nth-child(3) .membership-number {
+				background: var(--scm-gold);
+			}
+
+			.membership-requirements {
+				background: var(--scm-ink);
+				color: #fff;
+			}
+
+			.membership-requirements .membership-eyebrow,
+			.membership-requirements .membership-heading {
+				color: #fff;
+			}
+
+			.membership-requirements .membership-copy {
+				color: rgba(255, 255, 255, 0.74);
+			}
+
+			.membership-rule {
+				display: grid;
+				grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+				gap: 2rem;
+				align-items: stretch;
+				margin-top: 2rem;
+			}
+
+			.membership-percent {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				min-height: 300px;
+				padding: 2rem;
+				background: rgba(255, 255, 255, 0.08);
+				border: 1px solid rgba(255, 255, 255, 0.16);
+				border-radius: 8px;
+			}
+
+			.membership-percent strong {
+				color: #fff;
+				font-size: clamp(5rem, 13vw, 9rem);
+				line-height: 0.9;
+				letter-spacing: 0;
+			}
+
+			.membership-percent span {
+				margin-top: 1rem;
+				color: rgba(255, 255, 255, 0.78);
+				font-size: 1.05rem;
+				line-height: 1.6;
+			}
+
+			.membership-checklist {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.membership-checklist li {
+				margin-bottom: 1rem;
+				padding: 1.25rem;
+				color: rgba(255, 255, 255, 0.82);
+				background: rgba(255, 255, 255, 0.07);
+				border: 1px solid rgba(255, 255, 255, 0.13);
+				border-radius: 8px;
+				line-height: 1.65;
+			}
+
+			.membership-checklist li:last-child {
+				margin-bottom: 0;
+			}
+
+			.membership-cta {
+				background: #fff;
+			}
+
+			.membership-cta-box {
+				display: grid;
+				grid-template-columns: minmax(0, 1fr) auto;
+				gap: 1.5rem;
+				align-items: center;
+				padding: 2rem;
+				background: #f4f7f8;
+				border: 1px solid var(--scm-line);
+				border-radius: 8px;
+			}
+
+			@media (max-width: 991.98px) {
+				.membership-hero {
+					padding: 4.5rem 0 3.8rem;
+				}
+
+				.membership-benefits-grid,
+				.membership-rule,
+				.membership-cta-box {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			@media (max-width: 575.98px) {
+				.membership-section {
+					padding: 3.25rem 0;
+				}
+
+				.membership-hero-card {
+					align-items: flex-start;
+					flex-direction: column;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="bg-bg-3 sticky-top py-4 py-lg-7">
+			<div class="d-block d-lg-none">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-3" data-aos="fade-down" data-aos-delay="0">
+							<a class="btn btn-width-equal-height d-lg-none rounded-circle custom-mobile-nav-btn" data-bs-toggle="offcanvas" data-bs-target="#custom-id-3alue01m"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-light-1"><path d="M2.00016 5.33333H14.0002C14.177 5.33333 14.3465 5.2631 14.4716 5.13807C14.5966 5.01305 14.6668 4.84348 14.6668 4.66667C14.6668 4.48986 14.5966 4.32029 14.4716 4.19526C14.3465 4.07024 14.177 4 14.0002 4H2.00016C1.82335 4 1.65378 4.07024 1.52876 4.19526C1.40373 4.32029 1.3335 4.48986 1.3335 4.66667C1.3335 4.84348 1.40373 5.01305 1.52876 5.13807C1.65378 5.2631 1.82335 5.33333 2.00016 5.33333ZM14.0002 10.6667H2.00016C1.82335 10.6667 1.65378 10.7369 1.52876 10.8619C1.40373 10.987 1.3335 11.1565 1.3335 11.3333C1.3335 11.5101 1.40373 11.6797 1.52876 11.8047C1.65378 11.9298 1.82335 12 2.00016 12H14.0002C14.177 12 14.3465 11.9298 14.4716 11.8047C14.5966 11.6797 14.6668 11.5101 14.6668 11.3333C14.6668 11.1565 14.5966 10.987 14.4716 10.8619C14.3465 10.7369 14.177 10.6667 14.0002 10.6667ZM14.0002 7.33333H2.00016C1.82335 7.33333 1.65378 7.40357 1.52876 7.5286C1.40373 7.65362 1.3335 7.82319 1.3335 8C1.3335 8.17681 1.40373 8.34638 1.52876 8.4714C1.65378 8.59643 1.82335 8.66667 2.00016 8.66667H14.0002C14.177 8.66667 14.3465 8.59643 14.4716 8.4714C14.5966 8.34638 14.6668 8.17681 14.6668 8C14.6668 7.82319 14.5966 7.65362 14.4716 7.5286C14.3465 7.40357 14.177 7.33333 14.0002 7.33333Z"></path></svg></a>
+						</div>
+						<div class="col-6 text-center" data-aos="fade-down" data-aos-delay="200">
+							<a href="index.html"><img src="assets/Vertical Logo-1.png" srcset="assets/Vertical Logo-1.png 2x" alt="" class="img-fluid" data-aos="fade-down" data-aos-delay="0"></a>
+						</div>
+						<div class="col-3" data-aos="fade-down" data-aos-delay="400"></div>
+					</div>
+				</div>
+			</div>
+			<div class="offcanvas offcanvas-start bg-bg-3" id="custom-id-3alue01m" aria-hidden="true">
+				<div class="offcanvas-header">
+					<a href="index.html"><img src="assets/Vertical Logo-1.png" alt="" class="img-fluid"></a>
+					<a class="btn btn-sm btn-width-equal-height btn-bg-3" data-bs-dismiss="offcanvas"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-dark-2"><path d="M8.9398 8L13.1398 3.80667C13.2653 3.68113 13.3359 3.51087 13.3359 3.33333C13.3359 3.1558 13.2653 2.98554 13.1398 2.86C13.0143 2.73447 12.844 2.66394 12.6665 2.66394C12.4889 2.66394 12.3187 2.73447 12.1931 2.86L7.9998 7.06L3.80646 2.86C3.68093 2.73447 3.51066 2.66394 3.33313 2.66394C3.1556 2.66394 2.98533 2.73447 2.8598 2.86C2.73426 2.98554 2.66374 3.1558 2.66374 3.33333C2.66374 3.51087 2.73426 3.68113 2.8598 3.80667L7.0598 8L2.8598 12.1933C2.79731 12.2553 2.74771 12.329 2.71387 12.4103C2.68002 12.4915 2.6626 12.5787 2.6626 12.6667C2.6626 12.7547 2.68002 12.8418 2.71387 12.9231C2.74771 13.0043 2.79731 13.078 2.8598 13.14C2.92177 13.2025 2.99551 13.2521 3.07675 13.2859C3.15798 13.3198 3.24512 13.3372 3.33313 13.3372C3.42114 13.3372 3.50827 13.3198 3.58951 13.2859C3.67075 13.2521 3.74449 13.2025 3.80646 13.14L7.9998 8.94L12.1931 13.14C12.2551 13.2025 12.3288 13.2521 12.4101 13.2859C12.4913 13.3198 12.5785 13.3372 12.6665 13.3372C12.7545 13.3372 12.8416 13.3198 12.9228 13.2859C13.0041 13.2521 13.0778 13.2025 13.1398 13.14C13.2023 13.078 13.2519 13.0043 13.2857 12.9231C13.3196 12.8418 13.337 12.7547 13.337 12.6667C13.337 12.5787 13.3196 12.4915 13.2857 12.4103C13.2519 12.329 13.2023 12.2553 13.1398 12.1933L8.9398 8Z"></path></svg></a>
+				</div>
+				<div class="offcanvas-body">
+					<div><a href="index.html" class="fw-bold text-dark-1 py-2 d-inline-block">Home</a></div>
+					<div><a href="about.html" class="fw-bold text-dark-1 py-2 d-inline-block">About</a></div>
+					<div><a href="adboard.html" class="fw-bold text-dark-1 py-2 d-inline-block">Advisory Board</a></div>
+					<div>
+						<a href="team.html" class="fw-bold text-dark-1 py-2 d-inline-block">Team</a>
+						<div class="ps-4"><a href="team.html" class="text-dark-1 py-1 d-inline-block">Executive Board</a></div>
+						<div class="ps-4"><a href="team.html#coffee-chat" class="text-dark-1 py-1 d-inline-block">Coffee Chat</a></div>
+					</div>
+					<div>
+						<a href="programs.html" class="fw-bold text-dark-1 py-2 d-inline-block">Programs</a>
+						<div class="ps-4"><a href="programs.html" class="text-dark-1 py-1 d-inline-block">Programs Overview</a></div>
+						<div class="ps-4"><a href="membership.html" class="text-dark-1 py-1 d-inline-block">Membership</a></div>
+					</div>
+					<div><a href="events.html" class="fw-bold text-dark-1 py-2 d-inline-block">Events</a></div>
+					<div><a href="past-events.html" class="fw-bold text-dark-1 py-2 d-inline-block">Past Events</a></div>
+					<div><a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" class="fw-bold text-dark-1 py-2 d-inline-block">Mailing List</a></div>
+				</div>
+			</div>
+			<div class="d-none d-lg-block">
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-3">
+							<a href="index.html"><img src="assets/Vertical Logo-1.png" alt="" class="img-fluid" data-aos="fade-down" data-aos-delay="0"></a>
+						</div>
+						<div class="text-end col-9 float-lg-none">
+							<a href="index.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="100">Home</a>
+							<a href="about.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="200">About</a>
+							<a href="adboard.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="300">Advisory Board</a>
+							<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="300">
+								<a href="team.html" class="fw-bold mx-4 text-dark-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Team</a>
+								<ul class="dropdown-menu team-nav-menu">
+									<li><a class="dropdown-item" href="team.html">Team Overview</a></li>
+									<li><a class="dropdown-item" href="team.html#coffee-chat">Coffee Chat</a></li>
+								</ul>
+							</div>
+							<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="400">
+								<a href="programs.html" class="fw-bold mx-4 text-dark-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
+								<ul class="dropdown-menu team-nav-menu">
+									<li><a class="dropdown-item" href="programs.html">Programs Overview</a></li>
+									<li><a class="dropdown-item" href="membership.html">Membership</a></li>
+								</ul>
+							</div>
+							<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="500">
+								<a href="events.html" class="ms-4 btn btn-sm rounded-2 text-dvdkempblue btn-light-1 border border-dvdkempblue dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Events</a>
+								<ul class="dropdown-menu team-nav-menu">
+									<li><a class="dropdown-item" href="events.html">Upcoming Events</a></li>
+									<li><a class="dropdown-item" href="past-events.html">Past Events</a></li>
+								</ul>
+							</div>
+							<a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank" class="ms-4 btn btn-sm rounded-2 btn-dvdkempblue" data-aos="fade-down" data-aos-delay="500">Mailing List</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<main class="membership-page">
+
+			<section class="membership-section membership-requirements">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-6" data-aos="fade-down" data-aos-delay="0">
+							<p class="membership-eyebrow">Requirements</p>
+							<h2 class="membership-heading">Membership Requirements</h2>
+						</div>
+					</div>
+					<div class="membership-rule">
+						<div class="membership-percent" data-aos="fade-down" data-aos-delay="150">
+							<strong>50%</strong>
+							<span>General membership constitutes attendance at 50% of SCM events and general meetings in a given semester.</span>
+						</div>
+						<ul class="membership-checklist" data-aos="fade-down" data-aos-delay="220">
+							<li>Attend at least half of the events and general meetings hosted by SCM during the semester.</li>
+							<li>General meetings, speaker events, workshops, and other official SCM programming may count toward participation.</li>
+							<li>Students with questions about their membership status should reach out to SCM leadership at </strong><a href="mailto:scm@stern.nyu.edu" target="_blank"><strong>scm@stern.nyu.edu</strong></a> or speak with the team after a meeting.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section class="membership-section membership-cta">
+				<div class="container">
+					<div class="membership-cta-box" data-aos="fade-down" data-aos-delay="0">
+						<div>
+							<p class="membership-eyebrow">Stay Connected</p>
+							<h2 class="h2 mb-3">Start by coming to the next meeting.</h2>
+							<p class="membership-copy mb-0">Join the mailing list for event updates, then attend regularly to build toward general membership.</p>
+						</div>
+						<div>
+							<a href="events.html" class="btn btn-outline-dvdkempblue me-lg-4">Events</a>
+							<a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank" class="btn btn-dvdkempblue">Mailing List</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="py-8 text-center bg-dvdkempblue">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-2 col-md-3 mb-6 mb-md-0" data-aos="fade-down" data-aos-delay="0">
+						<a href="https://www.sterncapitalmanagement.org"><img src="assets/Vertical Logo-3.png" alt="" class="img-fluid w-75"></a>
+					</div>
+					<div class="col text-light-1 mt-sm-2 mt-1 mb-5 mb-sm-5" data-aos="fade-down" data-aos-delay="100">
+						<a href="about.html" class="font-heading text-light-1 mx-sm-2 mx-md-2 mx-1">About</a>
+						<a href="adboard.html" class="font-heading text-light-1 mx-sm-2 mx-md-2 mx-1">Advisory Board</a>
+						<a href="team.html" class="font-heading text-light-1 mx-sm-2 mx-1 mx-md-2">Team</a>
+						<a href="programs.html" class="font-heading text-light-1 mx-md-2 mx-sm-2 mx-1">Programs</a>
+						<a href="membership.html" class="font-heading text-light-1 mx-md-2 mx-sm-2 mx-1">Membership</a>
+					</div>
+					<div class="col-12 col-lg-2 col-md-3" data-aos="fade-down" data-aos-delay="200">
+						<a href="https://x.com/scmnyu" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin fill-light-1" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path></svg></a>
+						<a href="https://www.linkedin.com/company/stern-capital-management-nyu/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="mx-6 fill-light-1" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path></svg></a>
+						<a href="https://www.instagram.com/sterncapitalmanagement/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-light-1"><path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 19.6207 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 16.4732 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"></path></svg></a>
+					</div>
+				</div>
+				<div class="mt-6 mb-8 border-bottom border-light-1" data-aos="fade-down" data-aos-delay="300"></div>
+				<p class="fs-5 mb-0 text-light-1" data-aos="fade-down" data-aos-delay="400">Copyright © 2025-2026 Stern Capital Management</p>
+			</div>
+		</footer>
+		<i class="br-emoji visually-hidden" data-emoji="gesture"></i>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" data-integrity="88e7162c11208a04c36ec758824953c4aa31b0dcbf13d142dda3f8bc359ba3f9"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="assets/scripts.js"></script>
+		<script>
+		document.runStartupScripts = function(functionToRun, params) {
+			var startupFunctions = {
+				setBackgrounds: function() { setBackgrounds(); },
+				switchControlSlider: function() { switchControlSlider(); },
+				stopYouTubeOnModalClose: function() { stopYouTubeOnModalClose(); },
+				initAnimations: function() { initAnimations(params); }
+			};
+			if (functionToRun && startupFunctions[functionToRun]) {
+				startupFunctions[functionToRun](params);
+			} else {
+				Object.keys(startupFunctions).forEach(function(key) {
+					startupFunctions[key](params);
+				});
+			}
+		};
+		document.runStartupScripts();
+		</script>
+	</body>
+</html>
