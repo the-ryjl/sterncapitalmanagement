@@ -94,6 +94,53 @@
 				margin-bottom: 2rem;
 			}
 
+			.archive-carousel + .archive-carousel {
+				margin-top: 4.5rem;
+			}
+
+			.archive-carousel-head {
+				display: flex;
+				align-items: end;
+				justify-content: space-between;
+				gap: 1rem;
+				margin-bottom: 1.25rem;
+			}
+
+			.archive-semester {
+				margin: 0;
+				color: var(--archive-ink);
+				font-size: clamp(1.55rem, 3vw, 2.2rem);
+				letter-spacing: 0;
+			}
+
+			.archive-controls {
+				display: flex;
+				gap: 0.55rem;
+			}
+
+			.archive-arrow {
+				width: 46px;
+				height: 46px;
+				border: 1px solid var(--archive-blue);
+				border-radius: 50%;
+				background: transparent;
+				color: var(--archive-blue);
+				font-size: 1.35rem;
+				line-height: 1;
+				cursor: pointer;
+				transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+			}
+
+			.archive-arrow:hover {
+				background: var(--archive-blue);
+				color: #fff;
+			}
+
+			.archive-arrow:disabled {
+				opacity: 0.3;
+				cursor: default;
+			}
+
 			.archive-eyebrow {
 				margin-bottom: 0.7rem;
 				color: var(--archive-wine);
@@ -125,18 +172,44 @@
 			}
 
 			.archive-grid {
-				display: grid;
-				grid-template-columns: repeat(3, minmax(0, 1fr));
+				display: flex;
 				gap: 1px;
+				overflow-x: auto;
+				scroll-behavior: smooth;
+				scroll-snap-type: x mandatory;
+				scrollbar-width: thin;
+				scrollbar-color: var(--archive-gold) transparent;
 				background: var(--archive-line);
 				border: 1px solid var(--archive-line);
+				overscroll-behavior-inline: contain;
+			}
+
+			.archive-grid::-webkit-scrollbar {
+				height: 8px;
+			}
+
+			.archive-grid::-webkit-scrollbar-thumb {
+				background: var(--archive-gold);
+				border-radius: 999px;
 			}
 
 			.archive-card {
 				display: flex;
 				flex-direction: column;
+				flex: 0 0 calc((100% - 2px) / 3);
 				min-height: 100%;
 				background: #fff;
+				scroll-snap-align: start;
+			}
+
+			.archive-card-text-media {
+				display: grid;
+				place-items: center;
+				background: linear-gradient(135deg, var(--archive-blue), var(--archive-ink));
+				color: #fff;
+				font-size: clamp(2.5rem, 6vw, 4.5rem);
+				font-weight: 800;
+				letter-spacing: -0.05em;
 			}
 
 			.archive-card-media {
@@ -194,8 +267,8 @@
 			}
 
 			@media (max-width: 991.98px) {
-				.archive-grid {
-					grid-template-columns: repeat(2, minmax(0, 1fr));
+				.archive-card {
+					flex-basis: calc((100% - 1px) / 2);
 				}
 			}
 
@@ -215,8 +288,8 @@
 					padding: 3.4rem 0;
 				}
 
-				.archive-grid {
-					grid-template-columns: 1fr;
+				.archive-card {
+					flex-basis: 88%;
 				}
 			}
 		</style>
@@ -304,16 +377,25 @@
 				<div class="container">
 					<div class="archive-toolbar" data-aos="fade-up">
 						<div>
-							<div class="archive-eyebrow">2026 Speaker Series</div>
+							<div class="archive-eyebrow">SCM Speaker Series</div>
 							<h2 class="archive-heading">Previous Events</h2>
 						</div>
 						<a class="archive-back" href="events.html">Back to upcoming events</a>
 					</div>
-					<div class="archive-grid">
+
+					<section class="archive-carousel" aria-labelledby="spring-2026-heading">
+						<div class="archive-carousel-head">
+							<h3 class="archive-semester" id="spring-2026-heading">Spring 2026</h3>
+							<div class="archive-controls" aria-label="Spring 2026 carousel controls">
+								<button class="archive-arrow" type="button" data-scroll-direction="prev" aria-label="Previous Spring 2026 events">&#8592;</button>
+								<button class="archive-arrow" type="button" data-scroll-direction="next" aria-label="Next Spring 2026 events">&#8594;</button>
+							</div>
+						</div>
+					<div class="archive-grid" tabindex="0" aria-label="Spring 2026 events">
 						<article class="archive-card" data-aos="fade-up">
 							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/tudor.jpeg');"></div>
 							<div class="archive-card-body">
-								<div class="archive-card-type">Speaker Series 2026</div>
+								<div class="archive-card-type">Speaker Series · Spring 2026</div>
 								<h3>Giles Coppel</h3>
 								<p class="archive-firm">Tudor Investment Corporation</p>
 								<p class="archive-meta"><strong>Wednesday, Jan 21</strong><br>6:00 PM<br>KMC 3-130</p>
@@ -323,7 +405,7 @@
 						<article class="archive-card" data-aos="fade-up" data-aos-delay="100">
 							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/3gcapital.jpeg');"></div>
 							<div class="archive-card-body">
-								<div class="archive-card-type">Speaker Series 2026</div>
+								<div class="archive-card-type">Speaker Series · Spring 2026</div>
 								<h3>Bernardo Piquet</h3>
 								<p class="archive-firm">3G Capital</p>
 								<p class="archive-meta"><strong>Wednesday, Jan 28</strong><br>6:30 PM<br>KMC 3-55</p>
@@ -333,7 +415,7 @@
 						<article class="archive-card" data-aos="fade-up" data-aos-delay="200">
 							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/UN.jpeg');"></div>
 							<div class="archive-card-body">
-								<div class="archive-card-type">Speaker Series 2026</div>
+								<div class="archive-card-type">Speaker Series · Spring 2026</div>
 								<h3>Greg Solomon</h3>
 								<p class="archive-firm">United Nations Joint Staff Pension Fund</p>
 								<p class="archive-meta"><strong>Monday, Feb 9</strong><br>6:00 PM<br>Tisch 201</p>
@@ -343,7 +425,7 @@
 						<article class="archive-card" data-aos="fade-up">
 							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/jones.jpeg');"></div>
 							<div class="archive-card-body">
-								<div class="archive-card-type">Speaker Series 2026</div>
+								<div class="archive-card-type">Speaker Series · Spring 2026</div>
 								<h3>Soren Gandrud</h3>
 								<p class="archive-firm">Jones Hill Capital</p>
 								<p class="archive-meta"><strong>Tuesday, Feb 17</strong><br>6:30 PM<br>KMC 2-70</p>
@@ -353,7 +435,7 @@
 						<article class="archive-card" data-aos="fade-up" data-aos-delay="100">
 							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/atlantic.jpeg');"></div>
 							<div class="archive-card-body">
-								<div class="archive-card-type">Speaker Series 2026</div>
+								<div class="archive-card-type">Speaker Series · Spring 2026</div>
 								<h3>Alex Raytburg</h3>
 								<p class="archive-firm">Atlantic Investment Management</p>
 								<p class="archive-meta"><strong>Wednesday, Feb 25</strong><br>6:00 PM<br>KMC 2-70</p>
@@ -363,7 +445,7 @@
 						<article class="archive-card" data-aos="fade-up" data-aos-delay="200">
 							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/point72new.png');"></div>
 							<div class="archive-card-body">
-								<div class="archive-card-type">Speaker Series 2026</div>
+								<div class="archive-card-type">Speaker Series · Spring 2026</div>
 								<h3>Chandler Bocklage</h3>
 								<p class="archive-firm">Point72</p>
 								<p class="archive-meta"><strong>Thursday, Mar 5</strong><br>6:30 PM<br>KMC 2-100</p>
@@ -373,7 +455,7 @@
 						<article class="archive-card" data-aos="fade-up">
 							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/tenebrist.png');"></div>
 							<div class="archive-card-body">
-								<div class="archive-card-type">Speaker Series 2026</div>
+								<div class="archive-card-type">Speaker Series · Spring 2026</div>
 								<h3>James Reynolds</h3>
 								<p class="archive-firm">Tenebrist Global</p>
 								<p class="archive-meta"><strong>Wednesday, Mar 25</strong><br>6:00 PM<br>Tisch 201</p>
@@ -383,7 +465,7 @@
 						<article class="archive-card" data-aos="fade-up" data-aos-delay="100">
 							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/bluecrest1.png');"></div>
 							<div class="archive-card-body">
-								<div class="archive-card-type">Speaker Series 2026</div>
+								<div class="archive-card-type">Speaker Series · Spring 2026</div>
 								<h3>Joshua Sheldon</h3>
 								<p class="archive-firm">BlueCrest Capital Management</p>
 								<p class="archive-meta"><strong>Thursday, Apr 16</strong><br>6:30 PM<br>KMC 2-60</p>
@@ -393,7 +475,7 @@
 						<article class="archive-card" data-aos="fade-up" data-aos-delay="200">
 							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/ubs1.png');"></div>
 							<div class="archive-card-body">
-								<div class="archive-card-type">Speaker Series 2026</div>
+								<div class="archive-card-type">Speaker Series · Spring 2026</div>
 								<h3>Brian Zakrocki</h3>
 								<p class="archive-firm">UBS</p>
 								<p class="archive-meta"><strong>Tuesday, Apr 28</strong><br>6:30 PM<br>KMC 5-75</p>
@@ -401,6 +483,83 @@
 							</div>
 						</article>
 					</div>
+					</section>
+
+					<section class="archive-carousel" aria-labelledby="fall-2025-heading">
+						<div class="archive-carousel-head">
+							<h3 class="archive-semester" id="fall-2025-heading">Fall 2025</h3>
+							<div class="archive-controls" aria-label="Fall 2025 carousel controls">
+								<button class="archive-arrow" type="button" data-scroll-direction="prev" aria-label="Previous Fall 2025 events">&#8592;</button>
+								<button class="archive-arrow" type="button" data-scroll-direction="next" aria-label="Next Fall 2025 events">&#8594;</button>
+							</div>
+						</div>
+						<div class="archive-grid" tabindex="0" aria-label="Fall 2025 events">
+							<article class="archive-card" data-aos="fade-up">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/point72new.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series · Fall 2025</div>
+								<h3>Stanley Lee</h3>
+								<p class="archive-firm">Credit Trader · Point72</p>
+								<p class="archive-meta"><strong>Monday, Sept 15</strong><br>6:00 PM<br>KMC 5-75</p>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/chathamfinancial.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series · Fall 2025</div>
+								<h3>Raj Patel</h3>
+								<p class="archive-firm">Investment Manager · Chatham Financial</p>
+								<p class="archive-meta"><strong>Monday, Oct 6</strong><br>12:30 PM<br>KMC 2-100</p>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/davidsonkempner.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series · Fall 2025</div>
+								<h3>Spencer Schneider</h3>
+								<p class="archive-firm">Consumer L/S PM · Davidson Kempner</p>
+								<p class="archive-meta"><strong>Thursday, Oct 9</strong><br>6:30 PM<br>KMC 2-60</p>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/millenium.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series · Fall 2025</div>
+								<h3>Tim Wu</h3>
+								<p class="archive-firm">Senior Portfolio Manager · Millenium</p>
+								<p class="archive-meta"><strong>Thursday, Oct 16</strong><br>6:30 PM<br>Tisch UC-11</p>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/citi.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series · Fall 2025</div>
+								<h3>Zeshan Azam</h3>
+								<p class="archive-firm">Head of Global Equities · Citi</p>
+								<p class="archive-meta"><strong>Monday, Oct 20</strong><br>12:30 PM<br>KMC 2-100</p>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/luxor.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series · Fall 2025</div>
+								<h3>Said Mena</h3>
+								<p class="archive-firm">Partner & Portfolio Manager · Luxor Capital Group</p>
+								<p class="archive-meta"><strong>Monday, Nov 3</strong><br>12:30 PM<br>KMC 2-100</p>
+							</div>
+						</article>
+						<article class="archive-card" data-aos="fade-up">
+							<div class="archive-card-media" style="background-image: url('assets/eventsphotos/ltcmsalomon.png');"></div>
+							<div class="archive-card-body">
+								<div class="archive-card-type">Speaker Series · Fall 2025</div>
+								<h3>Eric Rosenfeld</h3>
+								<p class="archive-firm">Former Partner · LTCM/Salomon Brothers</p>
+								<p class="archive-meta"><strong>Monday, Nov 17</strong><br>9:30 AM<br>KMC 3-110</p>
+							</div>
+						</article>
+						</div>
+					</section>
+
 				</div>
 			</section>
 		</main>
@@ -431,5 +590,29 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" data-integrity="88e7162c11208a04c36ec758824953c4aa31b0dcbf13d142dda3f8bc359ba3f9"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="assets/scripts.js"></script>
+		<script>
+			document.querySelectorAll('.archive-carousel').forEach(function (carousel) {
+				var track = carousel.querySelector('.archive-grid');
+				var previous = carousel.querySelector('[data-scroll-direction="prev"]');
+				var next = carousel.querySelector('[data-scroll-direction="next"]');
+
+				function updateControls() {
+					previous.disabled = track.scrollLeft <= 2;
+					next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+				}
+
+				function move(direction) {
+					var card = track.querySelector('.archive-card');
+					var distance = card ? card.getBoundingClientRect().width + 1 : track.clientWidth;
+					track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+				}
+
+				previous.addEventListener('click', function () { move(-1); });
+				next.addEventListener('click', function () { move(1); });
+				track.addEventListener('scroll', updateControls, { passive: true });
+				window.addEventListener('resize', updateControls);
+				updateControls();
+			});
+		</script>
 	</body>
 </html>
