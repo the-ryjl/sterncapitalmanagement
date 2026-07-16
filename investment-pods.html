@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Investment Pods - Stern Capital Management</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Explore Stern Capital Management's student-led investment pods across FX, Healthcare, Technology, and Consumer markets.">
+		<link rel="icon" href="assets/favicon-32x32.png">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+		<link href="assets/homepage.css" rel="stylesheet">
+		<style>
+			.team-nav-dropdown { display: inline-block; }
+			.team-nav-dropdown:hover .dropdown-menu,
+			.team-nav-dropdown:focus-within .dropdown-menu { display: block; }
+			.pods-page {
+				--pods-ink: #132234;
+				--pods-blue: #243f63;
+				--pods-line: rgba(19, 34, 52, 0.14);
+				--pods-soft: #f4f7f8;
+				color: var(--pods-ink);
+				background: #fff;
+			}
+			.pods-hero {
+				position: relative;
+				min-height: 520px;
+				display: flex;
+				align-items: flex-end;
+				padding: 82px 0 68px;
+				background: linear-gradient(90deg, rgba(11, 25, 43, .95) 0%, rgba(20, 43, 69, .84) 48%, rgba(20, 43, 69, .34) 100%), url("assets/programs/bloombergterminals.jpg") center/cover no-repeat;
+				overflow: hidden;
+			}
+			.pods-hero-content { position: relative; z-index: 1; max-width: 850px; }
+			.pods-kicker,
+			.pods-eyebrow {
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				font-size: 13px;
+				font-weight: 700;
+				letter-spacing: .16em;
+				text-transform: uppercase;
+			}
+			.pods-kicker { color: rgba(255,255,255,.8); margin-bottom: 22px; }
+			.pods-eyebrow { color: var(--pods-blue); margin-bottom: 18px; }
+			.pods-kicker::before,
+			.pods-eyebrow::before { content: ""; width: 34px; height: 2px; background: currentColor; }
+			.pods-title { color: #fff; font-size: clamp(52px, 8vw, 96px); line-height: .95; letter-spacing: -.055em; margin: 0 0 28px; }
+			.pods-lede { max-width: 720px; color: rgba(255,255,255,.84); font-size: clamp(19px, 2.3vw, 25px); line-height: 1.55; margin: 0; }
+			.pods-section { padding: 100px 0; }
+			.pods-section-soft { background: var(--pods-soft); }
+			.pods-heading { color: var(--pods-ink); font-size: clamp(36px, 5vw, 58px); line-height: 1.06; letter-spacing: -.045em; margin-bottom: 22px; }
+			.pods-copy { color: #5c6874; font-size: 18px; line-height: 1.75; }
+			.pods-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 54px; }
+			.pod-card {
+				position: relative;
+				min-height: 360px;
+				padding: 34px 28px;
+				background: #fff;
+				border: 1px solid var(--pods-line);
+				display: flex;
+				flex-direction: column;
+				transition: transform .25s ease, box-shadow .25s ease;
+			}
+			.pod-card:hover { transform: translateY(-6px); box-shadow: 0 22px 50px rgba(19,34,52,.10); }
+			.pod-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--accent); }
+			.pod-card:nth-child(1) { --accent: #536f95; }
+			.pod-card:nth-child(2) { --accent: #7d8d7a; }
+			.pod-card:nth-child(3) { --accent: #6b668d; }
+			.pod-card:nth-child(4) { --accent: #a27b5d; }
+			.pod-mark { width: 64px; height: 64px; border-radius: 50%; background: color-mix(in srgb, var(--accent) 13%, white); color: var(--accent); display: grid; place-items: center; font-size: 19px; font-weight: 800; letter-spacing: .04em; margin-bottom: 60px; }
+			.pod-card h3 { color: var(--pods-ink); font-size: 28px; letter-spacing: -.03em; margin-bottom: 12px; }
+			.pod-card p { color: #68737f; line-height: 1.65; margin: 0; }
+			.pods-model { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+			.pods-steps { border-top: 1px solid var(--pods-line); }
+			.pods-step { display: grid; grid-template-columns: 58px 1fr; gap: 18px; padding: 25px 0; border-bottom: 1px solid var(--pods-line); }
+			.pods-step span { color: var(--pods-blue); font-size: 13px; font-weight: 800; letter-spacing: .12em; }
+			.pods-step h3 { color: var(--pods-ink); font-size: 22px; margin: 0 0 8px; }
+			.pods-step p { color: #68737f; line-height: 1.6; margin: 0; }
+			.pods-principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 50px; }
+			.pods-principle { padding: 34px; border-left: 2px solid var(--pods-blue); background: #fff; }
+			.pods-principle h3 { color: var(--pods-ink); font-size: 23px; margin-bottom: 12px; }
+			.pods-principle p { color: #68737f; line-height: 1.65; margin: 0; }
+			.pods-cta { padding: 84px 0; background: var(--pods-blue); }
+			.pods-cta h2 { color: #fff; font-size: clamp(34px, 5vw, 56px); letter-spacing: -.045em; margin-bottom: 18px; }
+			.pods-cta p { color: rgba(255,255,255,.75); font-size: 18px; line-height: 1.7; max-width: 680px; }
+			.pods-link { display: inline-flex; align-items: center; gap: 12px; color: #fff; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,.55); padding-bottom: 6px; }
+			.pods-link:hover { color: #fff; opacity: .78; }
+			@media (max-width: 991.98px) {
+				.pods-hero { min-height: 470px; }
+				.pods-grid { grid-template-columns: 1fr 1fr; }
+				.pods-model { grid-template-columns: 1fr; gap: 48px; }
+				.pods-principles { grid-template-columns: 1fr; }
+			}
+			@media (max-width: 575.98px) {
+				.pods-hero { min-height: 430px; padding: 60px 0 48px; }
+				.pods-section { padding: 72px 0; }
+				.pods-grid { grid-template-columns: 1fr; }
+				.pod-card { min-height: 300px; }
+				.pod-mark { margin-bottom: 34px; }
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="bg-bg-3 sticky-top py-4 py-lg-7">
+			<div class="d-block d-lg-none">
+				<div class="container"><div class="row align-items-center">
+					<div class="col-3" data-aos="fade-down"><a class="btn btn-width-equal-height d-lg-none rounded-circle custom-mobile-nav-btn" data-bs-toggle="offcanvas" data-bs-target="#custom-id-3alue01m" aria-label="Open navigation"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-light-1"><path d="M2 5.333h12a.667.667 0 0 0 0-1.333H2a.667.667 0 0 0 0 1.333Zm12 5.334H2A.667.667 0 0 0 2 12h12a.667.667 0 0 0 0-1.333ZM2 8.667h12a.667.667 0 0 0 0-1.334H2a.667.667 0 0 0 0 1.334Z"></path></svg></a></div>
+					<div class="col-6 text-center" data-aos="fade-down" data-aos-delay="200"><a href="index.html"><img src="assets/Vertical Logo-1.png" alt="Stern Capital Management" class="img-fluid"></a></div>
+					<div class="col-3"></div>
+				</div></div>
+			</div>
+			<div class="offcanvas offcanvas-start bg-bg-3" id="custom-id-3alue01m" aria-hidden="true">
+				<div class="offcanvas-header"><a href="index.html"><img src="assets/Vertical Logo-1.png" alt="Stern Capital Management" class="img-fluid w-50"></a><a class="btn btn-sm btn-width-equal-height btn-bg-3" data-bs-dismiss="offcanvas" aria-label="Close navigation"><svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-dark-2"><path d="m8.94 8 4.2-4.193a.667.667 0 1 0-.947-.947L8 7.06 3.807 2.86a.67.67 0 0 0-.947.947L7.06 8l-4.2 4.193a.67.67 0 0 0 .947.947L8 8.94l4.193 4.2a.67.67 0 0 0 .947-.947L8.94 8Z"></path></svg></a></div>
+				<div class="offcanvas-body">
+					<div><a href="index.html" class="fw-bold text-dark-1 py-2 d-inline-block">Home</a></div>
+					<div><a href="about.html" class="fw-bold text-dark-1 py-2 d-inline-block">About</a></div>
+					<div><a href="adboard.html" class="fw-bold text-dark-1 py-2 d-inline-block">Advisory Board</a></div>
+					<div><a href="team.html" class="fw-bold text-dark-1 py-2 d-inline-block">Team</a><div class="ps-4"><a href="team.html" class="text-dark-1 py-1 d-inline-block">Executive Board</a></div><div class="ps-4"><a href="team.html#coffee-chat" class="text-dark-1 py-1 d-inline-block">Coffee Chat</a></div></div>
+					<div><a href="programs.html" class="fw-bold text-dark-1 py-2 d-inline-block">Programs</a><div class="ps-4"><a href="programs.html" class="text-dark-1 py-1 d-inline-block">Scholars Program</a></div><div class="ps-4"><a href="investment-pods.html" class="text-dark-1 py-1 d-inline-block">Investment Pods</a></div><div class="ps-4"><a href="membership.html" class="text-dark-1 py-1 d-inline-block">Membership</a></div></div>
+					<div><a href="events.html" class="fw-bold text-dark-1 py-2 d-inline-block">Events</a></div>
+					<div><a href="past-events.html" class="fw-bold text-dark-1 py-2 d-inline-block">Past Events</a></div>
+					<div><a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" class="fw-bold text-dark-1 py-2 d-inline-block">Mailing List</a></div>
+				</div>
+			</div>
+			<div class="d-none d-lg-block"><div class="container"><div class="row justify-content-between align-items-center">
+				<div class="col-3"><a href="index.html"><img src="assets/Vertical Logo-1.png" alt="Stern Capital Management" class="img-fluid" data-aos="fade-down"></a></div>
+				<div class="text-end col-9 float-lg-none">
+					<a href="index.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="100">Home</a><a href="about.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="200">About</a><a href="adboard.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="300">Advisory Board</a>
+					<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="300"><a href="team.html" class="fw-bold mx-4 text-dark-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Team</a><ul class="dropdown-menu team-nav-menu"><li><a class="dropdown-item" href="team.html">Team Overview</a></li><li><a class="dropdown-item" href="team.html#coffee-chat">Coffee Chat</a></li></ul></div>
+					<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="400"><a href="programs.html" class="fw-bold mx-4 text-dark-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Programs</a><ul class="dropdown-menu team-nav-menu"><li><a class="dropdown-item" href="programs.html">Scholars Program</a></li><li><a class="dropdown-item" href="investment-pods.html">Investment Pods</a></li><li><a class="dropdown-item" href="membership.html">Membership</a></li></ul></div>
+					<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="500"><a href="events.html" class="ms-4 btn btn-sm rounded-2 text-dvdkempblue btn-light-1 border border-dvdkempblue dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Events</a><ul class="dropdown-menu team-nav-menu"><li><a class="dropdown-item" href="events.html">Upcoming Events</a></li><li><a class="dropdown-item" href="past-events.html">Past Events</a></li></ul></div>
+					<a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank" class="ms-4 btn btn-sm rounded-2 btn-dvdkempblue" data-aos="fade-down" data-aos-delay="500">Mailing List</a>
+				</div>
+			</div></div></div>
+		</nav>
+
+		<main class="pods-page">
+			<section class="pods-hero">
+				<div class="container"><div class="pods-hero-content">
+					<div class="pods-kicker" data-aos="fade-down">SCM's student-led investment platform</div>
+					<h1 class="pods-title" data-aos="fade-down" data-aos-delay="100">Investment Pods</h1>
+					<p class="pods-lede" data-aos="fade-down" data-aos-delay="200">Four focused teams. One shared view of the markets. SCM's investment pods give students a collaborative setting to explore ideas, strengthen their research, and learn how different parts of the market connect. Interested? Email </strong><a href="mailto:scm@stern.nyu.edu" target="_blank"><strong>scm@stern.nyu.edu</strong></a> for updates on our Fall 2026 Pod Program!</p>
+				</div></div>
+			</section>
+
+			<section class="pods-section">
+				<div class="container">
+					<div class="row justify-content-between align-items-end"><div class="col-lg-6"><p class="pods-eyebrow">Four lenses on the market</p><h2 class="pods-heading">Focused coverage.<br>Broader perspective.</h2></div><div class="col-lg-5"><p class="pods-copy mb-0">Each pod follows a distinct area of the market while contributing to a shared investment conversation. Together, they help members see how macro forces, sector trends, and company fundamentals shape opportunity.</p></div></div>
+					<div class="pods-grid">
+						<article class="pod-card" data-aos="fade-down" data-aos-delay="100"><div class="pod-mark">FX</div><h3>FX</h3><p>Exploring currencies, global macro themes, and the market forces that connect economies and companies.</p></article>
+						<article class="pod-card" data-aos="fade-down" data-aos-delay="160"><div class="pod-mark">HC</div><h3>Healthcare</h3><p>Following innovation, industry dynamics, and the evolving businesses shaping health and life sciences.</p></article>
+						<article class="pod-card" data-aos="fade-down" data-aos-delay="220"><div class="pod-mark">TX</div><h3>Tech</h3><p>Studying the companies, products, and structural shifts driving the digital economy forward.</p></article>
+						<article class="pod-card" data-aos="fade-down" data-aos-delay="280"><div class="pod-mark">CO</div><h3>Consumer</h3><p>Examining brands, behavior, and the economic trends influencing how people spend and live.</p></article>
+					</div>
+				</div>
+			</section>
+
+			<section class="pods-section pods-section-soft">
+				<div class="container"><div class="pods-model">
+					<div><p class="pods-eyebrow">The pod experience</p><h2 class="pods-heading">Learn by doing, together.</h2><p class="pods-copy">Pods are designed to make investment research approachable, collaborative, and connected to the real world. Members build fluency by following their area over time, discussing new developments, and sharing perspectives with the wider SCM community.</p></div>
+					<div class="pods-steps">
+						<div class="pods-step"><span>01</span><div><h3>Explore</h3><p>Develop curiosity about a market, sector, or company and learn which questions matter.</p></div></div>
+						<div class="pods-step"><span>02</span><div><h3>Analyze</h3><p>Turn information into a clear point of view through thoughtful research and discussion.</p></div></div>
+						<div class="pods-step"><span>03</span><div><h3>Share</h3><p>Bring ideas to the group, learn from feedback, and connect insights across all four pods.</p></div></div>
+					</div>
+				</div></div>
+			</section>
+
+			<section class="pods-cta"><div class="container"><div class="row justify-content-between align-items-end"><div class="col-lg-8"><h2>Follow the next chapter of SCM.</h2><p class="mb-lg-0">Stay connected for future updates, opportunities, and ways to participate in the investment pod community.</p></div><div class="col-lg-3 text-lg-end mt-5 mt-lg-0"><a class="pods-link" href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank">Join the mailing list <span aria-hidden="true">→</span></a></div></div></div></section>
+		</main>
+
+		<footer class="py-8 text-center bg-dvdkempblue">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-2 col-md-3 mb-6 mb-md-0" data-aos="fade-down" data-aos-delay="0">
+						<a href="https://www.sterncapitalmanagement.org"><img src="assets/Vertical Logo-3.png" alt="Stern Capital Management" class="img-fluid w-75"></a>
+					</div>
+					<div class="col text-light-1 mt-sm-2 mt-1 mb-5 mb-sm-5" data-aos="fade-down" data-aos-delay="100">
+						<a href="about.html" class="font-heading text-light-1 mx-sm-2 mx-md-2 mx-1">About</a>
+						<a href="adboard.html" class="font-heading text-light-1 mx-sm-2 mx-md-2 mx-1">Advisory Board</a>
+						<a href="team.html" class="font-heading text-light-1 mx-sm-2 mx-1 mx-md-2">Team</a>
+						<a href="programs.html" class="font-heading text-light-1 mx-md-2 mx-sm-2 mx-1">Programs</a>
+						<a href="events.html" class="font-heading text-light-1 mx-md-2 mx-sm-2 mx-1">Events</a>
+					</div>
+					<div class="col-12 col-lg-2 col-md-3" data-aos="fade-down" data-aos-delay="200">
+						<a href="https://x.com/scmnyu" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin fill-light-1" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path></svg></a>
+						<a href="https://www.linkedin.com/company/stern-capital-management-nyu/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="mx-6 fill-light-1" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path></svg></a>
+							<a href="https://www.instagram.com/sterncapitalmanagement/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-light-1"><path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"></path></svg></a>
+					</div>
+				</div>
+				<div class="mt-6 mb-8 border-bottom border-light-1"></div>
+				<p class="fs-5 mb-0 text-light-1">Copyright © 2025-2026 Stern Capital Management</p>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>if (window.AOS) AOS.init({ once: true, duration: 650 });</script>
+	</body>
+</html>
