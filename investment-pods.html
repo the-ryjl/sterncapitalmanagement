@@ -193,8 +193,32 @@
 				<p class="fs-5 mb-0 text-light-1" data-aos="fade-down" data-aos-delay="400">Copyright © 2025-2026 Stern Capital Management</p>
 			</div>
 		</footer>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" data-integrity="88e7162c11208a04c36ec758824953c4aa31b0dcbf13d142dda3f8bc359ba3f9"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script>if (window.AOS) AOS.init({ once: true, duration: 650 });</script>
+		<script src="assets/scripts.js"></script>
+		<script>
+			document.querySelectorAll('.archive-carousel').forEach(function (carousel) {
+				var track = carousel.querySelector('.archive-grid');
+				var previous = carousel.querySelector('[data-scroll-direction="prev"]');
+				var next = carousel.querySelector('[data-scroll-direction="next"]');
+
+				function updateControls() {
+					previous.disabled = track.scrollLeft <= 2;
+					next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+				}
+
+				function move(direction) {
+					var card = track.querySelector('.archive-card');
+					var distance = card ? card.getBoundingClientRect().width + 1 : track.clientWidth;
+					track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+				}
+
+				previous.addEventListener('click', function () { move(-1); });
+				next.addEventListener('click', function () { move(1); });
+				track.addEventListener('scroll', updateControls, { passive: true });
+				window.addEventListener('resize', updateControls);
+				updateControls();
+			});
+		</script>
 	</body>
 </html>
