@@ -48,23 +48,13 @@
 }
 
 .sf-styles ::-moz-selection {
-  background: #2260FF;
-  color: #FFFFFF;
-}
-
-.sf-styles ::webkit-selection {
-  background: #2260FF;
-  color: #FFFFFF;
-}
-
-.sf-styles ::-moz-selection {
-  background: #2260FF;
-  color: #FFFFFF;
+  background: #B3D4FC;
+  color: #1A1A1A;
 }
 
 .sf-styles ::selection {
-  background: #2260FF;
-  color: #FFFFFF;
+  background: #B3D4FC;
+  color: #1A1A1A;
 }
 
 body.sf-editor-on #sf-page-blocks .sf-block-holder:not(.sf-on-edit) {
@@ -9911,18 +9901,13 @@ body, p {
 
 /* Text highlight color */
 ::-moz-selection {
-  background: #FFA722;
-  color: #27282A;
-}
-
-::-webkit-selection {
-  background: #FFA722;
-  color: #27282A;
+  background: #B3D4FC;
+  color: #1A1A1A;
 }
 
 ::selection {
-  background: #FFA722;
-  color: #27282A;
+  background: #B3D4FC;
+  color: #1A1A1A;
 }
 
 /* Customized distance for AOS animations */
