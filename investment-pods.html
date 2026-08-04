@@ -69,6 +69,17 @@
 			.pod-mark { width: 64px; height: 64px; border-radius: 50%; background: color-mix(in srgb, var(--accent) 13%, white); color: var(--accent); display: grid; place-items: center; font-size: 19px; font-weight: 800; letter-spacing: .04em; margin-bottom: 60px; }
 			.pod-card h3 { color: var(--pods-ink); font-size: 28px; letter-spacing: -.03em; margin-bottom: 12px; }
 			.pod-card p { color: #68737f; line-height: 1.65; margin: 0; }
+			.pods-detail-header { max-width: 820px; }
+			.pods-detail-intro { max-width: 760px; }
+			.pods-subsector-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 46px; }
+			.pods-subsector { padding: 26px; background: #fff; border: 1px solid var(--pods-line); }
+			.pods-subsector h3 { color: var(--pods-ink); font-size: 21px; margin: 0; }
+			.pods-detail-note { margin-top: 22px; padding: 25px 28px; color: #52606d; line-height: 1.7; background: rgba(36, 63, 99, .07); border-left: 3px solid var(--pods-blue); }
+			.pods-workstreams { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 48px; }
+			.pods-workstream { padding: 32px 28px; border: 1px solid var(--pods-line); background: #fff; }
+			.pods-workstream-number { display: block; color: var(--pods-blue); font-size: 13px; font-weight: 800; letter-spacing: .12em; margin-bottom: 22px; }
+			.pods-workstream h3 { color: var(--pods-ink); font-size: 24px; margin-bottom: 14px; }
+			.pods-workstream p { color: #68737f; line-height: 1.68; margin: 0; }
 			.pods-model { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 			.pods-steps { border-top: 1px solid var(--pods-line); }
 			.pods-step { display: grid; grid-template-columns: 58px 1fr; gap: 18px; padding: 25px 0; border-bottom: 1px solid var(--pods-line); }
@@ -87,6 +98,8 @@
 			@media (max-width: 991.98px) {
 				.pods-hero { min-height: 470px; }
 				.pods-grid { grid-template-columns: 1fr 1fr; }
+				.pods-subsector-grid { grid-template-columns: 1fr 1fr; }
+				.pods-workstreams { grid-template-columns: 1fr; }
 				.pods-model { grid-template-columns: 1fr; gap: 48px; }
 				.pods-principles { grid-template-columns: 1fr; }
 			}
@@ -94,6 +107,7 @@
 				.pods-hero { min-height: 430px; padding: 60px 0 48px; }
 				.pods-section { padding: 72px 0; }
 				.pods-grid { grid-template-columns: 1fr; }
+				.pods-subsector-grid { grid-template-columns: 1fr; }
 				.pod-card { min-height: 300px; }
 				.pod-mark { margin-bottom: 34px; }
 			}
@@ -152,15 +166,50 @@
 				</div>
 			</section>
 
-			<section class="pods-section pods-section-soft">
-				<div class="container"><div class="pods-model">
-					<div><p class="pods-eyebrow">The pod experience</p><h2 class="pods-heading">Learn by doing, together.</h2><p class="pods-copy">Pods are designed to make investment research approachable, collaborative, and connected to the real world. Members build fluency by following their area over time, discussing new developments, and sharing perspectives with the wider SCM community.</p></div>
-					<div class="pods-steps">
-						<div class="pods-step"><span>01</span><div><h3>Explore</h3><p>Develop curiosity about a market, sector, or company and learn which questions matter.</p></div></div>
-						<div class="pods-step"><span>02</span><div><h3>Analyze</h3><p>Turn information into a clear point of view through thoughtful research and discussion.</p></div></div>
-						<div class="pods-step"><span>03</span><div><h3>Share</h3><p>Bring ideas to the group, learn from feedback, and connect insights across both pods.</p></div></div>
+			<section class="pods-section pods-section-soft" id="fic-pod">
+				<div class="container">
+					<div class="pods-detail-header">
+						<p class="pods-eyebrow">Fixed Income and Credit pod</p>
+						<h2 class="pods-heading">Build and defend an active view against the AGG.</h2>
+						<p class="pods-copy pods-detail-intro">The FIC pod manages both rates and credit decisions relative to the Bloomberg U.S. Aggregate Bond Index, using the AGG ETF for daily comparison. Members connect macroeconomic research, credit analysis, portfolio positioning, and performance measurement in one disciplined process.</p>
 					</div>
-				</div></div>
+					<div class="pods-workstreams">
+						<article class="pods-workstream">
+							<span class="pods-workstream-number">01</span>
+							<h3>Macro &amp; Rates</h3>
+							<p>Develop a view on the level of interest rates and the shape of the yield curve. Before major employment, inflation, and Federal Reserve releases, the team prepares a short memo explaining its expectations, key risks, and portfolio positioning.</p>
+						</article>
+						<article class="pods-workstream">
+							<span class="pods-workstream-number">02</span>
+							<h3>Credit</h3>
+							<p>Determine the appropriate credit exposure relative to the benchmark by studying the credit cycle, historical and current spreads, issuance, and risk. Views can be expressed through investment-grade, high-yield, or distressed credit, with sector teams added as coverage grows.</p>
+						</article>
+						<article class="pods-workstream">
+							<span class="pods-workstream-number">03</span>
+							<h3>Benchmark &amp; Performance</h3>
+							<p>Target 50–100 basis points of annual outperformance and track results against AGG daily. Each meeting begins with a performance and market update, including attribution of gains and losses to duration and credit positioning.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="pods-section" id="tech-pod">
+				<div class="container">
+					<div class="pods-detail-header">
+						<p class="pods-eyebrow">Tech pod</p>
+						<h2 class="pods-heading">Specialization is the edge.</h2>
+						<p class="pods-copy pods-detail-intro">Each Tech analyst develops expertise in a clearly defined subsector, building the focused knowledge needed to follow a large and fast-moving investment universe. This specialist structure gives the pod room to grow while preserving depth and accountability across coverage.</p>
+					</div>
+					<div class="pods-subsector-grid">
+						<div class="pods-subsector"><h3>Software</h3></div>
+						<div class="pods-subsector"><h3>Payments &amp; Fintech</h3></div>
+						<div class="pods-subsector"><h3>Semiconductors &amp; Hardware</h3></div>
+						<div class="pods-subsector"><h3>Internet &amp; Digital Platforms</h3></div>
+						<div class="pods-subsector"><h3>Gaming &amp; Online Travel</h3></div>
+						<div class="pods-subsector"><h3>Media &amp; Streaming</h3></div>
+					</div>
+					<p class="pods-detail-note mb-0">Coverage areas remain flexible as the team develops. As membership grows, large subsectors can expand into teams led by experienced analysts and supported by junior analysts, without combining distinct areas such as software and payments.</p>
+				</div>
 			</section>
 
 			<section class="pods-cta"><div class="container"><div class="row justify-content-between align-items-end"><div class="col-lg-8"><h2>Follow the next chapter of SCM.</h2><p class="mb-lg-0">Stay connected for future updates, opportunities, and ways to participate in the investment pod community.</p></div><div class="col-lg-3 text-lg-end mt-5 mt-lg-0"><a class="pods-link" href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank">Join the mailing list <span aria-hidden="true">→</span></a></div></div></div></section>
