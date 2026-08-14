@@ -163,116 +163,199 @@
 				line-height: 1.75;
 			}
 
-			.next-event {
+			.speaker-lineup {
 				display: grid;
-				grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-				min-height: 520px;
+				gap: 1.25rem;
+			}
+
+			.speaker-card {
+				position: relative;
+				display: grid;
+				grid-template-columns: 170px minmax(0, 1fr) minmax(230px, 0.72fr);
+				min-height: 290px;
 				background: #fff;
 				border: 1px solid var(--event-line);
+				border-radius: 18px;
+				box-shadow: 0 20px 55px rgba(17, 27, 41, 0.08);
+				overflow: hidden;
+				transition: transform 0.25s ease, box-shadow 0.25s ease;
 			}
 
-			.next-event-media {
+			.speaker-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 26px 70px rgba(17, 27, 41, 0.13);
+			}
+
+			.speaker-date {
 				position: relative;
-				min-height: 420px;
-				background: url("assets/eventsphotos/newcomingsoon.png") center/cover no-repeat;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 2rem 1.25rem;
+				background: var(--event-blue);
+				color: #fff;
+				text-align: center;
 			}
 
-			.next-event-media::after {
+			.speaker-card:nth-child(2) .speaker-date {
+				background: var(--event-wine);
+			}
+
+			.speaker-date::after {
 				content: "";
 				position: absolute;
-				inset: 0;
-				background: linear-gradient(180deg, rgba(17, 27, 41, 0.04), rgba(17, 27, 41, 0.36));
+				top: 50%;
+				right: -10px;
+				width: 20px;
+				height: 20px;
+				background: inherit;
+				transform: translateY(-50%) rotate(45deg);
 			}
 
-			.next-event-badge {
-				position: absolute;
-				left: 1.5rem;
-				bottom: 1.5rem;
-				z-index: 1;
-				padding: 0.55rem 0.75rem;
-				background: rgba(255, 255, 255, 0.92);
-				color: var(--event-blue);
+			.speaker-date-month {
 				font-size: 0.78rem;
-				font-weight: 900;
-				letter-spacing: 0.12em;
+				font-weight: 800;
+				letter-spacing: 0.18em;
 				text-transform: uppercase;
 			}
 
-			.next-event-body {
-				padding: clamp(2rem, 4vw, 3.5rem);
+			.speaker-date-day {
+				margin: 0.25rem 0;
+				font-size: 4.6rem;
+				font-weight: 800;
+				line-height: 0.95;
+				letter-spacing: -0.07em;
+			}
+
+			.speaker-date-year {
+				font-size: 0.85rem;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+			}
+
+			.speaker-details {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
+				padding: clamp(2rem, 4vw, 3rem);
 			}
 
-			.next-event-title {
-				margin-bottom: 1rem;
+			.speaker-series-label {
+				margin-bottom: 0.65rem;
+				color: var(--event-wine);
+				font-size: 0.72rem;
+				font-weight: 900;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+			}
+
+			.speaker-name {
+				margin-bottom: 0.45rem;
 				color: var(--event-ink);
-				font-size: clamp(2rem, 4vw, 3.7rem);
+				font-size: clamp(2rem, 4vw, 3.25rem);
 				line-height: 1;
-				letter-spacing: 0;
+				letter-spacing: -0.035em;
 			}
 
-			.next-event-text {
-				margin-bottom: 1.6rem;
-				color: var(--event-muted);
+			.speaker-firm-name {
+				margin-bottom: 1.5rem;
+				color: var(--event-blue);
 				font-size: 1.05rem;
-				line-height: 1.75;
+				font-weight: 700;
 			}
 
-			.event-facts {
-				display: grid;
-				gap: 0.75rem;
-				margin: 0 0 1.8rem;
+			.speaker-meta {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.65rem;
+				margin: 0;
 				padding: 0;
 				list-style: none;
 			}
 
-			.event-fact {
-				display: grid;
-				grid-template-columns: 42px minmax(0, 1fr);
-				gap: 0.9rem;
-				align-items: center;
-				padding: 0.85rem 0;
-				border-top: 1px solid var(--event-line);
-			}
-
-			.event-fact:last-child {
-				border-bottom: 1px solid var(--event-line);
-			}
-
-			.event-icon {
-				width: 42px;
-				height: 42px;
-				flex: 0 0 42px;
+			.speaker-meta li {
 				display: inline-flex;
 				align-items: center;
-				justify-content: center;
+				gap: 0.5rem;
+				min-height: 38px;
+				padding: 0.55rem 0.75rem;
 				background: var(--event-sky);
+				border-radius: 999px;
+				color: var(--event-ink);
+				font-size: 0.88rem;
+				font-weight: 700;
+			}
+
+			.speaker-meta svg {
+				width: 16px;
+				height: 16px;
+				color: var(--event-wine);
+			}
+
+			.speaker-firm {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 2rem;
+				background: linear-gradient(145deg, #f8fafb, #eef3f5);
+				border-left: 1px solid var(--event-line);
+			}
+
+			.firm-logo-placeholder {
+				width: 100%;
+				max-width: 220px;
+				height: 120px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 0.45rem;
+				padding: 1rem;
+				background: #fff;
+				border: 1px dashed rgba(36, 63, 99, 0.35);
+				border-radius: 12px;
 				color: var(--event-blue);
-				border-radius: 50%;
+				text-align: center;
 			}
 
-			.event-icon svg {
-				display: block;
-				width: 18px;
-				height: 18px;
+			.firm-logo-placeholder strong {
+				font-size: 0.95rem;
+				line-height: 1.25;
 			}
 
-			.event-fact > span:not(.event-icon) {
-				display: block;
+			.firm-logo-placeholder span {
 				color: var(--event-muted);
-				font-size: 0.82rem;
+				font-size: 0.62rem;
 				font-weight: 800;
-				letter-spacing: 0.08em;
+				letter-spacing: 0.13em;
 				text-transform: uppercase;
 			}
 
-			.event-fact strong {
+			.firm-logo {
 				display: block;
-				margin-top: 0.15rem;
-				color: var(--event-ink);
-				font-size: 1rem;
+				width: 100%;
+				max-width: 280px;
+				height: 153px;
+				object-fit: contain;
+				transition: transform 0.2s ease;
+			}
+
+			.firm-logo-link {
+				display: block;
+				width: 100%;
+				max-width: 280px;
+				border-radius: 10px;
+			}
+
+			.firm-logo-link:hover .firm-logo,
+			.firm-logo-link:focus-visible .firm-logo {
+				transform: scale(1.035);
+			}
+
+			.firm-logo-link:focus-visible {
+				outline: 3px solid var(--event-gold);
+				outline-offset: 5px;
 			}
 
 			.event-card-grid {
@@ -333,8 +416,14 @@
 					padding: 4rem 0 3.5rem;
 				}
 
-				.next-event {
-					grid-template-columns: 1fr;
+				.speaker-card {
+					grid-template-columns: 130px minmax(0, 1fr);
+				}
+
+				.speaker-firm {
+					grid-column: 1 / -1;
+					border-top: 1px solid var(--event-line);
+					border-left: 0;
 				}
 
 				.event-card-grid {
@@ -352,8 +441,30 @@
 					padding: 3.4rem 0;
 				}
 
-				.next-event-media {
-					min-height: 300px;
+				.speaker-card {
+					grid-template-columns: 1fr;
+				}
+
+				.speaker-date {
+					min-height: 150px;
+					padding: 1.4rem;
+				}
+
+				.speaker-date::after {
+					display: none;
+				}
+
+				.speaker-date-day {
+					font-size: 3.8rem;
+				}
+
+				.speaker-details {
+					padding: 2rem 1.4rem;
+				}
+
+				.speaker-firm {
+					grid-column: auto;
+					padding: 1.4rem;
 				}
 			}
 		</style>
@@ -445,37 +556,53 @@
 			<section class="events-section">
 				<div class="container">
 					<div class="events-section-head" data-aos="fade-up">
-						<div class="events-eyebrow">Upcoming</div>
-						<h2 class="events-heading">Next on the calendar</h2>
-						<p class="events-copy">We are finalizing the next speaker lineup. Meeting details stay here so students can quickly find the regular SCM touchpoint while new event announcements are prepared.</p>
+						<div class="events-eyebrow">Fall 2026 Speaker Series</div>
+						<h2 class="events-heading">Two perspectives from the buy side.</h2>
+						<p class="events-copy">Join Stern Capital Management for conversations with investors from leading credit and equity platforms. Event details will be updated here as rooms and times are confirmed.</p>
 					</div>
-					<article class="next-event" data-aos="fade-up" data-aos-delay="100">
-						<div class="next-event-media">
-							<div class="next-event-badge">Coming soon</div>
-						</div>
-						<div class="next-event-body">
-							<h3 class="next-event-title">Speaker schedule in progress</h3>
-							<p class="next-event-text">Have a good summer vacation! New speaker series announcements and special sessions will be posted here when the semester calendar is ready.</p>
-							<ul class="event-facts">
-								<li class="event-fact">
-									<span class="event-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z"></path></svg></span>
-									<span>Day<strong>Monday general meetings</strong></span>
-								</li>
-								<li class="event-fact">
-									<span class="event-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path></svg></span>
-									<span>Time<strong>12:30 - 1:30 PM</strong></span>
-								</li>
-								<li class="event-fact">
-									<span class="event-icon"><svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"></path></svg></span>
-									<span>Location<strong>Tisch 200</strong></span>
-								</li>
-							</ul>
-							<div class="events-actions">
-								<a class="events-btn events-btn-primary btn-dvdkempblue text-light-1" href="https://www.instagram.com/sterncapitalmanagement/" target="_blank">Follow updates</a>
-								<a class="events-btn border border-dvdkempblue text-dvdkempblue" href="past-events.html">Browse archive</a>
+					<div class="speaker-lineup">
+						<article class="speaker-card" data-aos="fade-up" data-aos-delay="100">
+							<div class="speaker-date" aria-label="October 15, 2026">
+								<span class="speaker-date-month">October</span>
+								<span class="speaker-date-day">15</span>
+								<span class="speaker-date-year">2026</span>
 							</div>
-						</div>
-					</article>
+							<div class="speaker-details">
+								<div class="speaker-series-label">Fall 2026 speaker event</div>
+								<h3 class="speaker-name">Adam Kurzer</h3>
+								<p class="speaker-firm-name">Shenkman Capital Management</p>
+								<ul class="speaker-meta">
+									<li><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path></svg>6:00 PM</li>
+									<li><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"></path></svg>Room TBD</li>
+								</ul>
+							</div>
+							<div class="speaker-firm">
+								<a class="firm-logo-link" href="https://www.shenkmancapital.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Shenkman Capital Management's website">
+									<img class="firm-logo" src="assets/eventsphotos/shenkman.png" alt="Shenkman Capital Management" width="440" height="240">
+								</a>
+							</div>
+						</article>
+
+						<article class="speaker-card" data-aos="fade-up" data-aos-delay="175">
+							<div class="speaker-date" aria-label="October 26, 2026">
+								<span class="speaker-date-month">October</span>
+								<span class="speaker-date-day">26</span>
+								<span class="speaker-date-year">2026</span>
+							</div>
+							<div class="speaker-details">
+								<div class="speaker-series-label">Fall 2026 speaker event</div>
+								<h3 class="speaker-name">Matt Schiff</h3>
+								<p class="speaker-firm-name">Surveyor Capital <span aria-label="part of Citadel">(Citadel)</span></p>
+								<ul class="speaker-meta">
+									<li><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path></svg>Time TBD</li>
+									<li><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"></path></svg>Room TBD</li>
+								</ul>
+							</div>
+							<div class="speaker-firm" aria-label="Surveyor Capital and Citadel logo placeholder">
+								<div class="firm-logo-placeholder"><strong>Surveyor Capital<br>(Citadel)</strong><span>Firm logo</span></div>
+							</div>
+						</article>
+					</div>
 				</div>
 			</section>
 
