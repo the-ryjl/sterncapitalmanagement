@@ -173,7 +173,7 @@
 				display: grid;
 				grid-template-columns: 170px minmax(0, 1fr) minmax(400px, 0.75fr);
 				min-height: 290px;
-				background: #fff;
+				background: var(--card-background, #fff);
 				border: 1px solid var(--event-line);
 				border-radius: 18px;
 				box-shadow: 0 20px 55px rgba(17, 27, 41, 0.08);
@@ -193,13 +193,9 @@
 				align-items: center;
 				justify-content: center;
 				padding: 2rem 1.25rem;
-				background: var(--event-blue);
-				color: #fff;
+				background: var(--card-accent, var(--event-blue));
+				color: var(--card-accent-text, #fff);
 				text-align: center;
-			}
-
-			.speaker-card:nth-child(2) .speaker-date {
-				background: var(--event-wine);
 			}
 
 			.speaker-date::after {
@@ -243,7 +239,7 @@
 
 			.speaker-series-label {
 				margin-bottom: 0.65rem;
-				color: var(--event-wine);
+				color: var(--card-label, var(--event-wine));
 				font-size: 0.72rem;
 				font-weight: 900;
 				letter-spacing: 0.15em;
@@ -252,7 +248,7 @@
 
 			.speaker-name {
 				margin-bottom: 0.45rem;
-				color: var(--event-ink);
+				color: var(--card-title, var(--event-ink));
 				font-size: clamp(2rem, 4vw, 3.25rem);
 				line-height: 1;
 				letter-spacing: -0.035em;
@@ -260,7 +256,7 @@
 
 			.speaker-firm-name {
 				margin-bottom: 1.5rem;
-				color: var(--event-blue);
+				color: var(--card-subtitle, var(--event-blue));
 				font-size: 1.05rem;
 				font-weight: 700;
 			}
@@ -280,9 +276,9 @@
 				gap: 0.5rem;
 				min-height: 38px;
 				padding: 0.55rem 0.75rem;
-				background: var(--event-sky);
+				background: var(--card-chip-background, var(--event-sky));
 				border-radius: 999px;
-				color: var(--event-ink);
+				color: var(--card-chip-text, var(--event-ink));
 				font-size: 0.88rem;
 				font-weight: 700;
 			}
@@ -290,7 +286,7 @@
 			.speaker-meta svg {
 				width: 16px;
 				height: 16px;
-				color: var(--event-wine);
+				color: var(--card-label, var(--event-wine));
 			}
 
 			.speaker-firm {
@@ -298,7 +294,7 @@
 				align-items: center;
 				justify-content: center;
 				padding: 1.5rem;
-				background: linear-gradient(145deg, #f8fafb, #eef3f5);
+				background: var(--card-logo-background, linear-gradient(145deg, #f8fafb, #eef3f5));
 				border-left: 1px solid var(--event-line);
 			}
 
@@ -561,7 +557,37 @@
 						<p class="events-copy">Explore upcoming speaker conversations, general meetings, workshops, and community events. Check back throughout the semester for new additions and updated event details.</p>
 					</div>
 					<div class="speaker-lineup">
-						<article class="speaker-card" data-aos="fade-up" data-aos-delay="100">
+						<!--
+							CARD COLORS: Edit any hex code below to recolor this card.
+							--card-accent: date block; --card-accent-text: date text;
+							--card-background: main card; --card-title: speaker name;
+							--card-subtitle: job/company; --card-label: label and icons;
+							--card-chip-background / --card-chip-text: time and room pills;
+							--card-logo-background: area behind the company logo.
+						-->
+						<article class="speaker-card" style="--card-accent: #000000; --card-accent-text: #ffffff; --card-background: #ffffff; --card-title: #111b29; --card-subtitle: #000000; --card-label: #000000; --card-chip-background: #e9f1f4; --card-chip-text: #111b29; --card-logo-background: #f3f6f7;" data-aos="fade-up" data-aos-delay="175">
+							<div class="speaker-date" aria-label="September 2, 2026">
+								<span class="speaker-date-month">September</span>
+								<span class="speaker-date-day">2</span>
+								<span class="speaker-date-year">2026</span>
+							</div>
+							<div class="speaker-details">
+								<div class="speaker-series-label">Fall 2026 Club Spotlight</div>
+								<h3 class="speaker-name">SCM Club Spotlight</h3>
+								<p class="speaker-firm-name">Speak with us at the Stern Club Spotlight!</p>
+								<ul class="speaker-meta">
+									<li><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path></svg>6:00 PM</li>
+									<li><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"></path></svg>Paulson Auditorium & T-200</li>
+								</ul>
+							</div>
+							<div class="speaker-firm">
+								<a class="firm-logo-link" href="https://www.sterncapitalmanagement.org" target="_blank" rel="noopener noreferrer" aria-label="Visit SCM's website">
+									<img class="firm-logo" src="assets/eventsphotos/scm800440.png" alt="Stern Capital Management" width="800" height="440">
+								</a>
+							</div>
+						</article>
+						
+						<article class="speaker-card" style="--card-accent: #243f63; --card-accent-text: #ffffff; --card-background: #ffffff; --card-title: #111b29; --card-subtitle: #243f63; --card-label: #7b1632; --card-chip-background: #e9f1f4; --card-chip-text: #111b29; --card-logo-background: #f3f6f7;" data-aos="fade-up" data-aos-delay="175">
 							<div class="speaker-date" aria-label="October 15, 2026">
 								<span class="speaker-date-month">October</span>
 								<span class="speaker-date-day">15</span>
@@ -583,7 +609,8 @@
 							</div>
 						</article>
 
-						<article class="speaker-card" data-aos="fade-up" data-aos-delay="175">
+						<!-- Edit these values independently to give this card a different palette. -->
+						<article class="speaker-card" style="--card-accent: #7b1632; --card-accent-text: #ffffff; --card-background: #ffffff; --card-title: #111b29; --card-subtitle: #243f63; --card-label: #7b1632; --card-chip-background: #e9f1f4; --card-chip-text: #111b29; --card-logo-background: #f3f6f7;" data-aos="fade-up" data-aos-delay="250">
 							<div class="speaker-date" aria-label="October 26, 2026">
 								<span class="speaker-date-month">October</span>
 								<span class="speaker-date-day">26</span>
