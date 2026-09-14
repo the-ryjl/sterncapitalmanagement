@@ -19384,3 +19384,95 @@ a:not([data-aos]):not(.btn):hover {
 					flex-direction: column;
 				}
 	}
+
+/* Site-wide Analyst Program application announcement */
+.application-announcement {
+	background: linear-gradient(90deg, #3d075f 0%, #57068c 52%, #2f1556 100%);
+	color: #fff;
+	position: relative;
+	z-index: 1031;
+}
+
+.application-announcement__link {
+	align-items: center;
+	color: #fff;
+	display: flex;
+	gap: 16px;
+	justify-content: center;
+	min-height: 48px;
+	padding: 10px 24px;
+	text-align: center;
+}
+
+.application-announcement__link:hover,
+.application-announcement__link:focus {
+	color: #fff;
+	text-decoration: none;
+}
+
+.application-announcement__link:focus-visible {
+	box-shadow: inset 0 0 0 3px #fff;
+	outline: 0;
+}
+
+.application-announcement__label {
+	background: #fff;
+	border-radius: 999px;
+	color: #57068c;
+	font-size: 11px;
+	font-weight: 800;
+	letter-spacing: .09em;
+	padding: 5px 9px;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.application-announcement__message {
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: .01em;
+}
+
+.application-announcement__action {
+	border-bottom: 1px solid rgba(255, 255, 255, .7);
+	font-size: 13px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+@media (max-width: 767.98px) {
+	.application-announcement__link {
+		flex-wrap: wrap;
+		gap: 6px 10px;
+		padding: 10px 16px;
+	}
+
+	.application-announcement__message {
+		font-size: 13px;
+		line-height: 1.35;
+		width: calc(100% - 105px);
+	}
+
+	.application-announcement__action {
+		font-size: 12px;
+		margin-left: 104px;
+	}
+}
+
+@media (max-width: 420px) {
+	.application-announcement__link {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		text-align: left;
+	}
+
+	.application-announcement__message {
+		width: auto;
+	}
+
+	.application-announcement__action {
+		grid-column: 2;
+		margin-left: 0;
+		width: max-content;
+	}
+}
