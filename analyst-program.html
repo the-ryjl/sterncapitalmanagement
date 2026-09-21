@@ -47,8 +47,6 @@
 			.pods-eyebrow::before { content: ""; width: 34px; height: 2px; background: currentColor; }
 			.pods-title { color: #fff; font-size: clamp(52px, 8vw, 96px); line-height: .95; letter-spacing: -.055em; margin: 0 0 28px; }
 			.pods-lede { max-width: 720px; color: rgba(255,255,255,.84); font-size: clamp(19px, 2.3vw, 25px); line-height: 1.55; margin: 0; }
-			.pods-lede a { color: #fff; border-bottom: 1px solid rgba(255,255,255,.65); }
-			.pods-lede a:hover { color: #fff; opacity: .8; }
 			.pods-section { padding: 100px 0; }
 			.pods-section-soft { background: var(--pods-soft); }
 			.pods-heading { color: var(--pods-ink); font-size: clamp(36px, 5vw, 58px); line-height: 1.06; letter-spacing: -.045em; margin-bottom: 22px; }
@@ -92,14 +90,6 @@
 			.pods-principle { padding: 34px; border-left: 2px solid var(--pods-blue); background: #fff; }
 			.pods-principle h3 { color: var(--pods-ink); font-size: 23px; margin-bottom: 12px; }
 			.pods-principle p { color: #68737f; line-height: 1.65; margin: 0; }
-			.pods-apply { padding: 72px 0; background: #f4eff8; scroll-margin-top: 130px; }
-			.pods-apply-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: center; padding: 46px 50px; background: #fff; border-top: 5px solid #57068c; box-shadow: 0 22px 55px rgba(44, 20, 65, .11); }
-			.pods-apply-label { color: #57068c; font-size: 13px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; margin: 0 0 14px; }
-			.pods-apply h2 { color: var(--pods-ink); font-size: clamp(34px, 4.5vw, 52px); line-height: 1.06; letter-spacing: -.04em; margin: 0 0 16px; }
-			.pods-apply-copy { color: #5c6874; font-size: 18px; line-height: 1.7; max-width: 720px; margin: 0; }
-			.pods-apply-button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-width: 190px; padding: 16px 24px; border: 2px solid #57068c; border-radius: 3px; background: #57068c; color: #fff; font-weight: 800; transition: background .2s ease, color .2s ease, transform .2s ease; }
-			.pods-apply-button:hover { background: #fff; color: #57068c; transform: translateY(-2px); }
-			.pods-apply-button:focus-visible { outline: 3px solid rgba(87,6,140,.28); outline-offset: 3px; }
 			.pods-cta { padding: 84px 0; background: var(--pods-blue); }
 			.pods-cta h2 { color: #fff; font-size: clamp(34px, 5vw, 56px); letter-spacing: -.045em; margin-bottom: 18px; }
 			.pods-cta p { color: rgba(255,255,255,.75); font-size: 18px; line-height: 1.7; max-width: 680px; }
@@ -112,7 +102,6 @@
 				.pods-workstreams { grid-template-columns: 1fr; }
 				.pods-model { grid-template-columns: 1fr; gap: 48px; }
 				.pods-principles { grid-template-columns: 1fr; }
-				.pods-apply-card { grid-template-columns: 1fr; gap: 28px; }
 			}
 			@media (max-width: 575.98px) {
 				.pods-hero { min-height: 430px; padding: 60px 0 48px; }
@@ -121,20 +110,10 @@
 				.pods-subsector-grid { grid-template-columns: 1fr; }
 				.pod-card { min-height: 300px; }
 				.pod-mark { margin-bottom: 34px; }
-				.pods-apply { padding: 48px 0; }
-				.pods-apply-card { padding: 34px 26px; }
-				.pods-apply-button { width: 100%; }
 			}
 		</style>
 	</head>
 	<body>
-		<div class="application-announcement" role="region" aria-label="Analyst Program applications">
-			<a class="application-announcement__link" href="analyst-program.html#apply">
-				<span class="application-announcement__label">Applications live</span>
-				<span class="application-announcement__message">Apply to the SCM Analyst Program through the Central Club Application.</span>
-				<span class="application-announcement__action">View details <span aria-hidden="true">→</span></span>
-			</a>
-		</div>
 		<nav class="bg-bg-3 sticky-top py-4 py-lg-7">
 			<div class="d-block d-lg-none">
 				<div class="container"><div class="row align-items-center">
@@ -173,23 +152,8 @@
 				<div class="container"><div class="pods-hero-content">
 					<div class="pods-kicker" data-aos="fade-down">SCM's student-led investment platform</div>
 					<h1 class="pods-title" data-aos="fade-down" data-aos-delay="100">Analyst Program</h1>
-					<p class="pods-lede" data-aos="fade-down" data-aos-delay="200">Two focused teams. One shared view of the markets. SCM's investment program gives students a collaborative setting to explore ideas, strengthen their research, and learn how different parts of the market connect. Interested? Email <a href="mailto:scm@stern.nyu.edu"><strong>scm@stern.nyu.edu</strong></a> for updates on our Fall 2026 Pod Program!</p>
+					<p class="pods-lede" data-aos="fade-down" data-aos-delay="200">Two focused teams. One shared view of the markets. SCM's investment program give students a collaborative setting to explore ideas, strengthen their research, and learn how different parts of the market connect. Interested? Email <a href="mailto:scm@stern.nyu.edu"><strong>scm@stern.nyu.edu</strong></a> for updates on our Fall 2026 Pod Program!</p>
 				</div></div>
-			</section>
-
-			<section class="pods-apply" id="apply" aria-labelledby="apply-heading">
-				<div class="container">
-					<div class="pods-apply-card" data-aos="fade-down">
-						<div>
-							<p class="pods-apply-label">Fall 2026 applications</p>
-							<h2 id="apply-heading">Applications are now open.</h2>
-							<p class="pods-apply-copy">Apply to join the SCM Analyst Program through NYU Stern's Central Club Application portal.</p>
-						</div>
-						<div>
-							<a class="pods-apply-button" href="https://nyustern.formstack.com/forms/club_application_portal?sso=6aa7f5568a8fb" target="_blank" rel="noopener noreferrer">Apply now <span aria-hidden="true">↗</span></a>
-						</div>
-					</div>
-				</div>
 			</section>
 
 			<section class="pods-section">
@@ -248,7 +212,7 @@
 				</div>
 			</section>
 
-			<section class="pods-cta"><div class="container"><div class="row justify-content-between align-items-end"><div class="col-lg-8"><h2>Ready to join the Analyst Program?</h2><p class="mb-lg-0">Submit your application through NYU Stern's Central Club Application portal.</p></div><div class="col-lg-3 text-lg-end mt-5 mt-lg-0"><a class="pods-link" href="https://nyustern.formstack.com/forms/club_application_portal?sso=6aa7f5568a8fb" target="_blank" rel="noopener noreferrer">Apply now <span aria-hidden="true">↗</span></a></div></div></div></section>
+			<section class="pods-cta"><div class="container"><div class="row justify-content-between align-items-end"><div class="col-lg-8"><h2>Follow the next chapter of SCM.</h2><p class="mb-lg-0">Stay connected for future updates, opportunities, and ways to participate in the investment pod community.</p></div><div class="col-lg-3 text-lg-end mt-5 mt-lg-0"><a class="pods-link" href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank">Join the mailing list <span aria-hidden="true">→</span></a></div></div></div></section>
 		</main>
 
 		<footer class="py-8 text-center bg-dvdkempblue">
