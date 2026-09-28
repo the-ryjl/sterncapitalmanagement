@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Analyst Program - Stern Capital Management</title>
+		<title>PSC Initiative - Stern Capital Management</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Explore Stern Capital Management's student-led investment program across Technology and Fixed Income and Credit markets.">
+		<meta name="description" content="Explore the PSC Initiative with Piper Sandler: a Summer 2028 technology investment banking opportunity for current freshmen in the Class of 2030, in collaboration with Business Finance Group (BFG) at NYU Tandon.">
 		<link rel="icon" href="assets/favicon-32x32.png">
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
@@ -111,7 +111,65 @@
 				.pod-card { min-height: 300px; }
 				.pod-mark { margin-bottom: 34px; }
 			}
-		</style>
+		
+            .psc-hero { background: var(--pods-ink); padding: 0; min-height: auto; }
+            .psc-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; align-items: stretch; }
+            .psc-hero-copy { padding: 76px 48px 76px 0; }
+            .psc-hero .pods-title { font-size: clamp(52px, 6.5vw, 84px); }
+            .psc-hero .pods-lede { font-size: 21px; }
+            .psc-hero-photo { margin: 0; position: relative; min-height: 500px; }
+            .psc-hero-photo img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+            .psc-hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(19,34,52,.8), transparent 45%); }
+            .psc-hero-photo figcaption { position: absolute; bottom: 28px; left: 28px; right: 28px; z-index: 1; color: white; font-size: 13px; letter-spacing: .06em; }
+            .psc-facts { display: grid; grid-template-columns: repeat(3,1fr); padding: 32px 0; border-bottom: 1px solid var(--pods-line); gap: 28px; }
+            .psc-facts div + div { border-left: 1px solid var(--pods-line); padding-left: 28px; }
+            .psc-facts span { display: block; color: #68737f; font-size: 12px; letter-spacing: .12em; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; }
+            .psc-facts strong { color: var(--pods-ink); font-size: 20px; }
+            .psc-collab { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; margin-top: 38px; padding: 32px; border-left: 3px solid var(--pods-blue); background: var(--pods-soft); }
+            .psc-collab p { margin: 0; color: #5c6874; line-height: 1.7; }
+            .psc-partners { display: flex; justify-content: space-between; gap: 20px; align-items: center; font-size: 18px; font-weight: 700; color: var(--pods-ink); }
+            .psc-partners span { color: #7890ac; font-size: 28px; font-weight: 400; }
+            .psc-experience { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 46px; }
+            .psc-experience figure { margin: 0; }
+            .psc-experience img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+            .psc-experience figcaption { font-size: 13px; color: #68737f; padding: 14px 0 0; }
+            .psc-experience .pods-step { grid-template-columns: 36px 1fr; }
+            .psc-sector-number { display: block; color: #7890ac; font-size: 12px; font-weight: 700; margin-bottom: 20px; letter-spacing: .12em; }
+            @media(max-width: 991.98px) { .psc-hero-copy { padding: 54px 30px 54px 0; } .psc-hero-grid { grid-template-columns: 1.1fr 1fr; } .psc-collab,.psc-experience { grid-template-columns: 1fr; gap: 32px; } }
+            @media(max-width: 575.98px) { .psc-hero-grid { grid-template-columns: 1fr; } .psc-hero-copy { padding: 48px 0 36px; } .psc-hero-photo { min-height: 260px; } .psc-hero .pods-lede { font-size: 19px; } .psc-facts { grid-template-columns: 1fr; gap: 18px; } .psc-facts div + div { border-left: 0; border-top: 1px solid var(--pods-line); padding: 18px 0 0; } .psc-collab { padding: 24px; } .psc-partners { font-size: 16px; gap: 14px; } }
+
+            .psc-cover { background: linear-gradient(90deg, rgba(12,29,49,.97), rgba(12,29,49,.86) 48%, rgba(12,29,49,.45)), url("assets/programs/stockphoto1stern.jpg") center/cover; color: #fff; }
+            .psc-cover-inner { padding-top: 28px; padding-bottom: 22px; }
+            .psc-cover-top { display: flex; justify-content: space-between; gap: 24px; padding-bottom: 24px; border-bottom: 1px solid #ffffff40; color: #d5dfec; font-size: 10px; font-weight: 600; letter-spacing: .14em; }
+            .psc-cover-layout { display: grid; grid-template-columns: 1.45fr 1fr; gap: 90px; padding: 64px 0 40px; align-items: center; }
+            .psc-cover .pods-title { font-size: clamp(52px,6.4vw,88px); margin-bottom: 20px; }
+            .psc-cover-tagline { color: #fff; font-size: clamp(26px,3vw,40px); letter-spacing: -.025em; line-height: 1.2; margin-bottom: 24px; }
+            .psc-cover-copy { color: #d0dbe8; max-width: 570px; font-size: 17px; line-height: 1.75; margin-bottom: 30px; }
+            .psc-brief { background: #fff; color: var(--pods-ink); padding: 34px; box-shadow: 0 24px 55px #0003; border-top: 4px solid #6d8aac; }
+            .psc-brief-label { font-size: 10px; letter-spacing: .13em; font-weight: 700; color: #647790; margin-bottom: 26px; }
+            .psc-brief h2 { font-size: 30px; letter-spacing: -.035em; line-height: 1.15; margin-bottom: 28px; }
+            .psc-brief dl { margin: 0 0 24px; }
+            .psc-brief dl div { display: grid; grid-template-columns: 1fr 1.25fr; gap: 12px; border-top: 1px solid var(--pods-line); padding: 17px 0; }
+            .psc-brief dt { font-size: 12px; font-weight: 500; color: #647080; }
+            .psc-brief dd { font-size: 14px; font-weight: 600; margin: 0; }
+            .psc-brief a { display: flex; justify-content: space-between; color: var(--pods-blue); font-size: 13px; font-weight: 700; }
+            .psc-photo-credit { font-size: 10px; color: #c5d1df; margin: 0; letter-spacing: .04em; }
+            .psc-collab { background: #fff; border: 1px solid var(--pods-line); border-left: 4px solid var(--pods-blue); padding: 36px; }
+            .psc-experience { gap: 70px; }
+            .psc-experience figure { position: relative; padding: 0 20px 20px 0; }
+            .psc-experience figure::before { content: ''; position: absolute; top: 24px; right: 0; bottom: 0; left: 24px; background: #e1e7ee; z-index: 0; }
+            .psc-experience img,.psc-experience figcaption { position: relative; }
+            .psc-experience figcaption { padding: 14px 18px 0; }
+            .psc-coverage .container { display: grid; grid-template-columns: .95fr 1.3fr; gap: 70px; align-items: start; }
+            .psc-coverage .pods-subsector-grid { grid-template-columns: 1fr 1fr; gap: 0; margin: 0; border-top: 1px solid var(--pods-line); border-left: 1px solid var(--pods-line); }
+            .psc-coverage .pods-subsector { border: 0; border-right: 1px solid var(--pods-line); border-bottom: 1px solid var(--pods-line); min-height: 148px; background: #f8fafc; }
+            .psc-coverage .pods-subsector h3 { font-size: 20px; }
+            .psc-eligibility-panel { background: #fff; padding: 38px; border-top: 4px solid var(--pods-blue); box-shadow: 0 14px 38px #13223408; }
+            .pods-cta { background: linear-gradient(110deg, #243f63, #132234); }
+            .pods-page a:focus-visible { outline: 3px solid #86a9d4; outline-offset: 5px; }
+            @media(max-width: 991.98px) { .psc-cover-layout { gap: 32px; grid-template-columns: 1.2fr 1fr; } .psc-brief { padding: 24px; } .psc-coverage .container { grid-template-columns: 1fr; gap: 30px; } }
+            @media(max-width: 575.98px) { .psc-cover-top { flex-direction: column; gap: 10px; } .psc-cover-layout { grid-template-columns: 1fr; padding-top: 42px; } .psc-cover .pods-title { font-size: 54px; } .psc-cover-copy { font-size: 16px; } .psc-brief { padding: 28px; } .psc-collab { padding: 24px; } .psc-coverage .pods-subsector { padding: 20px; min-height: 145px; } .psc-coverage .pods-subsector h3 { font-size: 17px; } .psc-eligibility-panel { padding: 28px; } }
+</style>
 	</head>
 	<body>
 		<nav class="bg-bg-3 sticky-top py-4 py-lg-7">
@@ -148,72 +206,35 @@
 		</nav>
 
 		<main class="pods-page">
-			<section class="pods-hero">
-				<div class="container"><div class="pods-hero-content">
-					<div class="pods-kicker" data-aos="fade-down">SCM's student-led investment platform</div>
-					<h1 class="pods-title" data-aos="fade-down" data-aos-delay="100">Analyst Program</h1>
-					<p class="pods-lede" data-aos="fade-down" data-aos-delay="200">Two focused teams. One shared view of the markets. SCM's investment program give students a collaborative setting to explore ideas, strengthen their research, and learn how different parts of the market connect. Interested? Email <a href="mailto:scm@stern.nyu.edu"><strong>scm@stern.nyu.edu</strong></a> for updates on our Fall 2026 Pod Program!</p>
-				</div></div>
-			</section>
-
-			<section class="pods-section">
-				<div class="container">
-					<div class="row justify-content-between align-items-end"><div class="col-lg-6"><p class="pods-eyebrow">Two specialized approaches</p><h2 class="pods-heading">Focused coverage.<br>Broader perspective.</h2></div><div class="col-lg-5"><p class="pods-copy mb-0">Each pod follows a distinct area of the market while contributing to a shared investment conversation. Together, they help members see how macro forces, sector trends, and company fundamentals shape opportunity.</p></div></div>
-					<div class="pods-grid">
-						<article class="pod-card" data-aos="fade-down" data-aos-delay="100"><div class="pod-mark">FIC</div><h3>Fixed Income and Credit</h3><p>Exploring credit risk, global macro themes, and the market forces that connect economies and companies.</p></article>
-						<article class="pod-card" data-aos="fade-down" data-aos-delay="160"><div class="pod-mark">TX</div><h3>Tech</h3><p>Studying the companies, products, and structural shifts driving the digital economy forward.</p></article>
-					</div>
-				</div>
-			</section>
-
-			<section class="pods-section pods-section-soft" id="fic-pod">
-				<div class="container">
-					<div class="pods-detail-header">
-						<p class="pods-eyebrow">Fixed Income and Credit</p>
-						<h2 class="pods-heading">Build and defend an active view against the AGG.</h2>
-						<p class="pods-copy pods-detail-intro">The FIC pod manages both rates and credit decisions relative to the Bloomberg U.S. Aggregate Bond Index, using the AGG ETF for daily comparison. Members connect macroeconomic research, credit analysis, portfolio positioning, and performance measurement in one disciplined process.</p>
-					</div>
-					<div class="pods-workstreams">
-						<article class="pods-workstream">
-							<span class="pods-workstream-number">01</span>
-							<h3>Macro &amp; Rates</h3>
-							<p>Develop a view on the level of interest rates and the shape of the yield curve. Before major employment, inflation, and Federal Reserve releases, the team prepares a short memo explaining its expectations, key risks, and portfolio positioning.</p>
-						</article>
-						<article class="pods-workstream">
-							<span class="pods-workstream-number">02</span>
-							<h3>Credit</h3>
-							<p>Determine the appropriate credit exposure relative to the benchmark by studying the credit cycle, historical and current spreads, issuance, and risk. Views can be expressed through investment-grade, high-yield, or distressed credit, with sector teams added as coverage grows.</p>
-						</article>
-						<article class="pods-workstream">
-							<span class="pods-workstream-number">03</span>
-							<h3>Benchmark &amp; Performance</h3>
-							<p>Target 50–100 basis points of annual outperformance and track results against AGG daily. Each meeting begins with a performance and market update, including attribution of gains and losses to duration and credit positioning.</p>
-						</article>
-					</div>
-				</div>
-			</section>
-
-			<section class="pods-section" id="tech-pod">
-				<div class="container">
-					<div class="pods-detail-header">
-						<p class="pods-eyebrow">Technology</p>
-						<h2 class="pods-heading">Specialization is the edge.</h2>
-						<p class="pods-copy pods-detail-intro">Each Tech analyst develops expertise in a clearly defined subsector, building the focused knowledge needed to follow a large and fast-moving investment universe. This specialist structure gives the pod room to grow while preserving depth and accountability across coverage.</p>
-					</div>
-					<div class="pods-subsector-grid">
-						<div class="pods-subsector"><h3>Software</h3></div>
-						<div class="pods-subsector"><h3>Payments &amp; Fintech</h3></div>
-						<div class="pods-subsector"><h3>Semiconductors &amp; Hardware</h3></div>
-						<div class="pods-subsector"><h3>Internet &amp; Digital Platforms</h3></div>
-						<div class="pods-subsector"><h3>Gaming &amp; Online Travel</h3></div>
-						<div class="pods-subsector"><h3>Media &amp; Streaming</h3></div>
-					</div>
-					<p class="pods-detail-note mb-0">Coverage areas remain flexible as the team develops. As membership grows, large subsectors can expand into teams led by experienced analysts and supported by junior analysts, without combining distinct areas such as software and payments.</p>
-				</div>
-			</section>
-
-			<section class="pods-cta"><div class="container"><div class="row justify-content-between align-items-end"><div class="col-lg-8"><h2>Follow the next chapter of SCM.</h2><p class="mb-lg-0">Stay connected for future updates, opportunities, and ways to participate in the investment pod community.</p></div><div class="col-lg-3 text-lg-end mt-5 mt-lg-0"><a class="pods-link" href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank">Join the mailing list <span aria-hidden="true">→</span></a></div></div></div></section>
-		</main>
+            <section class="psc-cover">
+                <div class="container psc-cover-inner"><div class="psc-cover-top"><span>STERN CAPITAL MANAGEMENT × BUSINESS FINANCE GROUP</span><span>PROGRAMS / PSC</span></div><div class="psc-cover-layout"><div><p class="pods-kicker">Piper Sandler · Technology Group</p><h1 class="pods-title">PSC Initiative</h1><p class="psc-cover-tagline">Where technology<br>meets opportunity.</p><p class="psc-cover-copy">A collaboration between Stern Capital Management and Business Finance Group (BFG) at NYU Tandon, sharing Piper Sandler’s Technology Investment Banking Summer Analyst opportunity.</p><a class="btn btn-light-1 rounded-2 text-dvdkempblue" href="https://docs.google.com/forms/d/e/1FAIpQLSepF_NRogyo-UA3J9nGAZ9f4gobIYTBV_w49hLgLBTjhxAGMA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Apply here <span aria-hidden="true">↗</span></a></div><aside class="psc-brief"><p class="psc-brief-label">THE OPPORTUNITY / AT A GLANCE</p><h2>Summer Analyst<br>Internship</h2><dl><div><dt>Who can apply</dt><dd>Current freshmen only<br>Class of 2030</dd></div><div><dt>Expected start</dt><dd>Summer 2028</dd></div><div><dt>Location</dt><dd>San Francisco, CA</dd></div></dl><a href="#experience">Explore the experience <span aria-hidden="true">↓</span></a></aside></div></div>
+            </section>
+            <section class="pods-section">
+                <div class="container">
+                    <div class="row justify-content-between align-items-end"><div class="col-lg-6"><p class="pods-eyebrow">The opportunity</p><h2 class="pods-heading">Explore technology investment banking.</h2></div><div class="col-lg-5"><p class="pods-copy mb-0">Join Piper Sandler’s Technology Group as an Investment Banking Summer Analyst Intern. Gain hands-on experience on transaction teams, with direct client exposure and frequent interaction with senior bankers.</p></div></div>
+                </div>
+            </section>
+            <section class="pods-section pods-section-soft" id="experience">
+                <div class="container"><div class="pods-detail-header"><p class="pods-eyebrow">The analyst experience</p><h2 class="pods-heading">Build skills through hands-on work.</h2><p class="pods-copy pods-detail-intro">Receive training as a member of transaction teams and learn from experienced bankers advising technology businesses.</p></div>
+                    <div class="psc-experience"><figure><img src="assets/programs/programs2.png" alt="Students attending a session in an NYU classroom" loading="lazy"></figure><div class="pods-steps">
+                        <div class="pods-step"><span>01</span><div><h3>Financial Modeling</h3><p>Create in-depth financial models and analyses to support strategic and financial transactions.</p></div></div>
+                        <div class="pods-step"><span>02</span><div><h3>Client Presentations</h3><p>Help draft presentations and meeting materials, translating detailed analysis into clear communication.</p></div></div>
+                        <div class="pods-step"><span>03</span><div><h3>Due Diligence</h3><p>Participate in client due diligence while working with senior bankers and transaction teams.</p></div></div>
+                    </div></div>
+                </div>
+            </section>
+            <section class="pods-section psc-coverage">
+                <div class="container"><div class="pods-detail-header"><p class="pods-eyebrow">Technology coverage</p><h2 class="pods-heading">Focused sectors.<br>Broader perspective.</h2><p class="pods-copy pods-detail-intro">The team offers exposure to multiple industries and investment banking products, with a particular focus on the following technology sectors.</p></div>
+                    <div class="pods-subsector-grid"><div class="pods-subsector"><span class="psc-sector-number">01</span><h3>Cybersecurity</h3></div><div class="pods-subsector"><span class="psc-sector-number">02</span><h3>Government &amp; Defense Tech</h3></div><div class="pods-subsector"><span class="psc-sector-number">03</span><h3>Fintech</h3></div><div class="pods-subsector"><span class="psc-sector-number">04</span><h3>Human Capital Management</h3></div><div class="pods-subsector"><span class="psc-sector-number">05</span><h3>Legal Tech</h3></div><div class="pods-subsector"><span class="psc-sector-number">06</span><h3>Semiconductors</h3></div></div></div>
+            </section>
+            <section class="pods-section pods-section-soft">
+                <div class="container"><div class="pods-model">
+                    <div class="psc-eligibility-panel"><p class="pods-eyebrow">Who should apply</p><h2 class="pods-heading">Current freshmen.<br>Class of 2030.</h2><p class="pods-copy">This opportunity is open only to current freshmen in the Class of 2030, with an expected internship start in Summer 2028.</p><p class="pods-copy mb-0">Piper Sandler seeks candidates who are analytically inclined, articulate, poised, and motivated to succeed in a growing, results-oriented organization.</p></div>
+                    <div><p class="pods-eyebrow">About Piper Sandler</p><h2 class="pods-heading">Learn from an experienced team.</h2><p class="pods-copy">Piper Sandler is an international investment bank and institutional securities firm serving middle-market corporations, private equity groups, public entities, and institutional investors. The Technology Team’s heads and managing directors each bring more than 20 years of experience.</p><p class="pods-copy mb-0">The team expanded through DBO Partners in October 2022 and G-Squared Capital Partners in 2025, adding expertise in complex transactions, government services, and defense technology.</p></div>
+                </div><p class="pods-detail-note mb-0">Full-time analysts have progressed to senior roles within the firm and pursued opportunities in private equity, technology companies, and start-ups.</p></div>
+            </section>
+            <section class="pods-cta"><div class="container"><div class="row justify-content-between align-items-center"><div class="col-lg-8"><h2>Apply to the PSC Initiative.</h2><p>Current freshman in the Class of 2030? Apply through the form to express your interest in this opportunity, shared in collaboration with Business Finance Group (BFG) at NYU Tandon.</p><p class="mb-lg-0">Questions? <a class="pods-link" href="mailto:scm@stern.nyu.edu">Contact SCM</a></p></div><div class="col-lg-3 text-lg-end mt-5 mt-lg-0"><a class="btn btn-light-1 rounded-2 text-dvdkempblue" href="https://docs.google.com/forms/d/e/1FAIpQLSepF_NRogyo-UA3J9nGAZ9f4gobIYTBV_w49hLgLBTjhxAGMA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Apply here <span aria-hidden="true">→</span></a></div></div></div></section>
+        </main>
 
 		<footer class="py-8 text-center bg-dvdkempblue">
 			<div class="container">
@@ -241,29 +262,5 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" data-integrity="88e7162c11208a04c36ec758824953c4aa31b0dcbf13d142dda3f8bc359ba3f9"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script src="assets/scripts.js"></script>
-		<script>
-			document.querySelectorAll('.archive-carousel').forEach(function (carousel) {
-				var track = carousel.querySelector('.archive-grid');
-				var previous = carousel.querySelector('[data-scroll-direction="prev"]');
-				var next = carousel.querySelector('[data-scroll-direction="next"]');
-
-				function updateControls() {
-					previous.disabled = track.scrollLeft <= 2;
-					next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
-				}
-
-				function move(direction) {
-					var card = track.querySelector('.archive-card');
-					var distance = card ? card.getBoundingClientRect().width + 1 : track.clientWidth;
-					track.scrollBy({ left: direction * distance, behavior: 'smooth' });
-				}
-
-				previous.addEventListener('click', function () { move(-1); });
-				next.addEventListener('click', function () { move(1); });
-				track.addEventListener('scroll', updateControls, { passive: true });
-				window.addEventListener('resize', updateControls);
-				updateControls();
-			});
-		</script>
 	</body>
 </html>
