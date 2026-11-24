@@ -1,293 +1,711 @@
 <!DOCTYPE html>
-<html  lang="en">
-	<head>
-		<meta charset="utf-8" >
-		<title>Stern Capital Management</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="custom" content="MzI0Mjcx" id="snextras">
-		<link rel="icon" type="image/x-icon" href="assets/favicon-32x32.png">
-		<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-		<!-- AOS 3.0.0-beta.6 plugin CSS (Animations) -->
-		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&subset=latin&display=swap" rel="stylesheet" id="sf-google-fonts">
-		<!-- jQuery 3.6.0 (uncomment line below if you need jQuery) -->
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-		<!-- Styles for controls (delete, move, edit, block name) -->
-		<link href="assets/homepage.css" rel="stylesheet" id="sf-custom-css"/>
-		<!-- Open graph settings (social networks sharing settings) -->
-		<meta name='twitter:card' content='summary_large_image'>
-		<style>
-			.team-nav-dropdown {
-				display: inline-block;
-			}
-			.team-nav-dropdown:hover .dropdown-menu,
-			.team-nav-dropdown:focus-within .dropdown-menu {
-				display: block;
-			}
-		</style>
-		<!-- Open graph settings end -->
-	</head> 
-	<body>
-<!-- Navigation 5 -->
-	<nav class="bg-bg-3 sticky-top py-4 py-lg-7">
-		<div class="d-block d-lg-none">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-3" data-aos="fade-down" data-aos-delay="0">
-						<a class="btn btn-width-equal-height d-lg-none rounded-circle custom-mobile-nav-btn" data-bs-toggle="offcanvas" data-bs-target="#custom-id-3alue01m"><svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-light-1"><path d="M2.00016 5.33333H14.0002C14.177 5.33333 14.3465 5.2631 14.4716 5.13807C14.5966 5.01305 14.6668 4.84348 14.6668 4.66667C14.6668 4.48986 14.5966 4.32029 14.4716 4.19526C14.3465 4.07024 14.177 4 14.0002 4H2.00016C1.82335 4 1.65378 4.07024 1.52876 4.19526C1.40373 4.32029 1.3335 4.48986 1.3335 4.66667C1.3335 4.84348 1.40373 5.01305 1.52876 5.13807C1.65378 5.2631 1.82335 5.33333 2.00016 5.33333ZM14.0002 10.6667H2.00016C1.82335 10.6667 1.65378 10.7369 1.52876 10.8619C1.40373 10.987 1.3335 11.1565 1.3335 11.3333C1.3335 11.5101 1.40373 11.6797 1.52876 11.8047C1.65378 11.9298 1.82335 12 2.00016 12H14.0002C14.177 12 14.3465 11.9298 14.4716 11.8047C14.5966 11.6797 14.6668 11.5101 14.6668 11.3333C14.6668 11.1565 14.5966 10.987 14.4716 10.8619C14.3465 10.7369 14.177 10.6667 14.0002 10.6667ZM14.0002 7.33333H2.00016C1.82335 7.33333 1.65378 7.40357 1.52876 7.5286C1.40373 7.65362 1.3335 7.82319 1.3335 8C1.3335 8.17681 1.40373 8.34638 1.52876 8.4714C1.65378 8.59643 1.82335 8.66667 2.00016 8.66667H14.0002C14.177 8.66667 14.3465 8.59643 14.4716 8.4714C14.5966 8.34638 14.6668 8.17681 14.6668 8C14.6668 7.82319 14.5966 7.65362 14.4716 7.5286C14.3465 7.40357 14.177 7.33333 14.0002 7.33333Z"></path></svg></a>
-					</div>
-					<div class="col-6 text-center" data-aos="fade-down" data-aos-delay="200">
-						<a href="#"><img src="assets/Vertical Logo-1.png" srcset="assets/Vertical Logo-1.png 2x" alt="" class="img-fluid" data-aos="fade-down" data-aos-delay="0"></a>
-					</div>
-					<div class="col-3" data-aos="fade-down" data-aos-delay="400">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="offcanvas offcanvas-start bg-bg-3" id="custom-id-3alue01m" aria-hidden="true">
-			<div class="offcanvas-header">
-				<a href="#"><img src="i/logo-dark.png" srcset="i/logo-dark@2x.png 2x" alt="" class="img-fluid">            </a>
-				<a class="btn btn-sm btn-width-equal-height btn-bg-3" data-bs-dismiss="offcanvas">                <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-dark-2">                    <path d="M8.9398 8L13.1398 3.80667C13.2653 3.68113 13.3359 3.51087 13.3359 3.33333C13.3359 3.1558 13.2653 2.98554 13.1398 2.86C13.0143 2.73447 12.844 2.66394 12.6665 2.66394C12.4889 2.66394 12.3187 2.73447 12.1931 2.86L7.9998 7.06L3.80646 2.86C3.68093 2.73447 3.51066 2.66394 3.33313 2.66394C3.1556 2.66394 2.98533 2.73447 2.8598 2.86C2.73426 2.98554 2.66374 3.1558 2.66374 3.33333C2.66374 3.51087 2.73426 3.68113 2.8598 3.80667L7.0598 8L2.8598 12.1933C2.79731 12.2553 2.74771 12.329 2.71387 12.4103C2.68002 12.4915 2.6626 12.5787 2.6626 12.6667C2.6626 12.7547 2.68002 12.8418 2.71387 12.9231C2.74771 13.0043 2.79731 13.078 2.8598 13.14C2.92177 13.2025 2.99551 13.2521 3.07675 13.2859C3.15798 13.3198 3.24512 13.3372 3.33313 13.3372C3.42114 13.3372 3.50827 13.3198 3.58951 13.2859C3.67075 13.2521 3.74449 13.2025 3.80646 13.14L7.9998 8.94L12.1931 13.14C12.2551 13.2025 12.3288 13.2521 12.4101 13.2859C12.4913 13.3198 12.5785 13.3372 12.6665 13.3372C12.7545 13.3372 12.8416 13.3198 12.9228 13.2859C13.0041 13.2521 13.0778 13.2025 13.1398 13.14C13.2023 13.078 13.2519 13.0043 13.2857 12.9231C13.3196 12.8418 13.337 12.7547 13.337 12.6667C13.337 12.5787 13.3196 12.4915 13.2857 12.4103C13.2519 12.329 13.2023 12.2553 13.1398 12.1933L8.9398 8Z">                    </path>                </svg>            </a>
-			</div>
-			<div class="offcanvas-body">
-				<div>
-					<a href="index.html" class="fw-bold text-dark-1 py-2 d-inline-block">Home</a>
-				</div>
-				<div>
-					<a href="about.html" class="fw-bold text-dark-1 py-2 d-inline-block">About</a><div class="ps-4"><a href="membership.html" class="text-dark-1 py-1 d-inline-block">Membership</a></div>
-					<div class="ps-4"><a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank" rel="noopener noreferrer" class="text-dark-1 py-1 d-inline-block">Mailing List</a></div>
-				</div>
-				<div>
-					<a href="adboard.html" class="fw-bold text-dark-1 py-2 d-inline-block">Advisory Board</a>
-				</div>
-				<div>
-					<a href="team.html" class="fw-bold text-dark-1 py-2 d-inline-block">Team</a>
-					<div class="ps-4">
-						<a href="team.html#executive-board" class="text-dark-1 py-1 d-inline-block">Executive Board</a>
-					</div>
-					<div class="ps-4">
-						<a href="team.html#coffee-chat" class="text-dark-1 py-1 d-inline-block">Coffee Chat</a>
-					</div>
-				</div>
-				<div>
-					<a href="scholars-program.html" class="fw-bold text-dark-1 py-2 d-inline-block">Programs</a>
-					<div class="ps-4"><a href="scholars-program.html" class="text-dark-1 py-1 d-inline-block">Scholars Program</a></div>
-					<div class="ps-4"><a href="analyst-program.html" class="text-dark-1 py-1 d-inline-block">Analyst Program</a></div>
-					<div class="ps-4"><a href="psc-initiative.html" class="text-dark-1 py-1 d-inline-block">PSC Initiative</a></div>
-				<div><a href="events.html" class="fw-bold text-dark-1 py-2 d-inline-block">Events</a></div>
-				<div><a href="past-events.html" class="fw-bold text-dark-1 py-2 d-inline-block">Past Events</a></div>
-				<div><a href="https://research.sterncapitalmanagement.org" target="_blank" rel="noopener noreferrer" class="fw-bold text-dark-1 py-2 d-inline-block">Research</a></div>
-				</div>
-			</div>
-		</div>
-		<div class="d-none d-lg-block">
-			<div class="container">
-				<div class="row justify-content-between align-items-center">
-					<div class="col-3">
-						<a href="#"><img src="assets/Vertical Logo-1.png" alt="" class="img-fluid" data-aos="fade-down" data-aos-delay="0">                    </a>
-					</div>
-					<div class="text-end col-9 float-lg-none">
-						<a href="#" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="100">Home                    </a>
-						<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="200">
-							<a href="about.html" class="fw-bold mx-4 text-dark-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-							<ul class="dropdown-menu team-nav-menu">
-								<li><a class="dropdown-item" href="about.html">About Overview</a></li><li><a class="dropdown-item" href="membership.html">Membership</a></li>
-								<li><a class="dropdown-item" href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank" rel="noopener noreferrer">Mailing List</a></li>
-							</ul>
-						</div>
-						<a href="adboard.html" class="fw-bold mx-4 text-dark-1" data-aos="fade-down" data-aos-delay="300">Advisory Board</a>
-						<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="300">
-							<a href="team.html" class="fw-bold mx-4 text-dark-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Team</a>
-							<ul class="dropdown-menu team-nav-menu">
-								<li><a class="dropdown-item" href="team.html">Team Overview</a></li>
-								<li><a class="dropdown-item" href="team.html#coffee-chat">Coffee Chat</a></li>
-							</ul>
-						</div>
-						<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="400">
-							<a href="scholars-program.html" class="fw-bold mx-4 text-dark-1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Programs</a>
-							<ul class="dropdown-menu team-nav-menu">
-								<li><a class="dropdown-item" href="scholars-program.html">Scholars Program</a></li>
-								<li><a class="dropdown-item" href="analyst-program.html">Analyst Program</a></li>
-								<li><a class="dropdown-item" href="psc-initiative.html">PSC Initiative</a></li>
-							</ul>
-						</div>
-						<div class="dropdown team-nav-dropdown" data-aos="fade-down" data-aos-delay="500">
-								<a href="events.html" class="ms-4 btn btn-sm rounded-2 text-dvdkempblue btn-light-1 border border-dvdkempblue dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Events</a>
-								<ul class="dropdown-menu team-nav-menu">
-									<li><a class="dropdown-item" href="events.html">Upcoming Events</a></li>
-									<li><a class="dropdown-item" href="past-events.html">Past Events</a></li>
-								</ul>
-						</div>
-						<a href="https://research.sterncapitalmanagement.org" target="_blank" rel="noopener noreferrer" class="ms-4 btn btn-sm rounded-2 btn-dvdkempblue" data-aos="fade-down" data-aos-delay="500">Research</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<!--Header 1-->
-	<header class="py-20 bg-offwhite">
-			<div class="container">
-				<div class="row align-items-center flex-md-row-reverse">
-					<div class="col-md-6">
-						<img src="assets/NYU_Stern.jpg" alt="" class="w-100 ps-lg-20" data-aos="fade-down" data-aos-delay="0">			
-					</div>
-					<div class="col-md-6 mt-8 mt-md-0">
-						<h1 class="display-3 mb-6" data-aos="fade-down" data-aos-delay="150">NYU Stern's hedge fund club</h1>
-						<p class="mb-8 fs-1" data-aos="fade-down" data-aos-delay="250">Stern Capital Management is a student-run hedge fund club at NYU Stern School of Business. Our mission is to provide members with hands-on experience in financial markets, investment analysis, and portfolio management while building connections with industry professionals and developing practical skills for careers in finance. Join our general meetings every Monday from 12:30 - 1:30 PM in KMC 2-100 to get involved!</p>
-						<div class="d-flex flex-wrap align-items-center gap-3" data-aos="fade-down" data-aos-delay="400">
-							<a href="events.html" class="btn btn-outline-dvdkempblue">View Events</a>
-							<a href="https://research.sterncapitalmanagement.org" target="_blank" rel="noopener noreferrer" class="btn btn-dvdkempblue">Explore Research</a>
-						</div>
-						<p class="mt-4 mb-0" data-aos="fade-down" data-aos-delay="500">
-							<span class="text-dark-1">Get meeting and event updates.</span>
-							<a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" target="_blank" rel="noopener noreferrer" class="fw-bold text-dvdkempblue ms-1">Join our mailing list <span aria-hidden="true">→</span></a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</header>
-		<!-- Footer 2 -->
-			<footer class="py-8 text-center bg-dvdkempblue">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-2 col-md-3 mb-6 mb-md-0" data-aos="fade-down" data-aos-delay="0">
-							<a href="https://www.sterncapitalmanagement.org"><img src="assets/Vertical Logo-3.png" alt="" class="img-fluid w-75"></a>
-						</div>
-						<div class="col text-light-1 mt-sm-2 mt-1 mb-5 mb-sm-5" data-aos="fade-down" data-aos-delay="100">
-							<a href="about.html" class="font-heading text-light-1 mx-sm-2 mx-md-2 mx-1">About</a>
-							<a href="adboard.html" class="font-heading text-light-1 mx-sm-2 mx-md-2 mx-1">Advisory Board</a>
-							<a href="team.html" class="font-heading text-light-1 mx-sm-2 mx-1 mx-md-2">Team</a>
-							<a href="scholars-program.html" class="font-heading text-light-1 mx-md-2 mx-sm-2 mx-1">Programs</a>
-						</div>
-						<div class="col-12 col-lg-2 col-md-3" data-aos="fade-down" data-aos-delay="200">
-							<a href="https://x.com/scmnyu" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin fill-light-1" viewBox="0 0 16 16">  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path></svg></a>
-							<a href="https://www.linkedin.com/company/stern-capital-management-nyu/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="mx-6 fill-light-1" viewBox="0 0 16 16">  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path></svg></a>
-							<a href="https://www.instagram.com/sterncapitalmanagement/" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-light-1"><path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 17.7383 21.3889 19.2135 20.3012 20.3012C19.2135 21.3889 17.7383 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 6.26174 2.61107 4.78649 3.69878 3.69878C4.78649 2.61107 6.26174 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z"></path></svg></a>
-						</div>
-					</div>
-					<div class="mt-6 mb-8 border-bottom border-light-1" data-aos="fade-down" data-aos-delay="300">
-					</div>
-					<p class="fs-5 mb-0 text-light-1" data-aos="fade-down" data-aos-delay="400">Copyright © 2025-2026 Stern Capital Management</p>
-				</div>
-			</footer>
-	<i class="br-emoji visually-hidden" data-emoji="gesture"></i>
-		<!-- Bootstrap JS -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" data-integrity="88e7162c11208a04c36ec758824953c4aa31b0dcbf13d142dda3f8bc359ba3f9"></script>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stern Capital Management</title>
+<meta name="description" content="Stern Capital Management is NYU Stern's hedge fund club: a student-run long/short Technology portfolio, weekly meetings and a speaker series with investors and bankers.">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Stern Capital Management">
+<meta property="og:title" content="Stern Capital Management | NYU Stern's hedge fund club">
+<meta property="og:description" content="Stern Capital Management is NYU Stern's hedge fund club: a student-run long/short Technology portfolio, weekly meetings and a speaker series with investors and bankers.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a fund's client portal, plain and exact; the club's facts stated, not sold.
+   IDEA: an IBKR-style account screen: hairline grids, summary tiles, one navy accent.
+   PICTURE: the portfolio card and performance chart.
+   COLOUR and TYPE: white ground, ink type, SCM navy accents; Figtree throughout, tabular figures.
+   LAYOUT: one page, five views on hash routes (#home #portfolios #events #team #join), full-width column, ink band for the meeting time. */
+:root{color-scheme:light;
+--bg:#FCFCFD;--surface:#FFFFFF;--panel:#F4F5F7;
+--line:#E3E6EA;--line2:#C9CDD3;--ink:#121417;
+--ink2:#4B5058;--mute:#5F6670;--accent:#172132;
+--gain:#0F7A45;--gainbg:#E8F4EE;
+--band:#121417;--bench:#8A9099}
+.firms{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+@media (max-width:1000px){.firms{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:700px){.firms{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:480px){.firms{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.firms span{border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);min-height:84px;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;font-size:18px;font-weight:800;letter-spacing:-.02em;line-height:1.15;color:var(--ink2)}
+.firms span:hover{color:var(--ink)}
+.firms img{max-height:var(--h,44px);max-width:min(170px,85%);object-fit:contain;filter:grayscale(1);opacity:.78;transition:filter .2s,opacity .2s}
+.logoband{background:var(--surface);border-block:1px solid var(--line);padding-block:clamp(40px,4.5vw,64px);margin-block:clamp(8px,1.5vw,20px)}
+.logoband .sec-h{margin-bottom:24px}
+.firms.big span{min-height:clamp(96px,7.5vw,120px);padding:20px}
+.firms.big img{max-height:calc(var(--h,44px)*1.2);max-width:min(210px,88%);opacity:.85}
+@media (max-width:600px){.firms.big img{max-height:calc(var(--h,44px)*.95)}}
+.firms span:hover img{filter:none;opacity:1}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.logoup{margin-top:14px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.logoup label.btn{font-size:15px;min-height:44px}
+*{box-sizing:border-box;min-width:0}
+[hidden]{display:none!important}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 'Figtree',Arial,sans-serif;overflow-x:clip;font-variant-numeric:tabular-nums}
+a{color:var(--accent-text,var(--accent))}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.08}
+p{margin:0}
+.wrap{max-width:1680px;margin:0 auto;padding-inline:clamp(16px,4vw,72px)}
+.preview{background:var(--panel);border-bottom:1px solid var(--line);font-size:13px;color:var(--ink2)}
+.preview .wrap{padding-block:8px}
+header.top{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding-block:12px}
+.logo img{display:block}
+.nav{display:flex;align-items:center;gap:4px 26px;font-size:15px;font-weight:600;overflow-x:auto}
+.nav a{flex:none;color:var(--ink);text-decoration:none;padding:10px 0;border-bottom:2px solid transparent}
+.nav a[aria-current=page]{border-bottom-color:var(--accent)}
+.nav a.join{padding:11px 20px;background:var(--accent);color:#fff;border:0;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font:700 16px 'Figtree',Arial,sans-serif;text-decoration:none;border:1px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer}
+.btn.out{background:transparent;color:var(--ink)}
+.btn.accent{background:var(--accent);border-color:var(--accent);color:#fff}
+button:focus-visible,a:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.view{animation:fade .25s ease-out}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.view{animation:none}}
+.sec{padding-block:clamp(36px,5vw,64px)}
+.sec-h{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;padding-bottom:14px;border-bottom:2px solid var(--ink);margin-bottom:22px}
+.sec-h h2{font-size:clamp(26px,3vw,32px);font-weight:800;letter-spacing:-.02em}
+.sec-h a{font-weight:700;text-decoration:none}
+.lead{font-size:18px;color:var(--ink2);max-width:62ch}
+.label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.card{background:var(--surface);border:1px solid var(--line)}
+.chip{display:inline-block;padding:3px 9px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+[data-view="portfolios"]{--accent:#D81222;--accent-text:#C4101F}
+.chip.long{background:var(--gainbg);color:var(--gain)}.chip.short{background:#FFF4F5;color:#C4101F}.chip.upd{background:var(--panel);color:var(--ink2)}
+.pos{color:var(--gain)}.neg{color:var(--accent-text,var(--accent))}
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,4vw,56px);align-items:center;padding-block:clamp(40px,6vw,80px)}
+.hero h1{font-size:clamp(40px,5.4vw,64px);font-weight:800;letter-spacing:-.035em;line-height:1.02}
+.hero .lead{margin-top:20px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.snap-h{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.snap-row{display:grid;grid-template-columns:minmax(0,1fr) 110px 76px 76px;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.snap-row.head{padding-block:9px;background:var(--panel)}
+.snap-row .r{text-align:right;font-weight:600;white-space:nowrap}
+.spark{height:34px;position:relative}.spark svg{position:absolute;inset:0;width:100%;height:100%}
+.note{font-size:13px;color:var(--mute);line-height:1.5}
+.band{background:var(--band);color:#fff}
+.band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding-block:32px}
+.band .k{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.band .big{font-size:clamp(22px,2.6vw,28px);font-weight:700;letter-spacing:-.01em}
+.band .sub{color:#C9CDD3;font-size:15px}
+.band .btn.out{color:#fff;border-color:#fff}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.rcard{display:flex;flex-direction:column;gap:12px;padding:22px;text-decoration:none;color:var(--ink)}
+.rcard:hover{border-color:var(--line2)}
+.rcard .t{font-size:21px;font-weight:700;line-height:1.25;letter-spacing:-.01em}
+.rcard .s{color:var(--ink2);font-size:15px}
+.rcard .m{margin-top:auto;font-size:13px;color:var(--mute)}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:left;padding:10px 12px;background:var(--panel);white-space:nowrap}
+td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+td.d{white-space:nowrap;font-weight:600}
+.page-h{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;padding-top:clamp(32px,4vw,52px)}
+.page-h h1{font-size:clamp(34px,4.2vw,48px);font-weight:800;letter-spacing:-.03em}
+.page-h .lead{margin-top:10px;font-size:17px}
+.seg{display:flex;flex-wrap:wrap;border:1px solid var(--line2)}
+.seg button{min-height:44px;padding:0 16px;border:0;border-left:1px solid var(--line2);background:var(--surface);color:var(--ink);font:600 14px 'Figtree',Arial,sans-serif;cursor:pointer}
+.seg button:first-child{border-left:0}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg);font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:26px}
+.kpi{background:var(--surface);padding:16px 20px;display:flex;flex-direction:column;gap:4px}
+.kpi .v{font-size:clamp(24px,2.4vw,30px);font-weight:700;white-space:nowrap}
+.kpi .c{font-size:13px;color:var(--mute)}
+.chart-h{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px}
+.legend span{display:flex;align-items:center;gap:8px}
+.lg{display:flex;align-items:center;gap:8px;min-height:36px;padding:0;border:0;background:none;color:var(--ink);font:inherit;cursor:pointer}
+.lg:disabled{cursor:default;opacity:1}.lg[aria-pressed=false]{opacity:.35}.lg[aria-pressed=false] b{visibility:hidden}
+.legend i{display:inline-block;width:18px;height:0;border-top:3px solid}
+.rng{display:flex;gap:2px}
+.rng button{min-height:40px;min-width:44px;border:0;border-bottom:2px solid transparent;background:none;color:var(--mute);font:600 13px 'Figtree',Arial,sans-serif;cursor:pointer}
+.rng button[aria-pressed=true]{color:var(--ink);border-bottom-color:var(--accent);font-weight:700}
+.fig{position:relative;height:300px;margin:12px 20px 16px}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:var(--mute);font-size:15px;border:1px dashed var(--line2)}
+.phil{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.phil>div{background:var(--surface);padding:26px 24px;display:flex;flex-direction:column;gap:10px}
+.disclaimer{margin-top:40px;font-size:13px;line-height:1.6;color:var(--mute);max-width:110ch}
+.phil h3{font-size:20px;font-weight:800;letter-spacing:-.015em;line-height:1.2}
+.phil p{color:var(--ink2);font-size:16px;line-height:1.55}
+@media (max-width:1000px){.phil{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.phil{grid-template-columns:minmax(0,1fr)}}
+.erow{display:grid;grid-template-columns:72px minmax(0,1fr);gap:4px 16px;padding:15px 0;border-bottom:1px solid var(--line)}
+.erow .d{font-weight:700;white-space:nowrap}.erow>div{display:flex;flex-direction:column;gap:2px}
+.erow .t{font-weight:700}.erow .s{color:var(--ink2);font-size:15px}.erow .m{color:var(--mute);font-size:14px}
+.livedot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gain);margin-right:7px;vertical-align:1px}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;margin-top:20px;align-items:start}
+.mrow{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 20px;border-bottom:1px solid var(--line);font-size:15px}
+.mrow:last-child{border-bottom:0}.mrow span:first-child{color:var(--ink2)}.mrow b{white-space:nowrap;text-align:right}
+#riskTbl td:first-child{color:var(--ink2)}#riskTbl td,#riskTbl th{padding-inline:20px}
+.books{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:20px;margin-top:20px;align-items:start}
+.book-h{padding:20px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.book-h h2{font-size:24px;font-weight:800;letter-spacing:-.015em}
+.bars{padding:12px 20px 20px;display:flex;flex-direction:column;gap:10px}
+.barrow{display:grid;grid-template-columns:150px minmax(0,1fr) 60px;align-items:center;gap:10px;font-size:15px}
+.track{height:10px;background:var(--panel)}.track i{display:block;height:100%;background:var(--ink)}
+details.loader{margin-top:20px}
+details.loader summary{cursor:pointer;padding:16px 20px;font-weight:700;min-height:44px}
+.loader .in{padding:0 20px 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px}
+.loader label{display:block;font-weight:600;margin-bottom:6px}
+.loader textarea{width:100%;min-height:150px;padding:10px;border:1px solid var(--line2);background:var(--bg);color:var(--ink);font:14px/1.5 ui-monospace,Menlo,Consolas,monospace}
+.loader .acts{padding:0 20px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.filters button{min-height:44px;padding:0 16px;border:1px solid var(--line2);background:var(--surface);color:var(--ink);font:600 14px 'Figtree',Arial,sans-serif;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.rrow{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:8px 24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rrow .t{font-size:20px;font-weight:700;line-height:1.3;color:var(--ink);text-decoration:none}
+.rrow .t:hover{text-decoration:underline}
+.people{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:32px 20px}
+@media (max-width:1240px){.people{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:640px){.people{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}}
+.person{display:flex;flex-direction:column;gap:14px;min-width:0}
+.duo{padding-block:clamp(96px,9vw,144px) 80px}
+.senior-advisors{padding-top:0}
+.duo-adv{margin-top:56px}
+.duo-link{display:inline-block;margin-top:20px;font-weight:700;text-decoration:none}
+.vsep{display:none}
+@media (min-width:1241px){
+ /* One column per board member (--n, set from EXEC). Bottom row uses the same columns:
+    PMs in 1-2, divider in 3, advisors in 4-6. Re-check these slots if the PM or advisor count changes. */
+ #exec,#seniorAdvisors{grid-template-columns:repeat(var(--n,7),minmax(0,1fr))}
+ .duo{display:grid;grid-template-columns:repeat(var(--n,7),minmax(0,1fr));column-gap:20px}
+ .duo-pm,.duo-adv,.duo .people{display:contents}
+ .duo .sec-h{align-self:end}
+ .duo-pm>.sec-h{grid-column:1/3;grid-row:1}
+ #pms>:nth-child(1){grid-column:1;grid-row:2}
+ #pms>:nth-child(2){grid-column:2;grid-row:2}
+ .duo-link{grid-column:1/3;grid-row:3;justify-self:start}
+ .vsep{display:block;grid-column:3;grid-row:1/4;justify-self:center;width:1px;background:var(--line2)}
+ .duo-adv>.sec-h{grid-column:4/-1;grid-row:1}
+ #advisors>:nth-child(1){grid-column:4;grid-row:2} #advisors>:nth-child(2){grid-column:5;grid-row:2} #advisors>:nth-child(3){grid-column:6;grid-row:2}
+}
+.av{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--panel);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:clamp(30px,2.6vw,42px);font-weight:700;letter-spacing:-.02em;color:#B9BEC6}
+.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.person b{font-size:16px;line-height:1.3}
+.person .note{font-size:14px;line-height:1.4}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:32px}
+.kv{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.steps>div{background:var(--surface);padding:20px;display:flex;flex-direction:column;gap:6px}
+.steps b.n{color:var(--accent)}
+footer.foot{background:var(--surface);border-top:1px solid var(--line);margin-top:24px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px;padding-block:40px 28px}
+.foot .cols{display:flex;flex-wrap:wrap;gap:44px;font-size:15px}
+.foot .cols div{display:flex;flex-direction:column;gap:9px}
+.foot .cols a{color:var(--ink);text-decoration:none}
+@media (max-width:860px){.hero,.books{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){
+ .bar{gap:8px}.nav{width:100%;gap:4px 16px;font-size:14px;justify-content:space-between}.nav a.join{padding:10px 14px}
+ .snap-row{grid-template-columns:minmax(0,1fr) 64px 64px}.snap-row .spark{display:none}.snap-row.head span:nth-child(2){display:none}
+ .rrow{grid-template-columns:minmax(0,1fr)}.barrow{grid-template-columns:110px minmax(0,1fr) 54px}.kv{grid-template-columns:minmax(0,1fr)}
+ table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--mute);font-size:12px}.stack td:empty{display:none}
+}
+</style>
+<script>new MutationObserver(()=>{for(const c of document.querySelectorAll('.stack td:not([data-l])')){let i=0,p=c;while(p=p.previousElementSibling)i+=p.colSpan;c.dataset.l=c.closest('table').rows[0].cells[i]?.textContent||''}}).observe(document,{childList:true,subtree:true})</script>
+</head>
+<body>
 
-		<!-- AOS 3.0.0-beta.6 plugin JS (Animations) -->
-		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<!-- Startup Plugins -->		<script src="app-dist/js/plugins.min.js?v=5.6.1.724"></script>
-		
-		<!-- Startup JS (Custom js for all blocks) - Remove ".min" if you want to edit a JS code -->
-		<script src="assets/scripts.js"></script>
 
-		<!-- Startup scripts runner (for preview only, this code won't be added in the export) -->
-		<script>
-		document.runStartupScripts = function(functionToRun,params){
-			console.log("fired runStartupScripts("+functionToRun+")");
-			var startupFunctions = {
-				setBackgrounds: function() {setBackgrounds()},
-				switchControlSlider: function() {switchControlSlider()},
-				stopYouTubeOnModalClose: function() {stopYouTubeOnModalClose()},
-				initAnimations: function() {initAnimations(params)},
-				reInitAnimations: function() {
-					if(params){
-						var elements;
-						var settings = Object.assign({}, params);
-						settings.animationSpeed = parseInt(settings.animationSpeed);
-						if(settings.animation){
-							elements = document.querySelectorAll("*[sf-anim-delay]");
-							if(elements.length){
-								elements.forEach(function(el) {
-									settings.delay = settings.animationSpeed * 50 * parseFloat(el.getAttribute("sf-anim-delay"));
-									if(settings.delay%50!=0){
-										settings.delay += settings.delay%50;
-									}
-									settings.style = el.getAttribute("sf-anim-style");
-									if(settings.style=="" || settings.style==undefined){
-										settings.style = settings.animationStyle;
-									}
-									el.classList.remove("aos-animate","aos-init");
-									el.setAttribute("data-aos",settings.style);
-									el.setAttribute("data-aos-delay",settings.delay);
-								});
-							}
-							settings.animationSpeed = settings.animationSpeed * 100;
-							initAnimations(settings.animationSpeed);
-							elements = document.querySelectorAll(".aos-init");
-							if(elements.length){
-								elements.forEach(function(el) {
-									el.classList.remove("aos-animate");
-								});
-								if(settings.timeOut){
-									clearTimeout(settings.timeOut);
-								}
-								settings.timeOut = setTimeout(function(){
-									elements.forEach(function(el) {
-										el.classList.add("aos-animate");
-									});
-								},settings.animationSpeed);
-							}		
-						}else{
-							elements = document.querySelectorAll(".aos-init");
-							if(elements.length){
-								elements.forEach(function(el) {
-									el.removeAttribute("data-aos");
-									el.removeAttribute("data-aos-delay");
-									el.classList.remove("aos-animate","aos-init");
-								});
-							}
-						}
-					}
-				},
-				showBsElement: function() {
-					if(params){
-						if(params.classList.contains("offcanvas")){
-							var eBsElement = new bootstrap.Offcanvas(params);							
-						}
-						if(params.classList.contains("modal")){
-							var eBsElement = new bootstrap.Modal(params);							
-						}
-						if(params.classList.contains("dropdown-toggle")){
-							var eBsElement = new bootstrap.Dropdown(params);							
-						}
-						eBsElement.show();
-					}
-				},
-				destroyBsElements: function() {
-					var elements = document.querySelectorAll(".offcanvas, .modal, .dropdown-toggle");
-					var eBsElement;
-					if(elements.length){
-						elements.forEach(function(el) {
-							if(el.classList.contains("offcanvas")){
-								eBsElement = bootstrap.Offcanvas.getInstance(el);
-							}else if(el.classList.contains("modal")){
-								eBsElement = bootstrap.Modal.getInstance(el);
-							}else if(el.classList.contains("dropdown-toggle")){
-								eBsElement = bootstrap.Dropdown.getInstance(el);
-							}
-							if(eBsElement){
-								eBsElement.hide();
-								el.style.display="";								
-								el.style.visibility="";								
-							}
-						});
-					}
-				},
-			};
-			if(functionToRun){
-				startupFunctions[functionToRun](params);
-			}else{
-				Object.keys(startupFunctions).forEach(function(key){
-					if(key!="showBsElement" && key!="destroyBsElements"){ // skip
-						startupFunctions[key](params);						
-					}
-				});
-			}
-		};
-		
-		</script>
-	<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"fb63be8153904768b745c35b3975e8c5","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#home" aria-label="Stern Capital Management, home">
+      <img src="logos/scm-full.png" width="216" height="48" alt="">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home" data-to="home">Home</a>
+      <a href="#portfolios" data-to="portfolios">Portfolios</a>
+      <a href="#events" data-to="events">Events</a>
+      <a href="#team" data-to="team">Team</a>
+      <a href="#join" data-to="join" class="join">Join</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HOME -->
+<section class="view" data-view="home">
+  <div class="wrap hero">
+    <div>
+      <h1>NYU Stern's hedge fund club.</h1>
+      <p class="lead">A student-run long/short Technology portfolio, a Fixed Income &amp; Credit pod to follow, and a speaker series with investors and bankers.</p>
+      <div class="ctas"><a class="btn" href="#portfolios">See the portfolios</a><a class="btn out" href="#events">Come to a meeting</a></div>
+    </div>
+    <div class="card">
+      <div class="snap-h"><b>Portfolios</b><a href="#portfolios" style="font-weight:700;text-decoration:none">View all →</a></div>
+      <div class="snap-row head label"><span>Book</span><span>Since start</span><span class="r">Return</span><span class="r">vs. SPY</span></div>
+      <div class="snap-row">
+        <span style="display:flex;flex-direction:column;gap:2px"><b>Technology</b><span class="note">Long/short equity</span></span>
+        <div class="spark" id="spTech"></div><span class="r" id="hTech">—</span><span class="r" id="hTechVs">—</span>
+      </div>
+      <div class="snap-row">
+        <span style="display:flex;flex-direction:column;gap:2px"><b>Fixed Income &amp; Credit</b><span class="note">Active vs. AGG</span></span>
+        <span class="note">Not started yet</span><span class="r">—</span><span class="r">—</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="band"><div class="wrap">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <span class="k">General meetings</span>
+      <span class="big">Mondays, 12:30–1:30 PM · KMC 2-100</span>
+      <span class="sub">Open to everyone. Come to half of the semester's meetings and events and you're a member.</span>
+    </div>
+    <a class="btn accent" href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page">Join the mailing list</a>
+  </div></div>
+
+  <div class="wrap sec">
+    <div class="sec-h"><h2>How we invest</h2><a href="#portfolios">See the book →</a></div>
+    <p class="lead" style="margin-bottom:26px">Fundamental long/short equity. Three kinds of ideas make it into the book.</p>
+    <div class="phil">
+      <div><span class="chip long" style="align-self:flex-start">Long</span><h3>Quality compounders</h3><p>Strong businesses with pricing power and high returns on capital. We buy when the price doesn't reflect how long they can keep growing.</p></div>
+      <div><span class="chip short" style="align-self:flex-start">Short</span><h3>Overpriced stories</h3><p>Stocks priced for growth or margins the company can't deliver. We short when the gap is big and something is likely to close it.</p></div>
+      <div><span class="chip long" style="align-self:flex-start">Long</span><h3>Beaten-up names with a catalyst</h3><p>Good companies that sold off more than the fundamentals justify. We buy when an event in the next few quarters, like earnings or a cost cut, can turn the stock around.</p></div>
+    </div>
+  </div>
+
+  <div class="logoband"><div class="wrap">
+    <div class="sec-h"><h2>Speakers, members and alumni come from</h2><a href="#events">All events →</a></div>
+    <div class="firms big" id="firmsHome"></div>
+  </div></div>
+
+  <div class="wrap sec">
+    <div class="two">
+      <div>
+        <div class="sec-h"><h2>Upcoming</h2><a href="#events">All events →</a></div>
+        <div id="homeUpcoming"></div>
+      </div>
+      <div>
+        <div class="sec-h"><h2>Recent speakers</h2><a href="#events">Past events →</a></div>
+        <div id="homeRecent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIOS -->
+<section class="view" data-view="portfolios" hidden>
+  <div class="wrap">
+    <div class="page-h">
+      <div>
+        <h1>How the books are doing</h1>
+        <p class="lead">Positions and performance for each pod's book.</p>
+        <p class="note" id="asOf" style="margin-top:8px"></p>
+      </div>
+      <div class="seg" role="group" aria-label="Book" id="bookSeg">
+        <button type="button" data-book="Technology" aria-pressed="true">Technology</button>
+        <button type="button" data-book="FIC" aria-pressed="false">Fixed Income &amp; Credit</button>
+      </div>
+    </div>
+
+    <div id="ficView" hidden>
+      <div class="card" style="margin-top:26px;padding:28px 24px;display:flex;flex-direction:column;gap:8px">
+        <b style="font-size:20px">The Fixed Income &amp; Credit pod has not started yet.</b>
+      </div>
+    </div>
+
+    <div id="techView">
+      <div class="kpis">
+        <div class="kpi"><span class="label">Net asset value</span><span class="v" id="kNav">—</span><span class="c" id="kNavC"></span></div>
+        <div class="kpi"><span class="label">Since start</span><span class="v" id="kRet">—</span><span class="c" id="kRetC"></span></div>
+        <div class="kpi"><span class="label">Today</span><span class="v" id="kToday">—</span><span class="c" id="kTodayC"></span></div>
+        <div class="kpi"><span class="label">Net exposure</span><span class="v" id="kNet">—</span><span class="c" id="kNetC"></span></div>
+      </div>
+
+      <div class="card" style="margin-top:20px">
+        <div class="chart-h">
+          <div class="legend" id="legend"></div>
+          <div class="rng" role="group" aria-label="Range" id="rng">
+            <button type="button" data-r="1W" aria-pressed="false">1W</button>
+            <button type="button" data-r="1M" aria-pressed="false">1M</button>
+            <button type="button" data-r="All" aria-pressed="true">Since start</button>
+          </div>
+        </div>
+        <div class="fig" id="chart"><div class="empty" id="chartEmpty" hidden>Not enough history to draw yet.</div></div>
+      </div>
+
+      <div class="mgrid">
+        <div class="card">
+          <div class="book-h"><h2>Exposure</h2><span class="note">% of NAV, from current positions</span></div>
+          <div id="expRows"></div>
+        </div>
+        <div class="card">
+          <div class="book-h"><h2>Risk</h2><span class="note" id="riskNote"></span></div>
+          <div class="scroll"><table id="riskTbl"></table></div>
+        </div>
+      </div>
+
+      <div class="books">
+        <div class="card">
+          <div class="book-h">
+            <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px"><h2>Positions</h2><span class="note">PM: Nikita Makaed</span></div>
+            <span style="color:var(--ink2);font-size:15px">Long/short equities, run by the Tech Pod.</span>
+          </div>
+          <div class="scroll"><table class="stack">
+            <thead><tr><th>Ticker</th><th>Side</th><th>Sector</th><th>Opened</th><th class="n">% of NAV</th><th class="n">P&amp;L</th><th class="n">Today</th></tr></thead>
+            <tbody id="holdBody"></tbody>
+          </table></div>
+        </div>
+        <div class="card">
+          <div class="book-h"><h2>By sector</h2><span class="note">Bar = gross, number = net, % of NAV</span></div>
+          <div class="bars" id="bars"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec" style="padding-bottom:0">
+      <div class="sec-h"><h2>How the pods work</h2></div>
+      <div class="two">
+        <div><h3 style="font-size:19px">Technology: depth before breadth</h3><p style="margin-top:8px;color:var(--ink2)">Each analyst owns one subsector with no overlap: software, fintech &amp; payments, internet, semiconductors, media, digital infrastructure. As the pod grows, big subsectors become teams without changing the structure.</p></div>
+        <div><h3 style="font-size:19px">Fixed Income &amp; Credit: beat the AGG</h3><p style="margin-top:8px;color:var(--ink2)">Every rates and credit call, from investment grade through distressed, will be measured against the Bloomberg U.S. Aggregate, tracked daily with AGG.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="view" data-view="events" hidden>
+  <div class="wrap">
+    <div class="page-h"><div><h1>Events</h1><p class="lead">Weekly general meetings plus a speaker series. Everything is open to NYU students.</p></div></div>
+    <div class="sec" style="padding-top:28px">
+      <div class="sec-h"><h2>Speakers, members and alumni come from</h2></div>
+      <div class="firms" id="firmsEvents"></div>
+      <p class="note" id="firmsMore" style="margin-top:12px"></p>
+    </div>
+    <div class="sec" style="padding-top:0">
+      <div class="sec-h"><h2>Coming Up</h2></div>
+      <div class="two">
+        <div class="card" style="padding:22px;display:flex;flex-direction:column;gap:6px"><span class="label">Every week</span><b style="font-size:22px">General Meeting</b><span style="color:var(--ink2)">Mondays, 12:30–1:30 PM · KMC 2-100</span></div>
+        <div class="card" style="padding:22px;display:flex;flex-direction:column;gap:6px"><span class="label">Spring 2027</span><b style="font-size:22px">Speaker Series</b><span style="color:var(--ink2)">Dates go here as speakers confirm. The mailing list hears first.</span><a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" style="font-weight:700;text-decoration:none;margin-top:4px">Join the mailing list →</a></div>
+      </div>
+    </div>
+    <div id="pastEvents"></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="view" data-view="team" hidden>
+  <div class="wrap">
+    <div class="page-h">
+      <div><h1>SCM Team</h1><p class="lead">Executive board, portfolio managers, faculty advisors and senior advisors.</p></div>
+      <div class="card" style="padding:20px 22px;max-width:440px;display:flex;flex-direction:column;gap:12px">
+        <span>Want 15 minutes with a board member about joining, recruiting or meetings?</span>
+        <span style="display:flex;flex-wrap:wrap;align-items:center;gap:12px"><a class="btn accent" href="mailto:scm@stern.nyu.edu?subject=Coffee%20chat">Request a coffee chat</a><span class="note">scm@stern.nyu.edu</span></span>
+      </div>
+    </div>
+    <div class="sec" style="padding-top:36px;padding-bottom:0">
+      <div class="sec-h exec-h" id="execH"><h2>Executive Board</h2></div>
+      <div class="people" id="exec"></div>
+    </div>
+    <div class="duo">
+      <div class="duo-pm">
+        <div class="sec-h"><h2>Portfolio Managers</h2></div>
+        <div class="people" id="pms"></div>
+        <a class="duo-link" href="#portfolios">See the book →</a>
+      </div>
+      <span class="vsep" aria-hidden="true"></span>
+      <div class="duo-adv">
+        <div class="sec-h"><h2>Advisory Board</h2></div>
+        <div class="people" id="advisors"></div>
+      </div>
+    </div>
+    <section class="sec senior-advisors" aria-labelledby="seniorAdvisorsHeading">
+      <div class="sec-h"><h2 id="seniorAdvisorsHeading">Senior Advisors</h2></div>
+      <div class="people" id="seniorAdvisors"></div>
+    </section>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section class="view" data-view="join" hidden>
+  <div class="wrap">
+    <div class="page-h"><div><h1>Three ways in</h1><p class="lead">Come to meetings, apply to a pod, or train with the cross-club Scholars cohort.</p></div></div>
+
+    <div class="sec" style="padding-top:32px">
+      <div class="sec-h"><h2>1. Become a member</h2></div>
+      <div class="two">
+        <p style="color:var(--ink2);font-size:17px">Attend at least half of SCM's general meetings and events in a semester. Speaker events, workshops and other official programming all count. Start with the next Monday meeting.</p>
+        <div class="card" style="padding:20px 22px;display:flex;flex-direction:column;gap:6px"><span class="label">General meetings</span><b style="font-size:20px">Mondays, 12:30–1:30 PM · KMC 2-100</b><a href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page" style="font-weight:700;text-decoration:none;margin-top:6px">Join the mailing list →</a></div>
+      </div>
+    </div>
+
+    <div class="sec" style="padding-top:0">
+      <div class="sec-h"><h2>2. Analyst Program</h2><span class="note">Questions: scm@stern.nyu.edu</span></div>
+      <div class="two">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div><h3 style="font-size:19px">Technology pod</h3><p style="margin-top:6px;color:var(--ink2)">Long/short equity. You own one subsector and pitch it: lead with the variant view, not the company description.</p></div>
+          <div><h3 style="font-size:19px">Fixed Income &amp; Credit pod</h3><p style="margin-top:6px;color:var(--ink2)">Rates and credit calls against the Bloomberg U.S. Aggregate, from investment grade to distressed.</p></div>
+        </div>
+        <div>
+          <span class="label">How the Fall 2026 cycle ran</span>
+          <div class="kv" style="margin-top:8px"><b>Sep 14</b><span>First general meeting, applications open</span></div>
+          <div class="kv"><b>Sep 18</b><span>Tech Pod interest meeting</span></div>
+          <div class="kv"><b>Sep 19</b><span>Applications close</span></div>
+          <div class="kv"><b>Sep 20–26</b><span>Interviews</span></div>
+          <p class="note" style="margin-top:10px">Next cycle's dates go out on the mailing list first.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec" style="padding-top:0">
+      <div class="sec-h"><h2>3. Scholars Program</h2></div>
+      <p style="color:var(--ink2);font-size:17px;max-width:70ch;margin-bottom:20px">Part of NYU Stern's Investment Management Initiative: SCM, IAG and QFS share one application and train about 40 scholars as one class, with five core modules (accounting, enterprise and equity value, DCF, M&amp;A, LBO) before pod-specific lessons.</p>
+      <div class="steps">
+        <div><b class="n">Step 1</b><b>Common application</b><span style="color:var(--ink2)">One application across SCM, QFS and IAG.</span></div>
+        <div><b class="n">Step 2</b><b>Club review</b><span style="color:var(--ink2)">Each club runs its own questions and interviews.</span></div>
+        <div><b class="n">Step 3</b><b>Scholars cohort</b><span style="color:var(--ink2)">After joining a club, apply separately to train with the cross-club class.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:440px">
+      <img src="logos/scm-header.png" width="40" height="40" alt="">
+      <span class="note">Stern Capital Management is a student organization at NYU Stern, not an investment adviser. Nothing on this site is investment advice.</span>
+    </div>
+    <div class="cols">
+      <div><span class="label">Site</span><a href="#home">Home</a><a href="#portfolios">Portfolios</a><a href="#events">Events</a><a href="#team">Team</a><a href="#join">Join</a></div>
+      <div><span class="label">Follow</span><a href="https://x.com/scmnyu">X</a><a href="https://www.linkedin.com/company/stern-capital-management-nyu/">LinkedIn</a><a href="https://www.instagram.com/sterncapitalmanagement/">Instagram</a><span class="note">scm@stern.nyu.edu</span></div>
+    </div>
+  </div>
+  <div class="wrap note" style="padding-bottom:28px">© 2026 Stern Capital Management</div>
+</footer>
+
+<script>
+{
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+/* LIVE DATA. Paste the sheet's Publish-to-web link (File > Share > Publish to web, Entire document) between the quotes.
+   The page then reads the SCM Tech Pod Book sheet every 60 seconds. If it can't reach Google, it shows the snapshot below. */
+const SHEET_PUB='https://docs.google.com/spreadsheets/d/e/2PACX-1vSpeW75ngF_1O9eFdZlDOznzw25czIdd5tHpzkk94S0y8U2vesr9NpD8cK0mLvZUl7g5JbAM3LRlBao/pubhtml';
+const GIDS={dash:0,trades:101,pos:102,prices:103,settings:106,history:107}; /* History = daily closes since the start date; Prices = rolling 1 year (fallback) */
+const SNAP={"asOf": "2026-11-23T13:54:00-05:00", "dash": "SCM Tech Pod\nBuilt from the Trade Log and live Google Finance prices. Nothing on this tab is typed in.\nBook,$,% of NAV\nNet asset value,\"$1,035,269\"\nStarting capital,\"$1,000,000\"\nReturn since start,3.53%\nToday's P&L,\"$8,555\",0.8%\nFree cash (NAV minus longs and shorts),\"$644,055\",62.2%\nExposure\nLong market value,\"$283,587\",27.4%\nShort market value,\"($107,627)\",(10.4%)\nGross exposure,\"$391,214\",37.8%\nNet exposure,\"$175,960\",17.0%\nBeta-adjusted net,\"$191,629\",18.5%\nPositions\nLong positions,5\nShort positions,4\nUnrealized P&L,\"$31,909\",3.1%\nTotal P&L since start,\"$35,269\",3.5%\n", "settings": "Setting,Value,Notes\nStarting capital,\"$1,000,000\",\nStart date,10/23/2026,\nBenchmark,SPY,\nSecond benchmark,QQQ,\nBenchmark price (auto),721.33\nBenchmark change today (auto),4.57%\nSecond benchmark price (auto),649.53\nSecond benchmark change today (auto),6.75%\n", "pos": "Ticker,Side,Company,Sector,Analyst,Net Shares,Avg Cost,Current Price,Market Value,% of NAV,P&L $,P&L %,Today %,Today $,Beta (1y daily vs benchmark),52w High,52w Low,% Off 52w High,Avg Volume (3m),% of ADV,Price Target,To Target,Currency,FX to USD\nCASH,Cash,Cash incl. short sale proceeds (not free cash),,,,,,\"$859,309\",83.00%\nAPP,Long,AppLovin,Information Technology,,100,$270.35,$370.67,\"$37,067\",3.58%,\"$10,032\",37.11%,6.43%,\"$2,239\",1.37,$738.01,$225.19,(49.8%),\"5,143,435\",0.00%,,,USD,1.0000\nBIT:DLG,Long,De'Longhi,Consumer Discretionary,,400,$50.99,$50.29,\"$20,118\",1.94%,($280),(1.37%),1.09%,$217,0.60,$53.89,$31.02,(6.7%),\"188,575\",0.21%,,,EUR,1.0891\nSE,Long,Sea Limited,Consumer Discretionary,,500,$66.98,$65.45,\"$32,725\",3.16%,($765),(2.28%),4.50%,$640,1.31,$148.26,$62.39,(55.9%),\"7,964,679\",0.01%,,,USD,1.0000\nUNH,Long,UnitedHealth Group,Health Care,,135,$369.22,$333.76,\"$45,058\",4.35%,\"($4,787)\",(9.60%),(1.79%),($462),0.33,$461.62,$255.97,(27.7%),\"6,859,097\",0.00%,,,USD,1.0000\nVIK,Long,Viking Holdings,Consumer Discretionary,,1500,$82.09,$99.08,\"$148,620\",14.36%,\"$25,485\",20.70%,5.38%,\"$7,588\",1.54,$110.09,$62.67,(10.0%),\"4,283,721\",0.04%,,,USD,1.0000\nCRWV,Short,CoreWeave,Information Technology,,-400,$48.02,$47.45,\"($18,980)\",(1.83%),$228,1.19%,20.10%,$228,3.48,$138.25,$40.58,(65.7%),\"71,083,643\",0.00%,,,USD,1.0000\nDUOL,Short,Duolingo,Consumer Discretionary,,-200,$153.22,$146.31,\"($29,262)\",(2.83%),\"$1,382\",4.51%,0.89%,($171),0.73,$213.37,$87.89,(31.4%),\"1,408,795\",0.01%,,,USD,1.0000\nFIG,Short,Figma,Information Technology,,-2000,$17.07,$17.07,\"($34,140)\",(3.30%),-,-,8.24%,\"($1,209)\",1.30,$40.28,$15.71,(57.6%),\"11,689,035\",0.02%,,,USD,1.0000\nPINS,Short,Pinterest,Communication Services,,-1500,$17.24,$16.83,\"($25,245)\",(2.44%),$615,2.38%,3.06%,($515),1.02,$27.96,$13.84,(39.8%),\"12,956,129\",0.01%,,,USD,1.0000\n", "trades": "Ticker,Action,Shares,Fill Price,Total $ (optional),Date,Analyst,Notes,Amount (auto),Signed Shares (auto),Cash Flow (auto),Position After (auto)\nVIK,Buy,1300,$82.09,,10/23/2026,,,\"$106,717.00\",1300,\"($106,717.00)\",\"1,300.\"\nVIK,Buy,200,$82.09,,10/23/2026,,,\"$16,418.00\",200,\"($16,418.00)\",\"1,500.\"\nSNAP,Short,6000,$5.95,,11/4/2026,,,\"$35,700.00\",-6000,\"$35,700.00\",\"(6,000.)\"\nAPP,Buy,100,$270.35,,11/4/2026,,,\"$27,035.00\",100,\"($27,035.00)\",100.\nFIG,Short,1500,$22.23,,11/4/2026,,,\"$33,345.00\",-1500,\"$33,345.00\",\"(1,500.)\"\nFIG,Cover,1500,$19.08,,11/5/2026,,,\"$28,620.00\",1500,\"($28,620.00)\",-\nFIG,Buy,1500,$19.01,,11/5/2026,,,\"$28,515.00\",1500,\"($28,515.00)\",\"1,500.\"\nFIG,Buy,1500,$18.96,,11/5/2026,,,\"$28,440.00\",1500,\"($28,440.00)\",\"3,000.\"\nFIG,Sell,3000,$18.86,,11/5/2026,,,\"$56,580.00\",-3000,\"$56,580.00\",-\nSNAP,Cover,6000,$5.03,,11/5/2026,,,\"$30,180.00\",6000,\"($30,180.00)\",-\nNBIS,Buy,172,$116.10,,11/13/2026,,,\"$19,969.20\",172,\"($19,969.20)\",172.\nCRWV,Short,450,$48.90,,11/17/2026,,,\"$22,005.00\",-450,\"$22,005.00\",(450.)\nUNH,Buy,75,$397.52,,11/17/2026,,,\"$29,814.00\",75,\"($29,814.00)\",75.\nNBIS,Sell,172,$106.27,,11/17/2026,,,\"$18,278.44\",-172,\"$18,278.44\",-\nCRWV,Short,400,$49.44,,11/17/2026,,,\"$19,776.00\",-400,\"$19,776.00\",(850.)\nCRWV,Cover,400,$54.78,,11/17/2026,,,\"$21,912.00\",400,\"($21,912.00)\",(450.)\nCRWV,Cover,400,$54.87,,11/17/2026,,,\"$21,948.00\",400,\"($21,948.00)\",(50.)\nCRWV,Cover,50,$54.81,,11/17/2026,,,\"$2,740.50\",50,\"($2,740.50)\",-\nSE,Buy,250,$68.25,,11/19/2026,,,\"$17,062.50\",250,\"($17,062.50)\",250.\nDUOL,Short,150,$155.37,,11/19/2026,,,\"$23,305.50\",-150,\"$23,305.50\",(150.)\nPINS,Short,1000,$17.46,,11/19/2026,,,\"$17,460.00\",-1000,\"$17,460.00\",\"(1,000.)\"\nFIG,Short,1000,$16.98,,11/19/2026,,,\"$16,980.00\",-1000,\"$16,980.00\",\"(1,000.)\"\nBIT:DLG,Buy,400,$46.40,\"$20,397.85\",11/20/2026,,,\"$20,397.85\",400,\"($20,397.85)\",400.\nUNH,Buy,60,$333.85,,11/23/2026,,,\"$20,031.00\",60,\"($20,031.00)\",135.\nSE,Buy,250,$65.71,,11/23/2026,,,\"$16,427.50\",250,\"($16,427.50)\",500.\nFIG,Short,1000,$17.16,,11/23/2026,,,\"$17,160.00\",-1000,\"$17,160.00\",\"(2,000.)\"\nDUOL,Short,50,$146.77,,11/23/2026,,,\"$7,338.50\",-50,\"$7,338.50\",(200.)\nPINS,Short,500,$16.80,,11/23/2026,,,\"$8,400.00\",-500,\"$8,400.00\",\"(1,500.)\"\nCRWV,Short,400,$48.02,,11/23/2026,,,\"$19,208.00\",-400,\"$19,208.00\",(400.)\n", "prices": "Date,SPY,QQQ,VIK,SNAP,APP,FIG,NBIS,CRWV,UNH,SE,DUOL,PINS,BIT:DLG\n10/22/2026,763.96,704.47,85.00,6.35,264.28,24.10,159.17,55.60,424.98,75.69,141.39,22.93,42.94\n10/23/2026,759.97,704.40,82.24,6.34,260.25,24.64,158.74,54.24,418.09,74.63,143.04,22.32,40.80\n10/26/2026,765.37,712.20,84.68,6.34,260.74,23.52,153.27,55.19,410.70,74.01,138.60,21.23,42.08\n10/27/2026,769.66,721.25,85.41,6.08,262.82,22.98,170.47,59.57,410.39,74.73,141.31,20.58,42.40\n10/28/2026,772.31,725.61,86.50,5.96,259.97,23.21,182.34,63.93,407.10,75.18,135.21,20.92,42.82\n10/29/2026,769.36,715.34,89.53,5.68,254.91,22.32,171.99,60.74,410.91,76.55,136.39,19.92,43.22\n10/30/2026,755.72,690.49,87.47,5.34,228.50,21.65,154.14,54.87,406.97,74.24,131.59,19.36,43.38\n11/2/2026,752.10,681.09,87.06,5.45,228.85,22.20,141.39,50.15,400.44,75.48,135.27,20.31,44.20\n11/3/2026,754.35,685.28,85.84,5.59,245.51,21.03,151.64,53.74,404.44,76.77,128.00,20.36,43.94\n11/4/2026,766.81,691.95,91.17,5.92,271.75,22.13,141.52,48.42,409.38,80.19,161.27,21.22,44.84\n11/5/2026,733.00,647.05,86.16,5.09,356.10,18.44,120.37,43.66,395.72,75.63,157.02,19.79,45.32\n11/6/2026,735.29,656.10,87.48,4.96,391.22,18.81,129.49,46.40,394.15,75.73,160.42,18.96,45.32\n11/9/2026,752.69,679.35,87.17,5.05,410.00,19.40,141.45,48.98,397.62,77.96,154.25,19.06,45.86\n11/10/2026,749.92,674.76,88.07,5.00,395.51,18.63,134.00,48.73,405.12,76.80,156.67,18.95,46.34\n11/11/2026,759.81,690.38,90.06,5.34,404.77,18.97,154.69,60.77,402.94,73.99,164.12,19.23,47.00\n11/12/2026,757.12,688.17,88.88,5.22,393.68,18.92,128.64,56.60,405.13,74.52,157.42,19.12,47.46\n11/13/2026,754.37,679.89,89.87,5.26,409.10,19.45,115.88,53.13,407.46,75.36,165.31,19.15,47.40\n11/16/2026,739.95,661.75,90.28,5.09,415.22,19.41,107.13,49.88,412.02,71.63,168.75,18.42,46.80\n11/17/2026,732.44,656.95,94.28,5.50,398.94,18.18,106.04,49.89,389.68,69.44,160.08,18.07,46.70\n11/18/2026,730.20,659.51,100.37,5.44,390.91,17.33,106.96,47.83,349.91,68.60,160.29,17.69,46.74\n11/19/2026,715.87,645.04,95.00,5.12,379.02,16.26,96.92,44.91,330.48,65.94,149.38,16.89,47.06\n11/20/2026,689.81,608.45,94.02,4.55,348.29,15.77,81.31,39.51,339.85,62.63,145.02,16.33,45.68\n"};
+const EVENTS=[
+ ['Fall 2026','2026-11-19','Barney Wilson','Former Portfolio Manager, Janus Technology Fund','6:00 PM','KMC 3-70'],
+ ['Fall 2026','2026-10-26','Matt Schiff','Senior Associate, Surveyor Capital (Citadel)','6:00 PM','KMC 3-80'],
+ ['Fall 2026','2026-10-21','Andrew Zinn','Vice President, Moelis','6:30 PM','KMC 2-80'],
+ ['Fall 2026','2026-10-19','Piper Sandler Info Session','With NYU Tandon BFG','6:00 PM','KMC 3-80'],
+ ['Fall 2026','2026-10-15','Adam Kurzer','Vice Chairman, Shenkman Capital Management','6:00 PM','KMC 3-70'],
+ ['Spring 2026','2026-04-28','Brian Zakrocki','Managing Director, UBS','6:30 PM','KMC 5-75'],
+ ['Spring 2026','2026-04-16','Joshua Sheldon','Senior PM, BlueCrest Capital Management','6:30 PM','KMC 2-60'],
+ ['Spring 2026','2026-03-25','James Reynolds','Managing Partner, Tenebrist Global','6:00 PM','Tisch 201'],
+ ['Spring 2026','2026-03-05','Chandler Bocklage','Head of Business Development, Point72','6:30 PM','KMC 2-100'],
+ ['Spring 2026','2026-02-25','Alex Raytburg','Senior Analyst, Atlantic Investment Management','6:00 PM','KMC 2-70'],
+ ['Spring 2026','2026-02-17','Soren Gandrud','Chief Investment Officer, Jones Hill Capital','6:30 PM','KMC 2-70'],
+ ['Spring 2026','2026-02-09','Greg Solomon','Investment Officer, U.N. Joint Staff Pension Fund','6:00 PM','Tisch 201'],
+ ['Spring 2026','2026-01-28','Bernardo Piquet','Former CFO & Partner, 3G Capital','6:30 PM','KMC 3-55'],
+ ['Spring 2026','2026-01-21','Giles Coppel','Portfolio Manager, Tudor Investment Corporation','6:00 PM','KMC 3-130'],
+ ['Fall 2025','2025-11-17','Eric Rosenfeld','Former Partner, LTCM / Salomon Brothers','9:30 AM','KMC 3-110'],
+ ['Fall 2025','2025-11-03','Said Mena','Partner & Portfolio Manager, Luxor Capital Group','12:30 PM','KMC 2-100'],
+ ['Fall 2025','2025-10-20','Zeshan Azam','Head of Global Equities, Citi','12:30 PM','KMC 2-100'],
+ ['Fall 2025','2025-10-16','Tim Wu','Senior Portfolio Manager, Millennium','6:30 PM','Tisch UC-11'],
+ ['Fall 2025','2025-10-09','Spencer Schneider','Consumer L/S PM, Davidson Kempner','6:30 PM','KMC 2-60'],
+ ['Fall 2025','2025-10-06','Raj Patel','Investment Manager, Chatham Financial','12:30 PM','KMC 2-100'],
+ ['Fall 2025','2025-09-15','Stanley Lee','Credit Trader, Point72','6:00 PM','KMC 5-75']];
+/* Team photos: drop a square-ish JPG into the team/ folder named after the person,
+   lowercase with dashes (e.g. team/lily-zawadskas.jpg). No photo yet = initials. */
+const EXEC=[['Ryan Lee','President'],['Mukhammad Anvarkhonov','Vice President'],['Joey Mallozzi','Vice President'],['Stacy Dinh','Secretary'],['Kylie Osborne','Treasurer'],['Lily Zawadskas','Director of Marketing']];
+const PMS=[['Nikita Makaed','PM, Equities'],['Mukhammad Anvarkhonov','PM, Fixed Income & Credit']];
+const ADVISORS=[['Matthew Richardson','Chair, Finance Department, NYU Stern'],['Jeffrey Meli','Clinical Professor of Finance, NYU Stern'],['Gygmy Gonnot','Adjunct Professor of Finance, NYU Stern']];
+const SENIOR_ADVISORS=[['Jonathan Renger','Equities, Senior Advisor'],['Antony Pfaffle','Equities, Senior Advisor']];
+
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ok=v=>v!=null&&isFinite(v);
+const rnd=(v,d)=>+(+v).toFixed(d);
+const pct=(v,d=1)=>{if(!ok(v))return'—';const r=rnd(v,d);return(r>0?'+':r<0?'−':'')+Math.abs(r).toFixed(d)+'%'};
+const pctN=(v,d=1)=>{if(!ok(v))return'—';const r=rnd(v,d);return(r<0?'−':'')+Math.abs(r).toFixed(d)+'%'};
+const pts=v=>{if(!ok(v))return'—';const r=rnd(v,1);return(r>0?'+':r<0?'−':'')+Math.abs(r).toFixed(1)+' pts'};
+const usd=(v,s)=>ok(v)?(v<0?'−':s&&v>0?'+':'')+'$'+Math.round(Math.abs(v)).toLocaleString('en-US'):'—';
+const cls=v=>{if(!ok(v))return'';const r=rnd(v,1);return r>0?'pos':r<0?'neg':''};
+const fd=(iso,y=true)=>{const d=new Date(iso+'T12:00:00');return isNaN(d)?esc(iso):d.toLocaleDateString('en-US',y?{month:'short',day:'numeric',year:'numeric'}:{month:'short',day:'numeric'})};
+const fdd=(d,y=true)=>d?d.toLocaleDateString('en-US',y?{month:'short',day:'numeric',year:'numeric'}:{month:'short',day:'numeric'}):'—';
+
+/* ---- reading the sheet ---- */
+const parseCSV=t=>{const rows=[];let row=[],f='',q=false;t=String(t||'');for(let i=0;i<t.length;i++){const c=t[i];
+ if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++}else q=false}else f+=c}
+ else if(c==='"')q=true;else if(c===','){row.push(f);f=''}
+ else if(c==='\n'||c==='\r'){if(c==='\r'&&t[i+1]==='\n')i++;row.push(f);rows.push(row);row=[];f=''}else f+=c}
+ if(f!==''||row.length){row.push(f);rows.push(row)}return rows};
+const N=v=>{if(v==null)return null;let s=String(v).trim();if(!s||s==='-'||s==='—')return null;
+ const neg=/^\(.*\)$/.test(s)||/^-/.test(s.replace(/[$\s]/g,''));const n=parseFloat(s.replace(/[()$,%\s]/g,'').replace(/^-/,''));return isFinite(n)?(neg?-n:n):null};
+const D=s=>{const m=String(s||'').match(/^\s*(\d{1,2})\/(\d{1,2})\/(\d{4})/);return m?new Date(+m[3],m[1]-1,+m[2]):null};
+const kv=(rows,label,col=1)=>{const r=rows.find(r=>(r[0]||'').trim().toLowerCase()===label.toLowerCase());return r?r[col]:null};
+
+function build(src){
+ const dash=parseCSV(src.dash),set=parseCSV(src.settings),pos=parseCSV(src.pos),tr=parseCSV(src.trades),pr=parseCSV(src.prices);
+ const cap=N(kv(set,'Starting capital'))??N(kv(dash,'Starting capital'))??1e6,start=D(kv(set,'Start date'));
+ const b1=(kv(set,'Benchmark')||'SPY').trim(),b2=(kv(set,'Second benchmark')||'QQQ').trim();
+ const lim={long:N(kv(set,'Single long, max % of NAV')),short:N(kv(set,'Single short, max % of NAV')),top5:N(kv(set,'Top five positions (gross), max % of NAV'))};
+ const ph=pos[0].map(h=>h.trim().toLowerCase()),pc=n=>ph.findIndex(h=>h.startsWith(n)),g=(r,n)=>{const i=pc(n);return i<0?'':r[i]};
+ const P=pos.slice(1).filter(r=>/^(long|short)$/i.test((g(r,'side')||'').trim())).map(r=>({t:g(r,'ticker').trim(),side:g(r,'side').trim(),name:g(r,'company'),sector:g(r,'sector')||'Other',
+  sh:N(g(r,'net shares')),mv:N(g(r,'market value')),w:N(g(r,'% of nav')),pl:N(g(r,'p&l $')),plp:N(g(r,'p&l %')),tdd:N(g(r,'today $')),beta:N(g(r,'beta')),fx:N(g(r,'fx to usd'))||1}));
+ const th=tr[0].map(h=>h.trim().toLowerCase()),tc=n=>th.findIndex(h=>h.startsWith(n)),tg=(r,n)=>{const i=tc(n);return i<0?'':r[i]};
+ const T=tr.slice(1).filter(r=>tg(r,'ticker')&&D(tg(r,'date'))).map(r=>{const a=String(tg(r,'action')).toLowerCase(),sh=N(tg(r,'shares'))||0;
+  let ss=N(tg(r,'signed'));if(ss==null)ss=(/buy|cover/.test(a)?1:-1)*sh;let cf=N(tg(r,'cash flow'));
+  if(cf==null){const tot=N(tg(r,'total'));cf=-Math.sign(ss)*(tot??sh*(N(tg(r,'fill'))||0))}
+  return{t:tg(r,'ticker').trim(),d:D(tg(r,'date')),ss,cf}});
+ const open={},cur={};T.forEach(t=>{const b=cur[t.t]||0,a=b+t.ss;if(b===0&&a!==0)open[t.t]=t.d;if(a===0)delete open[t.t];cur[t.t]=a});
+ P.forEach(p=>p.opened=open[p.t]||null);
+ const fx={};P.forEach(p=>fx[p.t]=p.fx);
+ const hdr=pr[0].map(h=>h.trim());
+ const rows=pr.slice(1).map(r=>({d:D(r[0]),v:Object.fromEntries(hdr.slice(1).map((h,i)=>[h,N(r[i+1])]))})).filter(r=>r.d).sort((a,b)=>a.d-b.d);
+ const S=[],lp={};let base=null;
+ rows.forEach(r=>{for(const k in r.v)if(r.v[k]!=null)lp[k]=r.v[k];
+  if(start&&r.d<start){base={d:r.d,nav:cap,b1:lp[b1],b2:lp[b2]};return}
+  let cash=cap;const sh={};T.forEach(t=>{if(t.d<=r.d){cash+=t.cf;sh[t.t]=(sh[t.t]||0)+t.ss}});
+  let mv=0;for(const k in sh)if(sh[k]&&lp[k]!=null)mv+=sh[k]*lp[k]*(fx[k]||1);
+  S.push({d:r.d,nav:cash+mv,b1:lp[b1],b2:lp[b2]})});
+ if(base)S.unshift(base);
+ const nav=N(kv(dash,'Net asset value'))??(S.length?S[S.length-1].nav:null);
+ const asOf=new Date(src.asOf||Date.now()),ad=new Date(asOf);ad.setHours(0,0,0,0);
+ const last=S[S.length-1];
+ if(ok(nav)&&ad.getDay()%6!==0&&(!last||ad>last.d))S.push({d:ad,nav,b1:N(kv(set,'Benchmark price (auto)'))??(last&&last.b1),b2:N(kv(set,'Second benchmark price (auto)'))??(last&&last.b2)});
+ return{asOf,live:!!src.live,cap,start,b1,b2,lim,nav,ret:ok(nav)?(nav/cap-1)*100:null,
+  today:N(kv(dash,"Today's P&L")),todayPct:N(kv(dash,"Today's P&L",2)),unreal:N(kv(dash,'Unrealized P&L')),P,S}}
+
+/* ---- state, maths ---- */
+let B=null,st={book:'Technology',range:'All',hide:{}};
+const inRange=(S,rg)=>{if(!S.length)return S;const end=S[S.length-1].d,days=rg==='1W'?7:rg==='1M'?31:0;if(!days)return S;
+ const s=new Date(end-days*864e5);const i=Math.max(0,S.findIndex(r=>r.d>=s)-1);return S.slice(i)};
+const ret=(S,k)=>{const v=S.filter(r=>ok(r[k])&&r[k]>0);return v.length<2?null:(v[v.length-1][k]/v[0][k]-1)*100};
+const diff=(a,b)=>ok(a)&&ok(b)?a-b:null;
+function stats(S){const v=S.filter(r=>ok(r.nav));if(v.length<4)return null;const rs=[];
+ for(let i=1;i<v.length;i++)rs.push([v[i].nav/v[i-1].nav-1,ok(v[i].b1)&&ok(v[i-1].b1)?v[i].b1/v[i-1].b1-1:null]);
+ const r=rs.map(x=>x[0]),m=r.reduce((a,x)=>a+x,0)/r.length,sd=Math.sqrt(r.reduce((a,x)=>a+(x-m)**2,0)/(r.length-1));
+ let pk=-Infinity,dd=0;v.forEach(x=>{pk=Math.max(pk,x.nav);dd=Math.min(dd,x.nav/pk-1)});
+ const pr=rs.filter(x=>ok(x[1]));let beta=null;if(pr.length>3){const ma=pr.reduce((a,p)=>a+p[0],0)/pr.length,mb=pr.reduce((a,p)=>a+p[1],0)/pr.length,vb=pr.reduce((a,p)=>a+(p[1]-mb)**2,0);if(vb>0)beta=pr.reduce((a,p)=>a+(p[0]-ma)*(p[1]-mb),0)/vb}
+ return{n:r.length,vol:sd*Math.sqrt(252)*100,sharpe:sd>0?m*252/(sd*Math.sqrt(252)):null,dd:dd*100,beta}}
+
+/* ---- drawing ---- */
+const LINES=()=>{const ink=getComputedStyle(document.body).color;return[{k:'nav',n:'Tech Pod',c:ink,w:2.5},{k:'b1',n:B.b1,c:'#8A9099',dash:'6 5',w:2},{k:'b2',n:B.b2,c:'#B6BBC2',dash:'2 4',w:2}]};
+function drawChart(){const box=$('#chart');if(!box||!box.clientWidth||!B)return;const W=box.clientWidth,H=box.clientHeight,S=inRange(B.S,st.range),ALL=LINES(),L=ALL.filter(s=>!st.hide[s.k]);
+ $('#legend').innerHTML=ALL.map(s=>`<button type="button" class="lg" data-k="${s.k}" aria-pressed="${!st.hide[s.k]}" ${s.k==='nav'?'disabled':''} title="${s.k==='nav'?'':'Show or hide'}"><i style="border-top:${s.dash?'2px dashed':'3px solid'} ${s.c}"></i>${esc(s.n)} <b class="${cls(ret(S,s.k))}" style="margin-left:4px">${pct(ret(S,s.k))}</b></button>`).join('')+(S.length>1?`<span class="note">Book range: ${pct(Math.min(...S.map(r=>(r.nav/S[0].nav-1)*100)))} to ${pct(Math.max(...S.map(r=>(r.nav/S[0].nav-1)*100)))}</span>`:'');
+ const old=box.querySelector('svg');if(old)old.remove();const has=S.length>1;$('#chartEmpty').hidden=has;if(!has)return;
+ const val=(r,k,b)=>(r[k]/b-1)*100,vals=[0];L.forEach(s=>{const b=S.find(r=>ok(r[s.k]))?.[s.k];if(b)S.forEach(r=>ok(r[s.k])&&vals.push(val(r,s.k,b)))});
+ let lo=Math.min(...vals),hi=Math.max(...vals);const pad=(hi-lo||1)*.12;lo-=pad;hi+=pad;
+ const Lm=W<520?8:52,R=10,T=10,Bm=26,t0=S[0].d,t1=S[S.length-1].d,x=d=>Lm+((d-t0)/((t1-t0)||1))*(W-Lm-R),y=v=>T+(1-(v-lo)/(hi-lo))*(H-T-Bm);
+ const step=(()=>{const r=(hi-lo)/4,p=Math.pow(10,Math.floor(Math.log10(r))),m=r/p;return(m<1.5?1:m<3.5?2:m<7.5?5:10)*p})();
+ let g='';for(let v=Math.ceil(lo/step)*step;v<=hi+1e-9;v+=step){const yy=y(v).toFixed(1);g+=`<line x1="${Lm}" x2="${W-R}" y1="${yy}" y2="${yy}" stroke="currentColor" stroke-opacity="${Math.abs(v)<1e-9?.4:.12}"/>`;if(W>=520)g+=`<text x="${Lm-8}" y="${+yy+4}" text-anchor="end" font-size="12" fill="currentColor" fill-opacity=".6">${v>0?'+':''}${+v.toFixed(2)}%</text>`}
+ g+=`<text x="${Lm}" y="${H-6}" font-size="12" fill="currentColor" fill-opacity=".6">${fdd(t0)}</text><text x="${W-R}" y="${H-6}" text-anchor="end" font-size="12" fill="currentColor" fill-opacity=".6">${fdd(t1)}</text>`;
+ const p=L.slice().reverse().map(s=>{const v=S.filter(r=>ok(r[s.k]));if(v.length<2)return'';const b=v[0][s.k];return`<polyline fill="none" stroke="${s.c}" stroke-width="${s.w}" ${s.dash?`stroke-dasharray="${s.dash}"`:''} stroke-linejoin="round" points="${v.map(r=>x(r.d).toFixed(1)+','+y(val(r,s.k,b)).toFixed(1)).join(' ')}"/>`}).join('');
+ box.insertAdjacentHTML('beforeend',`<svg role="img" aria-label="Tech Pod return vs ${esc(B.b1)} and ${esc(B.b2)}" style="color:var(--ink)">${g}${p}</svg>`)}
+function spark(){const box=$('#spTech');if(!box||!box.clientWidth||!B)return;const W=box.clientWidth,H=box.clientHeight,v=B.S.filter(r=>ok(r.nav));
+ if(v.length<2){box.innerHTML='';return}const t0=v[0].d,t1=v[v.length-1].d,lo=Math.min(...v.map(r=>r.nav)),hi=Math.max(...v.map(r=>r.nav));
+ box.innerHTML=`<svg aria-hidden="true"><polyline fill="none" stroke="currentColor" stroke-width="2" points="${v.map(r=>((r.d-t0)/((t1-t0)||1)*W).toFixed(1)+','+(3+(1-(r.nav-lo)/((hi-lo)||1))*(H-6)).toFixed(1)).join(' ')}"/></svg>`}
+
+/* ---- rendering ---- */
+function render(){if(!B)return;const fic=st.book==='FIC';$('#ficView').hidden=!fic;$('#techView').hidden=fic;
+ const all=B.S,since=ret(all,'nav'),s1=ret(all,'b1'),s2=ret(all,'b2');
+ $('#asOf').innerHTML=B.live?`<span class="livedot"></span>Live · updated ${B.asOf.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})}`:`As of ${B.asOf.toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZone:'America/New_York'})} ET`;
+ const set=(id,txt,v)=>{const e=$(id);e.textContent=txt;e.classList.remove('pos','neg');if(cls(v))e.classList.add(cls(v))};
+ set('#hTech',pct(B.ret),B.ret);set('#hTechVs',pts(diff(B.ret,s1)).replace(' pts',''),diff(B.ret,s1));
+ set('#kNav',usd(B.nav));$('#kNavC').textContent=`Book started ${fdd(B.start)}`;
+ set('#kRet',pct(B.ret),B.ret);$('#kRetC').textContent=`vs. ${B.b1} ${pts(diff(B.ret,s1))} · ${B.b2} ${pts(diff(B.ret,s2))}`;
+ set('#kToday',usd(B.today,true),B.today);$('#kTodayC').textContent=`${pct(B.todayPct)} of NAV`;
+ const L=B.P.filter(p=>p.w>0),Sh=B.P.filter(p=>p.w<0),wl=L.reduce((a,p)=>a+p.w,0),ws=-Sh.reduce((a,p)=>a+p.w,0),net=wl-ws,gross=wl+ws,bnet=B.P.reduce((a,p)=>a+p.w*(p.beta??1),0);
+ set('#kNet',pct(net),net);$('#kNetC').textContent=`gross ${pctN(gross)} · beta-adj. ${pct(bnet)}`;
+ const big=a=>a.slice().sort((x,y)=>Math.abs(y.w)-Math.abs(x.w))[0],bl=big(L),bs=big(Sh),top5=B.P.map(p=>Math.abs(p.w)).sort((a,b)=>b-a).slice(0,5).reduce((a,x)=>a+x,0);
+ const withPl=B.P.filter(p=>ok(p.pl)),wins=withPl.filter(p=>p.pl>0).length,lim=(v,l)=>ok(l)?` <span class="note">limit ${pctN(l,0)}</span>`:'';
+ const E=[['Long exposure',pctN(wl)],['Short exposure',ws?'−'+ws.toFixed(1)+'%':'0.0%'],['Net exposure',pct(net),cls(net)],['Gross exposure',pctN(gross)],['Beta-adjusted net',pct(bnet),cls(bnet)],['Free cash',pctN(100-gross)],
+  ['Long / short ratio',ws?(wl/ws).toFixed(2)+'x':'—'],['Positions',`${L.length} long · ${Sh.length} short`],
+  ['Largest long',bl?`${esc(bl.t)} ${pctN(bl.w)}${lim(0,B.lim.long)}`:'—'],['Largest short',bs?`${esc(bs.t)} ${pctN(-bs.w)}${lim(0,B.lim.short)}`:'—'],['Top five, share of NAV',`${pctN(top5)}${lim(0,B.lim.top5)}`],
+  ['Positions in the green',withPl.length?`${wins} of ${withPl.length}`:'—'],['Unrealized P&L',usd(B.unreal,true),cls(B.unreal)]];
+ $('#expRows').innerHTML=E.map(([l,v,c])=>`<div class="mrow"><span>${l}</span><b class="${c||''}">${v}</b></div>`).join('');
+ const R=inRange(B.S,st.range),k=stats(R),rr=ret(R,'nav'),rb1=ret(R,'b1'),rb2=ret(R,'b2');
+ $('#riskNote').textContent=k?`Daily NAV, ${k.n} trading days · ${st.range==='All'?'since start':'last '+st.range}`:'Not enough history yet';
+ const rows=[['Return',pct(rr),cls(rr)],[`vs. ${B.b1}`,pts(diff(rr,rb1)),cls(diff(rr,rb1))],[`vs. ${B.b2}`,pts(diff(rr,rb2)),cls(diff(rr,rb2))],['Volatility (ann.)',k?pctN(k.vol):'—'],['Sharpe (rf 0%)',k&&ok(k.sharpe)?(k.n>=60?k.sharpe.toFixed(2):'<span class="note">after 60 days</span>'):'—'],['Max drawdown',k?pct(k.dd):'—',k&&k.dd<0?'neg':''],[`Beta vs. ${B.b1}`,k&&ok(k.beta)?k.beta.toFixed(2):'—']];
+ $('#riskTbl').innerHTML=`<tbody>${rows.map(([l,v,c])=>`<tr><td>${l}</td><td class="n ${c||''}" style="font-weight:600">${v}</td></tr>`).join('')}</tbody>`;
+ const ord=[...L.sort((a,b)=>b.w-a.w),...Sh.sort((a,b)=>a.w-b.w)];
+ $('#holdBody').innerHTML=ord.map(p=>`<tr><td><b>${esc(p.t)}</b> <span class="note">${esc(p.name)}</span></td><td><span class="chip ${p.w>0?'long':'short'}">${esc(p.side)}</span></td><td style="color:var(--ink2)">${esc(p.sector)}</td><td class="d">${fdd(p.opened,false)}</td><td class="n">${pct(p.w)}</td><td class="n ${cls(p.pl)}">${ok(p.plp)?pct(p.plp):'0.0%'}<br><span class="note">${ok(p.pl)?usd(p.pl,true):'$0'}</span></td><td class="n ${cls(p.tdd)}">${usd(p.tdd,true)}</td></tr>`).join('');
+ const by={};B.P.forEach(p=>{const s=p.sector||'Other';by[s]=by[s]||{g:0,n:0};by[s].g+=Math.abs(p.w);by[s].n+=p.w});
+ const ks=Object.entries(by).sort((a,b)=>b[1].g-a[1].g),mx=Math.max(1,...ks.map(k=>k[1].g));
+ $('#bars').innerHTML=ks.map(([s,v])=>`<div class="barrow"><span>${esc(s)}</span><span class="track"><i style="width:${(v.g/mx*100).toFixed(1)}%"></i></span><b style="text-align:right" class="${cls(v.n)}">${pct(v.n)}</b></div>`).join('');
+ drawChart();spark()}
+
+/* Mondays with no general meeting (NYU 2026-27 calendar: winter break, Presidents Day, spring break, summer).
+   The homepage skips these and shows the next real meeting. Update each academic year. */
+const MEETING_OFF=[['2026-12-15','2027-01-24'],['2027-02-15','2027-02-15'],['2027-03-15','2027-03-21'],['2027-05-05','2027-09-07']];
+function events(){const row=e=>`<tr><td class="d">${fd(e[1],false)}</td><td><b>${esc(e[2])}</b></td><td style="color:var(--ink2)">${esc(e[3])}</td><td style="white-space:nowrap">${esc(e[4])} · ${esc(e[5])}</td></tr>`;
+ /* Add a future event to EVENTS (same format, future date) and it shows under Upcoming until the day passes, then moves to Recent. */
+ const now=new Date(),today=new Date(now.toLocaleString('en-US',{timeZone:'America/New_York'}));const t0=new Date(today);t0.setHours(0,0,0,0);
+ const dt=e=>new Date(e[1]+'T12:00:00'),up=EVENTS.filter(e=>dt(e)>=t0).sort((a,b)=>dt(a)-dt(b)),past=EVENTS.filter(e=>dt(e)<t0);
+ const nm=new Date(t0);const after=today.getHours()*60+today.getMinutes()>=13*60+30;let add=(1-nm.getDay()+7)%7;if(add===0&&after)add=7;nm.setDate(nm.getDate()+add);
+ const off=d=>MEETING_OFF.some(([a,b])=>d>=new Date(a+'T00:00:00')&&d<=new Date(b+'T23:59:59'));for(let i=0;i<60&&off(nm);i++)nm.setDate(nm.getDate()+7);
+ const er=(d,t,s,m)=>`<div class="erow"><span class="d">${d}</span><div><span class="t">${t}</span>${s?`<span class="s">${s}</span>`:''}<span class="m">${m}</span></div></div>`;
+ const U=[er(fdd(nm,false),'General meeting','Open to everyone','12:30–1:30 PM · KMC 2-100'),...up.slice(0,3).map(e=>er(fd(e[1],false),esc(e[2]),esc(e[3]),`${esc(e[4])} · ${esc(e[5])}`))];
+ if(!up.length)U.push(er('Spring','Speaker series','Dates go up here as speakers confirm','The mailing list hears first'));
+ $('#homeUpcoming').innerHTML=U.join('');
+ $('#homeRecent').innerHTML=past.filter(e=>!/info session/i.test(e[2])).slice(0,4).map(e=>er(fd(e[1],false),esc(e[2]),esc(e[3]),`${esc(e[4])} · ${esc(e[5])}`)).join('');
+ const terms=[...new Set(past.map(e=>e[0]))];
+ $('#pastEvents').innerHTML=terms.map(t=>{const L=past.filter(e=>e[0]===t);return `<div class="sec" style="padding-top:0"><div class="sec-h"><h2>${t}</h2><span class="note">${L.length} events</span></div><div class="scroll"><table class="stack"><thead><tr><th>Date</th><th>Speaker</th><th>Role</th><th>Time · Room</th></tr></thead><tbody>${L.map(row).join('')}</tbody></table></div></div>`}).join('')}
+
+const slug=n=>n.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const personCard=([n,r])=>`<div class="person"><span class="av" aria-hidden="true">${esc(n.split(' ').map(w=>w[0]).join('').slice(0,2))}<img src="team/${slug(n)}.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span style="display:flex;flex-direction:column;gap:3px;min-width:0"><b>${esc(n)}</b><span class="note">${esc(r)}</span></span></div>`;
+function team(){
+ $('[data-view="team"]').style.setProperty('--n',Math.min(EXEC.length,7));
+ $('#exec').innerHTML=EXEC.map(personCard).join('');
+ $('#pms').innerHTML=PMS.map(personCard).join('');
+ $('#advisors').innerHTML=ADVISORS.map(personCard).join('');
+ $('#seniorAdvisors').innerHTML=SENIOR_ADVISORS.map(personCard).join('');
+}
+
+$('#bookSeg').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;st.book=b.dataset.book;$$('#bookSeg button').forEach(x=>x.setAttribute('aria-pressed',x===b));render()});
+$('#rng').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;st.range=b.dataset.r;$$('#rng button').forEach(x=>x.setAttribute('aria-pressed',x===b));render()});
+$('#legend').addEventListener('click',e=>{const b=e.target.closest('button.lg');if(!b||b.disabled)return;st.hide[b.dataset.k]=!st.hide[b.dataset.k];drawChart()});
+
+const pubBase=()=>{const m=SHEET_PUB.match(/\/spreadsheets\/d\/e\/([^/?#]+)/);return m?`https://docs.google.com/spreadsheets/d/e/${m[1]}/pub`:''};
+async function load(){const base=pubBase();if(!base)return null;
+ const get=g=>fetch(`${base}?gid=${g}&single=true&output=csv&_=${Date.now()}`,{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.text()});
+ const [dash,trades,pos,settings,hist,prices]=await Promise.all([get(GIDS.dash),get(GIDS.trades),get(GIDS.pos),get(GIDS.settings),get(GIDS.history).catch(()=>''),get(GIDS.prices).catch(()=>'')]);
+ const cached=store.get('scm-prices'),px=[hist,prices,cached&&cached.csv].find(pricesOK)||SNAP.prices;
+ if(px===hist||px===prices)store.set('scm-prices',{csv:px});
+ return{asOf:new Date().toISOString(),live:true,dash,trades,pos,prices:px,settings}}
+/* Google's published copy recalculates GOOGLEFINANCE on its own schedule and can briefly serve "Loading..." or blank prices.
+   Only accept a price tab where every ticker column has numbers, and never swap a good book for a half-loaded one:
+   fall back to the last good live data this browser saw, then to the snapshot baked into the page. */
+const store={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+function pricesOK(t){if(!t||/Loading|#N\/A|#REF|#ERROR/.test(t))return false;const r=parseCSV(t),h=r[0]||[],d=r.slice(1).filter(x=>D(x[0]));
+ return d.length>=5&&h.slice(1).every((c,i)=>!c.trim()||d.some(x=>N(x[i+1])!=null))}
+const sane=b=>!!b&&ok(b.nav)&&b.nav>0&&b.P.length>0&&b.P.every(p=>ok(p.mv)&&ok(p.w))&&b.S.length>=5&&Math.abs(b.S[b.S.length-1].nav/b.nav-1)<.05;
+async function refresh(){let src=null,nb=null;try{src=await load()}catch(e){}
+ if(src&&!/Loading/.test(src.dash+src.pos))try{nb=build(src)}catch(e){nb=null}
+ if(sane(nb)){B=nb;store.set('scm-live',src)}
+ else if(!B||!B.live){const c=store.get('scm-live');let cb=null;try{cb=c&&build({...c,live:false})}catch(e){}B=sane(cb)?cb:build(SNAP)}
+ render()}
+
+const VIEWS=['home','portfolios','events','team','join'],TITLES={portfolios:'Portfolios',events:'Events',team:'Team',join:'Join'};
+const route=()=>{let v=location.hash.slice(1);if(!VIEWS.includes(v))v='home';
+ $$('[data-view]').forEach(s=>s.hidden=s.dataset.view!==v);
+ document.title=v==='home'?'Stern Capital Management':TITLES[v]+' | Stern Capital Management';
+ $$('.nav a[data-to]').forEach(a=>a.dataset.to===v?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+ window.scrollTo(0,0);requestAnimationFrame(()=>{drawChart();spark()})};
+window.addEventListener('hashchange',route);
+const ro=new ResizeObserver(()=>{drawChart();spark()});['#chart','#spTech'].forEach(s=>ro.observe($(s)));
+/* Ranked: hedge funds first, then banks. Firms without a logo file are listed by name under the Events grid. */
+const FIRMS=[['Citadel','citadel'],['Millennium','millennium'],['Point72','point72'],['Tudor Investment Corp.','tudor'],['Davidson Kempner','davidsonkempner'],['BlueCrest Capital','bluecrest'],['3G Capital','3gcapital'],['Moelis','moelis'],['UBS','ubs'],['Citi','citi'],['Piper Sandler','pipersandler'],['Shenkman Capital','shenkman'],['Luxor Capital Group','luxor'],['Janus','janus'],['Salomon Brothers / LTCM','salomon'],['Jones Hill Capital','joneshill'],['Tenebrist Global','tenebrist'],['Atlantic Investment Mgmt.','atlantic'],['Chatham Financial','chatham'],['U.N. Joint Staff Pension Fund','unjspf']];
+const LOGO_FILES=Object.fromEntries(['citadel','millennium','point72','tudor','davidsonkempner','bluecrest','3gcapital','moelis','ubs','citi','pipersandler','shenkman'].map(s=>[s,'logos/'+s+'.png']));
+const LOGO_H={moelis:25,citi:32,ubs:32,'3gcapital':30,millennium:30};
+/* Firm logos: PNGs in logos/ named by slug. To add one, drop the file in and add its slug to LOGO_FILES. */
+const firmCell=([n,s])=>{const src=LOGO_FILES[s];return src?`<span><img src="${esc(src)}" alt="${esc(n)}" style="--h:${LOGO_H[s]||44}px" onerror="this.replaceWith(Object.assign(document.createElement('b'),{textContent:this.alt}))"></span>`:`<span>${esc(n)}</span>`};
+const hasLogo=([n,s])=>!!LOGO_FILES[s];
+const renderFirms=()=>{const withL=FIRMS.filter(hasLogo),rest=FIRMS.filter(f=>!hasLogo(f));
+ ['#firmsHome','#firmsEvents'].forEach(s=>{$(s).innerHTML=(withL.length?withL:FIRMS).map(firmCell).join('')});
+ $('#firmsMore').textContent=withL.length&&rest.length?'Also: '+rest.map(f=>f[0]).join(' · '):''};
+renderFirms();
+
+events();team();route();refresh();if(pubBase())setInterval(refresh,60000);
+}
+
+</script>
 </body>
 </html>
