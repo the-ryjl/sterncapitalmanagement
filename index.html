@@ -20,7 +20,7 @@
    IDEA: an IBKR-style account screen: hairline grids, summary tiles, one navy accent.
    PICTURE: the portfolio card and performance chart.
    COLOUR and TYPE: white ground, ink type, SCM navy accents; Figtree throughout, tabular figures.
-   LAYOUT: one page, five views on hash routes (#home #portfolios #events #team #join), full-width column, ink band for the meeting time. */
+   LAYOUT: one page, six views on hash routes (#home #portfolios #programs #events #team #join), full-width column, ink band for the meeting time. */
 :root{color-scheme:light;
 --bg:#FCFCFD;--surface:#FFFFFF;--panel:#F4F5F7;
 --line:#E3E6EA;--line2:#C9CDD3;--ink:#121417;
@@ -192,6 +192,14 @@ details.loader summary{cursor:pointer;padding:16px 20px;font-weight:700;min-heig
 .person .note{font-size:14px;line-height:1.4}
 .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:32px}
 .kv{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}
+.progs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.prog{background:var(--surface);border:1px solid var(--line);padding:clamp(22px,2.6vw,40px);display:flex;flex-direction:column}
+.prog-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-height:26px}
+.prog h2{font-size:clamp(30px,3vw,44px);margin-top:16px}
+.prog>p{margin:8px 0 16px;color:var(--ink2);font-size:17px}
+.prog .kv{grid-template-columns:120px minmax(0,1fr)}
+.prog .ctas{margin-top:auto;padding-top:28px}
+@media (max-width:900px){.progs{grid-template-columns:minmax(0,1fr)}}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
 .steps>div{background:var(--surface);padding:20px;display:flex;flex-direction:column;gap:6px}
 .steps b.n{color:var(--accent)}
@@ -202,7 +210,8 @@ footer.foot{background:var(--surface);border-top:1px solid var(--line);margin-to
 .foot .cols a{color:var(--ink);text-decoration:none}
 @media (max-width:860px){.hero,.books{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:600px){
- .bar{gap:8px}.nav{width:100%;gap:4px 16px;font-size:14px;justify-content:space-between}.nav a.join{padding:10px 14px}
+ .bar{gap:8px}.nav{width:100%;flex-wrap:wrap;gap:4px 12px;font-size:14px;justify-content:space-between}.nav a.join{padding:10px 14px}
+ .prog .kv{grid-template-columns:minmax(0,1fr);gap:4px}
  .snap-row{grid-template-columns:minmax(0,1fr) 64px 64px}.snap-row .spark{display:none}.snap-row.head span:nth-child(2){display:none}
  .rrow{grid-template-columns:minmax(0,1fr)}.barrow{grid-template-columns:110px minmax(0,1fr) 54px}.kv{grid-template-columns:minmax(0,1fr)}
  table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;white-space:normal;color:var(--mute);font-size:12px}.stack td:empty{display:none}
@@ -221,6 +230,7 @@ footer.foot{background:var(--surface);border-top:1px solid var(--line);margin-to
     <nav class="nav" aria-label="Main">
       <a href="#home" data-to="home">Home</a>
       <a href="#portfolios" data-to="portfolios">Portfolios</a>
+      <a href="#programs" data-to="programs">Programs</a>
       <a href="#events" data-to="events">Events</a>
       <a href="#team" data-to="team">Team</a>
       <a href="#join" data-to="join" class="join">Join</a>
@@ -285,6 +295,50 @@ footer.foot{background:var(--surface);border-top:1px solid var(--line);margin-to
       <div>
         <div class="sec-h"><h2>Recent speakers</h2><a href="#events">Past events →</a></div>
         <div id="homeRecent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="view" data-view="programs" hidden>
+  <div class="wrap">
+    <div class="page-h"><div><h1>Programs</h1><p class="lead">Two investing programs. Analysts cover one area, pitch to the PM, and the ideas that make it go into a live book.</p></div></div>
+
+    <div class="sec" style="padding-top:32px">
+      <div class="progs">
+        <article class="prog">
+          <div class="prog-top"><span class="note"><span class="livedot"></span>Live · book started Oct 23, 2026</span></div>
+          <h2>Equities</h2>
+          <p>Fundamental long/short equity. The live book today is the Technology pod.</p>
+          <div class="kv"><b>Strategy</b><span>Long quality compounders and beaten-up names with a catalyst. Short overpriced stories.</span></div>
+          <div class="kv"><b>Coverage</b><span>Software, fintech &amp; payments, internet, semiconductors, media and digital infrastructure. One analyst per subsector, no overlap.</span></div>
+          <div class="kv"><b>Benchmarks</b><span>SPY and QQQ</span></div>
+          <div class="kv"><b>PM</b><span>Nikita Makaed</span></div>
+          <div class="kv"><b>Your job</b><span>Own your subsector and pitch it. Lead with the variant view, not the company description.</span></div>
+          <div class="ctas"><a class="btn" href="#portfolios">See the book</a><a class="btn out" href="#join">How to apply</a></div>
+        </article>
+        <article class="prog">
+          <div class="prog-top"><span class="chip upd">Not started yet</span></div>
+          <h2>Fixed Income &amp; Credit</h2>
+          <p>Rates and credit calls, from investment grade through distressed.</p>
+          <div class="kv"><b>Strategy</b><span>Rates and credit views, sized and tracked like the equities book.</span></div>
+          <div class="kv"><b>Coverage</b><span>Rates and credit, investment grade through distressed.</span></div>
+          <div class="kv"><b>Benchmark</b><span>Bloomberg U.S. Aggregate, tracked daily with AGG.</span></div>
+          <div class="kv"><b>Status</b><span>The pod has not started yet. The mailing list hears first when it does.</span></div>
+          <div class="kv"><b>Your job</b><span>Make the call and own it. Every call is measured against the AGG.</span></div>
+          <div class="ctas"><a class="btn" href="https://mailchi.mp/d43590ee8404/website-mailing-list-signup-page">Get launch updates</a><a class="btn out" href="#join">How to apply</a></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="sec" style="padding-top:0">
+      <div class="sec-h"><h2>How both programs run</h2></div>
+      <div class="steps">
+        <div><b class="n">Step 1</b><b>Apply</b><span style="color:var(--ink2)">Applications open at the first general meeting of each semester.</span></div>
+        <div><b class="n">Step 2</b><b>Interview</b><span style="color:var(--ink2)">Interviews run the week after applications close.</span></div>
+        <div><b class="n">Step 3</b><b>Cover</b><span style="color:var(--ink2)">You own one area and pitch ideas to the PM.</span></div>
+        <div><b class="n">Step 4</b><b>Track</b><span style="color:var(--ink2)">Positions in the book update live on the Portfolios page.</span></div>
       </div>
     </div>
   </div>
@@ -475,7 +529,7 @@ footer.foot{background:var(--surface);border-top:1px solid var(--line);margin-to
       <span class="note">Stern Capital Management is a student organization at NYU Stern, not an investment adviser. Nothing on this site is investment advice.</span>
     </div>
     <div class="cols">
-      <div><span class="label">Site</span><a href="#home">Home</a><a href="#portfolios">Portfolios</a><a href="#events">Events</a><a href="#team">Team</a><a href="#join">Join</a></div>
+      <div><span class="label">Site</span><a href="#home">Home</a><a href="#portfolios">Portfolios</a><a href="#programs">Programs</a><a href="#events">Events</a><a href="#team">Team</a><a href="#join">Join</a></div>
       <div><span class="label">Follow</span><a href="https://x.com/scmnyu">X</a><a href="https://www.linkedin.com/company/stern-capital-management-nyu/">LinkedIn</a><a href="https://www.instagram.com/sterncapitalmanagement/">Instagram</a><span class="note">scm@stern.nyu.edu</span></div>
     </div>
   </div>
@@ -683,7 +737,7 @@ async function refresh(){let src=null,nb=null;try{src=await load()}catch(e){}
  else if(!B||!B.live){const c=store.get('scm-live');let cb=null;try{cb=c&&build({...c,live:false})}catch(e){}B=sane(cb)?cb:build(SNAP)}
  render()}
 
-const VIEWS=['home','portfolios','events','team','join'],TITLES={portfolios:'Portfolios',events:'Events',team:'Team',join:'Join'};
+const VIEWS=['home','portfolios','programs','events','team','join'],TITLES={portfolios:'Portfolios',programs:'Programs',events:'Events',team:'Team',join:'Join'};
 const route=()=>{let v=location.hash.slice(1);if(!VIEWS.includes(v))v='home';
  $$('[data-view]').forEach(s=>s.hidden=s.dataset.view!==v);
  document.title=v==='home'?'Stern Capital Management':TITLES[v]+' | Stern Capital Management';
